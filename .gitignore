@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+reports/
+state.json
+state.tmp
+previous-state.zip
+.cache/
+model.pt
+model.tmp

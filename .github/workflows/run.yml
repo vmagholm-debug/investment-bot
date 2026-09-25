@@ -1,0 +1,59 @@
+name: Run investment bot
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: investment-bot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements.txt
+      - name: Test fake-money accounting and checkpoints
+        run: python -m unittest discover -s tests -v
+      - name: Restore fake-money account
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          artifact_id=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=paper-trading-report&per_page=100" --jq '[.artifacts[] | select(.expired == false)] | sort_by(.created_at) | reverse | .[0].id // empty')
+          if [ -n "$artifact_id" ]; then
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$artifact_id/zip" > previous-state.zip
+            unzip -p previous-state.zip state.json > state.json
+            unzip -p previous-state.zip model.pt > model.pt
+          else
+            echo "No saved account found; starting with 100000 fake USD."
+          fi
+      - name: Run bot
+        run: python lstm_bot.py
+        env:
+          PYTHONUNBUFFERED: '1'
+      - name: Save report
+        if: always() && hashFiles('reports/latest.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-trading-report
+          path: |
+            reports/*.json
+            state.json
+            model.pt
+          retention-days: 90
+          if-no-files-found: warn
