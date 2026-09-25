@@ -39,6 +39,9 @@ jobs:
             gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$artifact_id/zip" > previous-state.zip
             unzip -p previous-state.zip state.json > state.json
             unzip -p previous-state.zip model.pt > model.pt
+            if unzip -Z1 previous-state.zip | grep -qx discovery.json; then
+              unzip -p previous-state.zip discovery.json > discovery.json
+            fi
           else
             echo "No saved account found; starting with 100000 fake USD."
           fi
@@ -52,8 +55,9 @@ jobs:
         with:
           name: paper-trading-report
           path: |
-            reports/*.json
+            reports/
             state.json
             model.pt
+            discovery.json
           retention-days: 90
           if-no-files-found: warn

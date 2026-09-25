@@ -14,3 +14,6 @@ previous-state.zip
 .cache/
 model.pt
 model.tmp
+
+discovery.json
+discovery.tmp

@@ -11,6 +11,9 @@ from torch import nn
 import yfinance as yf
 
 from bot import TenPercentMonthlyBot
+from market import CurrencyConverter
+from discovery import discover, save_discovery, is_europe
+from reporting import write_reports
 
 
 class LSTMModel(nn.Module):
@@ -42,6 +45,9 @@ class ContinuousLearner(TenPercentMonthlyBot):
         self.seen = set()
         self.training_steps = 0
         self.last_loss = None
+        self.fx = CurrencyConverter()
+        self.learning = {}
+        self.discovered_regions = {}
         if self.checkpoint.exists():
             saved = torch.load(self.checkpoint, map_location='cpu', weights_only=True)
             if saved['version'] != 1:
@@ -79,11 +85,36 @@ class ContinuousLearner(TenPercentMonthlyBot):
     def learn(self):
         errors = {}
         added = 0
+        details = {}
+        steps_before = self.training_steps
         for ticker in self.tickers:
             try:
-                added += self.update_model(ticker)
+                new_count = self.update_model(ticker)
+                added += new_count
+                known = self.fetch_data(ticker)['Target'].dropna()
+                details[ticker] = {'new_samples': new_count, 'known_outcomes': len(known),
+                                   'target_reached': int(known.sum())}
             except Exception as exc:
                 errors[ticker] = str(exc)
+        before_scores = {}
+        if self.training_steps:
+            for ticker in self.tickers:
+                if ticker not in errors:
+                    try:
+                        before_scores[ticker] = self.predict(ticker)['confidence']
+                    except ValueError:
+                        pass
+        # Evaluate the same fixed replay batch before and after the update.
+        evaluation = self.buffer[-min(256, len(self.buffer)):]
+        def loss_on_fixed_batch():
+            if not evaluation:
+                return None
+            self.model.eval()
+            with torch.no_grad():
+                x = torch.stack([row[0] for row in evaluation])
+                y = torch.tensor([row[1] for row in evaluation]).unsqueeze(1)
+                return float(nn.BCELoss()(self.model(x), y).item())
+        loss_before = loss_on_fixed_batch()
         # Avoid training over and over on the same data when manually rerun.
         if added and len(self.buffer) >= 64:
             self.model.train()
@@ -101,6 +132,12 @@ class ContinuousLearner(TenPercentMonthlyBot):
                 self.optimizer.step()
                 self.training_steps += 1
                 self.last_loss = float(loss.item())
+        self.learning = {'new_samples': added, 'samples_by_ticker': details,
+                         'steps_this_run': self.training_steps - steps_before,
+                         'fixed_batch_loss_before': loss_before,
+                         'fixed_batch_loss_after': loss_on_fixed_batch(),
+                         'scores_before_update': before_scores,
+                         'interpretation': 'Training-fit measurements only; not evidence of future profit or causal market knowledge.'}
         return errors
 
     def save_model(self):
@@ -126,18 +163,25 @@ class ContinuousLearner(TenPercentMonthlyBot):
                 'data_date': df.index[-1].isoformat(),
                 'timestamp': datetime.now().isoformat()}
 
+    def price_quote(self, ticker, df):
+        quote = self.fx.convert(float(df['Close'].iloc[-1]), self.fx.currency(ticker))
+        quote['data_date'] = df.index[-1].isoformat()
+        quote['region'] = self.discovered_regions.get(ticker, 'Europe' if is_europe(ticker) else 'Other')
+        return quote
+
     def advise(self, signal):
         # The supplied LSTM uses a >0.8 score filter. No unmeasured accuracy claim.
         amount = self.cash * .1
         if signal['direction'] != 'BUY' or amount < 1:
             return None
-        return {**signal, 'action': 'PAPER BUY', 'amount': amount}
+        return {**signal, 'action': 'PAPER BUY', 'amount': amount,
+                'reason': 'LSTM score above 0.80; purchase capped at 10% of remaining fake cash'}
 
 
 def main():
     parser = argparse.ArgumentParser(description='LSTM fake-money bot; no real orders')
-    parser.add_argument('--tickers', nargs='+', default=[
-        'TQQQ', 'SOXL', 'UPRO', 'SPXL', 'TECL', 'FNGU', 'LABU', 'YINN', 'UDOW', 'NAIL'])
+    parser.add_argument('--tickers', nargs='+', help='Optional explicit override; default uses live discovery')
+    parser.add_argument('--discovery-state', type=Path, default=Path('discovery.json'))
     parser.add_argument('--state', type=Path, default=Path('state.json'))
     parser.add_argument('--checkpoint', type=Path, default=Path('model.pt'))
     parser.add_argument('--output', type=Path, default=Path('reports/latest.json'))
@@ -146,11 +190,17 @@ def main():
     if not 1 <= args.steps <= 200:
         parser.error('--steps must be between 1 and 200')
     yf.set_tz_cache_location(str(args.state.parent / '.cache' / 'yfinance'))
-    bot = ContinuousLearner(args.tickers, args.checkpoint, args.steps)
+    if args.tickers:
+        tickers, discovery_report, discovery_state = args.tickers, {'mode': 'explicit CLI override'}, None
+    else:
+        tickers, discovery_report, discovery_state = discover(args.discovery_state)
+    bot = ContinuousLearner(tickers, args.checkpoint, args.steps)
+    bot.discovered_regions = {t: d['region_group'] for t, d in discovery_report.get('selected', {}).items()}
     bot.load_state(args.state)
-    bot.tickers = list(dict.fromkeys(args.tickers + list(bot.portfolio)))
+    bot.tickers = list(dict.fromkeys(tickers + list(bot.portfolio)))
+    trade_count_before = len(bot.trade_log)
     errors = bot.learn()
-    results = bot.run_once()
+    results = bot.run_once(refresh=False)
     bot.save_model()
     bot.save_state(args.state)
     holdings_value = sum(qty * bot.last_prices[ticker]['price']
@@ -161,13 +211,22 @@ def main():
               'total_account_value': bot.cash + holdings_value,
               'profit_loss': bot.cash + holdings_value - 100000.,
               'portfolio': bot.portfolio, 'valuation_prices': bot.last_prices,
-              'trades': bot.trade_log, 'results': results, 'training_errors': errors,
+              'trades': bot.trade_log, 'new_trades': bot.trade_log[trade_count_before:],
+              'results': results, 'training_errors': errors,
+              'learning': bot.learning,
+              'discovery': discovery_report,
+              'coverage': {'tickers': bot.tickers, 'europe': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') == 'Europe' for t in bot.tickers),
+                           'other': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') != 'Europe' for t in bot.tickers),
+                           'scope': 'Live Europe-first Yahoo screener with rotating candidate selection'},
               'training_steps': bot.training_steps, 'training_loss': bot.last_loss,
               'replay_samples': len(bot.buffer),
               'model_validation': 'Uncalibrated score; no out-of-sample performance estimate'}
     rendered = json.dumps(report, indent=2, allow_nan=False)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(rendered + '\n')
+    write_reports(report, args.output.parent)
+    if discovery_state is not None:
+        save_discovery(args.discovery_state, discovery_state)
     print(rendered, flush=True)
     return 1 if errors or any('error' in result for result in results) else 0
 

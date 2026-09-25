@@ -65,7 +65,7 @@ class TenPercentMonthlyBot:
                          auto_adjust=True, multi_level_index=False, timeout=20)
         if df is None or df.empty:
             raise ValueError(f"No data for {ticker}")
-        df['Return'] = df['Close'].pct_change()
+        df['Return'] = df['Close'].pct_change(fill_method=None)
         df['SMA_5'] = df['Close'].rolling(5).mean()
         df['SMA_20'] = df['Close'].rolling(20).mean()
         df['SMA_50'] = df['Close'].rolling(50).mean()
@@ -75,7 +75,7 @@ class TenPercentMonthlyBot:
         df['MACD'] = df['EMA_12'] - df['EMA_26']
         df['RSI'] = self.compute_rsi(df['Close'], 14)
         df['Volatility'] = df['Return'].rolling(20).std()
-        df['Volume_Change'] = df['Volume'].pct_change()
+        df['Volume_Change'] = df['Volume'].pct_change(fill_method=None)
         df['ATR'] = self.compute_atr(df, 14)
         df['Momentum'] = df['Close'] - df['Close'].shift(21)
         df['Forward_Return_21d'] = df['Close'].shift(-self.prediction_horizon) / df['Close'] - 1
@@ -192,22 +192,29 @@ class TenPercentMonthlyBot:
             'action': 'PAPER BUY',
             'qty': qty,
             'price': price,
+            'amount': order['amount'],
+            'currency': 'USD',
+            'quote': self.last_prices.get(ticker, {}),
+            'reason': order.get('reason', 'Configured signal filters passed'),
             'confidence': order['confidence'],
             'accuracy': order['accuracy'],
             'historical_mean_21d_return': order['historical_mean_21d_return']
         })
 
-    def run_once(self):
-        self.data.clear()
+    def price_quote(self, ticker, df):
+        return {'price': float(df['Close'].iloc[-1]),
+                'data_date': df.index[-1].isoformat()}
+
+    def run_once(self, refresh=True):
+        if refresh:
+            self.data.clear()
         self.models.clear()
         self.accuracy_scores.clear()
         advice = []
         for ticker in self.tickers:
             try:
                 df = self.fetch_data(ticker)
-                self.last_prices[ticker] = {
-                    'price': float(df['Close'].iloc[-1]),
-                    'data_date': df.index[-1].isoformat()}
+                self.last_prices[ticker] = self.price_quote(ticker, df)
                 sig = self.predict(ticker)
                 order = self.advise(sig)
                 if self.last_purchase_dates.get(ticker) == sig['data_date']:
@@ -215,7 +222,7 @@ class TenPercentMonthlyBot:
                                    'reason': 'Already purchased on this price date'})
                     continue
                 if order:
-                    price = float(self.data[ticker]['Close'].iloc[-1])
+                    price = self.last_prices[ticker]['price']
                     self.execute(order, price)
                     advice.append(order)
                 else:
