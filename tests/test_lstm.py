@@ -40,11 +40,6 @@ class LSTMTests(unittest.TestCase):
         values = ContinuousLearner.normalize(np.ones((30, 10)))
         self.assertTrue(np.isfinite(values).all())
 
-    def test_signal_creates_fake_order_only_above_threshold(self):
-        with tempfile.TemporaryDirectory() as folder:
-            bot = ContinuousLearner(['TEST'], Path(folder) / 'model.pt')
-            self.assertIsNone(bot.advise({'direction': 'HOLD'}))
-            self.assertEqual(bot.advise({'direction': 'BUY', 'research_gate': {'approved': True, 'reason': 'Test evidence'}})['amount'], 10000.)
 
 
 if __name__ == '__main__':

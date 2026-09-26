@@ -27,9 +27,6 @@ class ResearchTests(unittest.TestCase):
         gate = evaluate(data, NOW)
         self.assertFalse(gate['approved'])
         self.assertIn('Negative news evidence', gate['blockers'])
-        with tempfile.TemporaryDirectory() as folder:
-            bot = ContinuousLearner(['TEST'], Path(folder) / 'model.pt')
-            self.assertIsNone(bot.advise({'direction': 'BUY', 'confidence': .99, 'research_gate': gate}))
 
     def test_missing_data_is_not_positive_and_retrieval_errors_block(self):
         data = evidence()

@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import pandas as pd
+from test_strategies import frame as strategy_frame
 from market import CurrencyConverter
 from lstm_bot import ContinuousLearner
 from reporting import write_reports
@@ -24,7 +25,7 @@ class MarketTests(unittest.TestCase):
     def test_fake_purchase_uses_converted_price(self):
         with tempfile.TemporaryDirectory() as folder:
             bot = ContinuousLearner(['ASML.AS'], Path(folder) / 'model.pt')
-            frame = pd.DataFrame({'Close': [100.]}, index=[pd.Timestamp('2026-09-24')])
+            frame = strategy_frame()
             bot.data['ASML.AS'] = frame
             bot.fx.currencies['ASML.AS'] = 'EUR'
             bot.fx.rates['EUR'] = {'rate': 1.1, 'data_date': '2026-09-24'}
@@ -32,10 +33,11 @@ class MarketTests(unittest.TestCase):
                       'accuracy': None, 'historical_mean_21d_return': .1,
                       'data_date': frame.index[-1].isoformat(),
                       'research_gate': {'approved': True, 'reason': 'Test evidence'}}
+            bot.research_reports['ASML.AS'] = {'gate': signal['research_gate']}
             with patch.object(bot, 'predict', return_value=signal):
                 bot.run_once(refresh=False)
-            self.assertAlmostEqual(bot.portfolio['ASML.AS'], 10000 / 110)
-            self.assertEqual(bot.cash, 90000)
+            self.assertAlmostEqual(bot.portfolio['ASML.AS'], 2000 / 110)
+            self.assertEqual(bot.cash, 98000)
             self.assertEqual(bot.trade_log[0]['currency'], 'USD')
             self.assertEqual(bot.trade_log[0]['quote']['quote_currency'], 'EUR')
 
@@ -52,8 +54,16 @@ class MarketTests(unittest.TestCase):
             write_reports(report, folder)
             text = (Path(folder) / 'summary.md').read_text()
             self.assertIn('No model update occurred', text)
-            self.assertIn('No simulated purchases', text)
+            self.assertIn('No simulated trades', text)
             self.assertTrue((Path(folder) / 'trades.csv').read_text().startswith('time,ticker'))
+            sale = {'time': 'today', 'ticker': 'TEST', 'action': 'PAPER SELL',
+                    'qty': 2., 'price': 90., 'amount': 180., 'confidence': None,
+                    'strategy': 'mean_reversion', 'realized_pnl': -20., 'reason': 'Daily loss exit'}
+            report.update(strategy_policy='test policy', trades=[sale], new_trades=[sale])
+            write_reports(report, folder)
+            self.assertIn('PAPER SELL', (Path(folder) / 'summary.md').read_text())
+            self.assertIn('-20.0', (Path(folder) / 'summary.md').read_text())
+            self.assertIn('mean_reversion', (Path(folder) / 'trades.csv').read_text())
 
 
 if __name__ == '__main__':

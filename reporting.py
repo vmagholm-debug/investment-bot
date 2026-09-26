@@ -27,12 +27,12 @@ def write_reports(report, directory):
              'Discovered live from Yahoo Finance; European listings are considered first.', '',
              '## New simulated trades', '']
     if new_trades:
-        lines += [table(['Time', 'Ticker', 'Action', 'Shares', 'USD/share', 'Fake USD spent', 'Score', 'Reason'],
+        lines += [table(['Time', 'Ticker', 'Action', 'Shares', 'USD/share', 'Fake USD amount', 'Score', 'Reason'],
                         [[t['time'], t['ticker'], t['action'], f"{t['qty']:.6f}",
                           f"{t['price']:.4f}", f"{t.get('amount', t['qty'] * t['price']):.2f}",
-                          f"{t['confidence']:.4f}", t.get('reason', '')] for t in new_trades]), '']
+                          (f"{t['confidence']:.4f}" if t.get('confidence') is not None else 'Unavailable'), t.get('reason', '')] for t in new_trades]), '']
     else:
-        lines += ['No simulated purchases this run. See the signal table for scores, filters, and errors.', '']
+        lines += ['No simulated trades this run. See the signal table for scores, filters, and errors.', '']
     lines += ['## What changed in training', '',
               f"Added **{learning['new_samples']} newly labeled examples** and performed "
               f"**{learning['steps_this_run']} training updates**. Replay buffer: {report['replay_samples']} examples.", '']
@@ -50,7 +50,7 @@ def write_reports(report, directory):
               '## Signals and decisions', '',
               table(['Ticker', 'Score before training', 'Score after training', 'Action / reason'],
                     [[s['ticker'], f"{learning['scores_before_update'][s['ticker']]:.4f}" if s['ticker'] in learning['scores_before_update'] else 'Unavailable',
-                      f"{s['confidence']:.4f}" if 'confidence' in s else 'Unavailable',
+                      f"{s['confidence']:.4f}" if s.get('confidence') is not None else 'Unavailable',
                       s.get('error', s.get('action', '')) + (' — ' + s['reason'] if s.get('reason') else '')]
                      for s in report['results']]), '', '## Holdings', '']
     if report['portfolio']:
@@ -66,7 +66,7 @@ def write_reports(report, directory):
               '`paper-trading-report` artifact for the complete ledger, including prior runs.', '',
               'Foreign quotes are converted to fake USD using dated FX prices. UK pence are divided by 100 first. '
               'If a price or FX lookup fails, no purchase is made for that ticker; any prior valuation is stale. '
-              'This simulation is buy-only and does not model fees, slippage or dividend cash payments.', '']
+              'Daily buy/sell simulation excludes fees, slippage and dividend cash payments. Exit thresholds are not guaranteed fills; gaps can exceed them.', '']
     if report['training_errors']:
         lines += ['## Training errors', '', str(report['training_errors']), '']
     lines += ['## Live stock discovery', '']
@@ -120,17 +120,32 @@ def write_reports(report, directory):
         lines += ['News sentiment uses a fixed, pretrained English FinBERT model on headlines and provider summaries. '
                   'It does not read full articles or complete company filings, verify claims independently, or retrain FinBERT. '
                   'Research gate thresholds are experimental rules, not proven investment advantages.', '']
+    if report.get('strategy_policy'):
+        lines += ['## Five trading strategies', '', report['strategy_policy'], '',
+                  'Any single entry can qualify; overlapping signals do not increase position size. '
+                  'Attribution priority: mean reversion, momentum, trend following, breakout, earnings. '
+                  'Momentum ranks the analyzed universe, not the entire market. LSTM scores no longer veto entries. '
+                  'Research approval remains required. Fills use latest adjusted closes and dated FX, not executable quotes.', '',
+                  table(['Ticker', 'Strategy', 'Entry', 'Exit', 'Evidence / thresholds'],
+                        [[s['ticker'], name, rule['entry'], rule['exit'], rule['reason']]
+                         for s in report['results'] for name, rule in s.get('strategies', {}).items()]), '',
+                  '## Realized strategy results', '',
+                  table(['Strategy', 'Closed trades', 'Realized P/L USD'],
+                        [[name, sum(t.get('strategy') == name and t['action'] == 'PAPER SELL' for t in report['trades']),
+                          round(sum(t.get('realized_pnl', 0) for t in report['trades'] if t.get('strategy') == name), 2)]
+                         for name in ['mean_reversion', 'momentum', 'trend_following', 'breakout', 'earnings']]), '',
+                  'Realized P/L excludes open positions. Rules are experimental, without validated profitability.', '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)
     # Plain text preformatted content keeps email consistent with the measured report.
     (directory / 'email.html').write_text('<html><body><pre style="white-space:pre-wrap;font:14px sans-serif">' + html.escape(summary) + '</pre></body></html>')
-    fields = ['time', 'ticker', 'action', 'qty', 'price', 'amount', 'currency', 'confidence', 'reason']
+    fields = ['time', 'ticker', 'action', 'qty', 'price', 'amount', 'currency', 'quote_currency', 'native_price', 'fx_to_usd', 'confidence', 'strategy', 'realized_pnl', 'reason']
     with (directory / 'trades.csv').open('w', newline='') as stream:
         writer = csv.DictWriter(stream, fieldnames=fields, extrasaction='ignore')
         writer.writeheader()
         for trade in report['trades']:
-            writer.writerow({**trade, 'amount': trade.get('amount', trade['qty'] * trade['price']),
+            writer.writerow({**trade, **{key: trade.get('quote', {}).get(key) for key in ['quote_currency', 'native_price', 'fx_to_usd']}, 'amount': trade.get('amount', trade['qty'] * trade['price']),
                              'currency': trade.get('currency', 'USD')})
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as stream:

@@ -1,4 +1,4 @@
-# Europe-first LSTM fake-money investment bot
+# Europe-first five-strategy fake-money investment bot
 
 ## Where to see results
 
@@ -44,8 +44,8 @@ measurements, not invented market narratives or proof of predictive skill.
 
 
 Runs daily at 09:00 Europe/Stockholm (Swedish local time, including DST), starting with **100,000 simulated USD**. No broker,
-credentials, deposits, or real orders are involved. The supplied two-layer LSTM trains on 30-day sequences. A score above 0.8 buys
-fractional simulated shares with 10% of remaining cash, without borrowing.
+credentials, deposits, or real orders are involved. The supplied two-layer LSTM trains on 30-day sequences. The five strategies below generate entries independently of the LSTM score. Each entry uses
+2% of remaining fake cash, with at most ten holdings and no borrowing.
 Purchases use the latest downloaded adjusted close, not an executable live quote.
 The bot keeps cash, holdings, and trade history in `state.json`; repeated runs
 cannot buy the same ticker twice for the same price date.
@@ -54,8 +54,8 @@ The supplied strategy's 10% return target is a classification threshold, not a
 promised return. Model probabilities are uncalibrated; holdout accuracy is not
 proof of profitability. The historical mean return field is not a forecast. LSTM scores have no measured
 out-of-sample accuracy; reports explicitly mark accuracy as unavailable.
-There are no sell rules, commissions, slippage, or dividend cash accounting.
-This is an experimental buy-only simulation; cash will decline as purchases occur.
+Daily sell rules are described below. Commissions, slippage and dividend cash accounting are not modeled.
+This is an experimental simulation, without validated profitability.
 Price dates are included in reports; failed downloads may leave stale valuations.
 
 ## Run locally
@@ -118,7 +118,7 @@ weekly reset. It runs daily, not in an endless hourly loop.
 
 The earlier gradient-boosting implementation remains in `bot.py` as shared
 accounting/indicator code and an optional standalone baseline. Its filters differ
-from the LSTM's score-only threshold. Do not run both against the same state file.
+from the scheduled five-strategy system. Do not run both against the same state file.
 
 ## Corrections
 
@@ -150,7 +150,7 @@ full articles, full filings, non-English news or independently verify journalism
 The pretrained FinBERT is fixed; only the original price/volume LSTM keeps learning.
 No API subscription is needed; model weights are downloaded for local CPU inference.
 
-A technical score above 0.80 is now necessary but insufficient. Paper buys also
+An entry from at least one of the five strategies is required. LSTM scores are diagnostic only. Paper buys also
 require supportive recent fundamentals and at least one other supportive research
 category, no negative category or retrieval/inference errors, and no known earnings
 announcement within two days. Unknown data is never counted as supportive.
@@ -173,8 +173,36 @@ The explicit experimental rules are:
 
 These thresholds are transparent research heuristics, not backtested advantages.
 Today's evidence is not inserted into historical training rows, which would leak
-future information. Research may veto a high technical score. Every trade records
+future information. Research may veto any strategy entry. Every trade records
 its research gate and reason. Daily email reports include the same research results.
 
 Sources: https://ranaroussi.github.io/yfinance/ and
 https://huggingface.co/ProsusAI/finbert
+
+## Five strategy rules (experimental v1)
+
+These are chosen transparent rules, not an industry-standard five-pillar system.
+At least 61 valid daily observations are required. Entry priority when several
+qualify: mean reversion, momentum, trend following, breakout, earnings. Only one
+position per ticker is permitted; overlapping signals never multiply its size.
+
+| Strategy | Entry | Strategy exit |
+| --- | --- | --- |
+| Mean reversion | Close at least 1.5 standard deviations below 20-day mean, RSI <40, and close above prior close | Close reaches SMA20 |
+| Momentum | Top 20% of analyzed candidates by 60-day return (at least 5 peers), return >5%, positive 20-day return | 20-day return <=0 |
+| Trend following | Close > SMA20 > SMA50 and SMA50 above its value five bars ago | Close below SMA50 |
+| Breakout | Close above the preceding 20 daily highs, volume >=1.5 times preceding 20-day mean | Close below SMA20 |
+| Earnings | EPS surprise >=5%, released within seven calendar days, a price bar after the report date and positive daily return | Close below SMA20 |
+
+Every holding also exits at an observed USD return <=-5%, >=10%, or after 21
+trading bars. These are checked daily, not intraday stop orders. Fills use the
+observed adjusted close, so losses can exceed 5% after gaps. Quotes older than
+seven calendar days or failed currency lookups block execution. Positions remain
+valued at their last known quote when retrieval fails. All strategy entries still
+require the research gate above. No purchase is guaranteed on any given day.
+
+Trades retain strategy attribution and sales record realized USD P/L. The report
+shows all five rule evaluations and realized results by strategy; the cumulative
+CSV contains buys and sells. Existing state and LSTM training continue unchanged.
+Realized strategy P/L excludes open positions and trading costs. This is forward
+paper evaluation, not evidence from a historical out-of-sample backtest.
