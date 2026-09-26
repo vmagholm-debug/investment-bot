@@ -196,6 +196,7 @@ class TenPercentMonthlyBot:
             'currency': 'USD',
             'quote': self.last_prices.get(ticker, {}),
             'reason': order.get('reason', 'Configured signal filters passed'),
+            'research_gate': order.get('research_gate'),
             'confidence': order['confidence'],
             'accuracy': order['accuracy'],
             'historical_mean_21d_return': order['historical_mean_21d_return']
@@ -226,7 +227,7 @@ class TenPercentMonthlyBot:
                     self.execute(order, price)
                     advice.append(order)
                 else:
-                    advice.append({**sig, 'action': 'NO TRADE', 'reason': 'One or more configured filters were not met'})
+                    advice.append({**sig, 'action': 'NO TRADE', 'reason': sig.get('reason', 'One or more configured filters were not met')})
             except Exception as e:
                 advice.append({'ticker': ticker, 'error': str(e)})
         return advice

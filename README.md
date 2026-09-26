@@ -26,9 +26,9 @@ matching-stock counts, fetched candidates, selected symbols, and data-source
 metadata. A screener failure stops the run visibly; it never silently substitutes
 a fixed watchlist. The optional `--tickers` flag is only an explicit test override.
 
-This uses yfinance's public-data interfaces. It does not browse arbitrary websites
-or read news. Sources can be delayed or unavailable. Discovery is bounded to fit
-the free scheduled runner. The model remains an experimental price-history LSTM.
+This uses yfinance's public-data interfaces and company-associated news feeds. It
+does not browse arbitrary websites. Sources can be delayed or unavailable. Discovery is bounded to fit
+the free scheduled runner. The LSTM remains an experimental price-history model, with a separate current-evidence research gate.
 
 Every discovered ticker's quote currency is fetched dynamically. Foreign prices
 are converted to the account's existing fake USD balance, with FX dates recorded.
@@ -133,3 +133,48 @@ from the LSTM's score-only threshold. Do not run both against the same state fil
 ```bash
 .venv/bin/python -m unittest discover -s tests -v
 ```
+
+## News, fundamentals, earnings and analyst research
+
+`research.py` retrieves current company information, quarterly income statements,
+reported/estimated EPS and upcoming earnings dates, analyst recommendation/target
+aggregates, and recent company-associated news. Financial data and article links,
+publication dates, observation time, missing coverage and errors appear in reports.
+The JSON artifact retains the complete evidence used for each decision.
+
+FinBERT (`ProsusAI/finbert`, pinned revision) classifies relevant English headlines
+and provider summaries from the last seven days as positive, negative or neutral.
+It requires a company-name/ticker mention, an explicit English language tag and a
+valid publication date, and removes duplicates/future/old items. It does not read
+full articles, full filings, non-English news or independently verify journalism.
+The pretrained FinBERT is fixed; only the original price/volume LSTM keeps learning.
+No API subscription is needed; model weights are downloaded for local CPU inference.
+
+A technical score above 0.80 is now necessary but insufficient. Paper buys also
+require supportive recent fundamentals and at least one other supportive research
+category, no negative category or retrieval/inference errors, and no known earnings
+announcement within two days. Unknown data is never counted as supportive.
+
+The explicit experimental rules are:
+- Fundamentals: quarterly statement no older than 180 days; at least two positive
+  observations among net margin, revenue growth vs the same quarter a year earlier,
+  and operating cash flow with a current reported quarter; no negative observation.
+  Two negative observations classify the category as negative.
+- Earnings: recent reported EPS surprise and/or year-over-year net-income growth;
+  any value below -5% is negative; otherwise a positive value is supportive.
+- Analysts: at least three analysts, recommendation mean <=2.5 (1 strongest buy)
+  and mean target upside >=5% is supportive. Recommendation >=3.5 or target downside
+  below -5% is negative. Incomplete or suspicious target/quote unit data is unavailable.
+  Targets typically use a 12-month horizon, not the LSTM's 21 trading days. Individual
+  analyst-report dates and full texts are not available from this aggregate feed.
+- News: mean FinBERT positive probability minus negative probability >=0.15 is
+  supportive; <=-0.25 is negative; other observed scores are mixed. Missing relevant
+  English stories are unavailable. Failure to fetch/analyze stories blocks approval.
+
+These thresholds are transparent research heuristics, not backtested advantages.
+Today's evidence is not inserted into historical training rows, which would leak
+future information. Research may veto a high technical score. Every trade records
+its research gate and reason. Daily email reports include the same research results.
+
+Sources: https://ranaroussi.github.io/yfinance/ and
+https://huggingface.co/ProsusAI/finbert

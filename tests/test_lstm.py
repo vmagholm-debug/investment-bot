@@ -44,7 +44,7 @@ class LSTMTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             bot = ContinuousLearner(['TEST'], Path(folder) / 'model.pt')
             self.assertIsNone(bot.advise({'direction': 'HOLD'}))
-            self.assertEqual(bot.advise({'direction': 'BUY'})['amount'], 10000.)
+            self.assertEqual(bot.advise({'direction': 'BUY', 'research_gate': {'approved': True, 'reason': 'Test evidence'}})['amount'], 10000.)
 
 
 if __name__ == '__main__':

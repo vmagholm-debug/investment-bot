@@ -30,7 +30,8 @@ class MarketTests(unittest.TestCase):
             bot.fx.rates['EUR'] = {'rate': 1.1, 'data_date': '2026-09-24'}
             signal = {'ticker': 'ASML.AS', 'direction': 'BUY', 'confidence': .9,
                       'accuracy': None, 'historical_mean_21d_return': .1,
-                      'data_date': frame.index[-1].isoformat()}
+                      'data_date': frame.index[-1].isoformat(),
+                      'research_gate': {'approved': True, 'reason': 'Test evidence'}}
             with patch.object(bot, 'predict', return_value=signal):
                 bot.run_once(refresh=False)
             self.assertAlmostEqual(bot.portfolio['ASML.AS'], 10000 / 110)

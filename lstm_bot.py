@@ -14,6 +14,7 @@ from bot import TenPercentMonthlyBot
 from market import CurrencyConverter
 from discovery import discover, save_discovery, is_europe
 from reporting import write_reports
+from research import CompanyResearch
 
 
 class LSTMModel(nn.Module):
@@ -48,6 +49,7 @@ class ContinuousLearner(TenPercentMonthlyBot):
         self.fx = CurrencyConverter()
         self.learning = {}
         self.discovered_regions = {}
+        self.research_reports = {}
         if self.checkpoint.exists():
             saved = torch.load(self.checkpoint, map_location='cpu', weights_only=True)
             if saved['version'] != 1:
@@ -157,7 +159,11 @@ class ContinuousLearner(TenPercentMonthlyBot):
         self.model.eval()
         with torch.no_grad():
             probability = float(self.model(torch.from_numpy(sequence).unsqueeze(0)).item())
+        research = self.research_reports.get(ticker, {})
+        gate = research.get('gate', {'approved': False, 'reason': 'Research not available'})
+        reason = 'LSTM score must exceed 0.80' if probability <= .8 else gate['reason']
         return {'ticker': ticker, 'direction': 'BUY' if probability > .8 else 'HOLD',
+                'research_gate': gate, 'reason': reason,
                 'confidence': probability, 'accuracy': None,
                 'historical_mean_21d_return': float(df['Forward_Return_21d'].dropna().tail(60).mean()),
                 'data_date': df.index[-1].isoformat(),
@@ -172,10 +178,12 @@ class ContinuousLearner(TenPercentMonthlyBot):
     def advise(self, signal):
         # The supplied LSTM uses a >0.8 score filter. No unmeasured accuracy claim.
         amount = self.cash * .1
-        if signal['direction'] != 'BUY' or amount < 1:
+        if (signal['direction'] != 'BUY' or amount < 1
+                or not signal.get('research_gate', {}).get('approved', False)):
             return None
         return {**signal, 'action': 'PAPER BUY', 'amount': amount,
-                'reason': 'LSTM score above 0.80; purchase capped at 10% of remaining fake cash'}
+                'reason': 'LSTM score above 0.80; ' + signal['research_gate']['reason'] +
+                          '; purchase capped at 10% of remaining fake cash'}
 
 
 def main():
@@ -200,6 +208,14 @@ def main():
     bot.tickers = list(dict.fromkeys(tickers + list(bot.portfolio)))
     trade_count_before = len(bot.trade_log)
     errors = bot.learn()
+    researcher = CompanyResearch(args.state.parent / '.cache' / 'finbert')
+    for ticker in bot.tickers:
+        try:
+            bot.research_reports[ticker] = researcher.collect(ticker)
+        except Exception as exc:
+            bot.research_reports[ticker] = {'symbol': ticker, 'errors': {'research': str(exc)},
+                                           'gate': {'approved': False, 'reason': 'Research failed: ' + str(exc),
+                                                    'categories': {}, 'blockers': ['Research unavailable']}}
     results = bot.run_once(refresh=False)
     bot.save_model()
     bot.save_state(args.state)
@@ -213,7 +229,7 @@ def main():
               'portfolio': bot.portfolio, 'valuation_prices': bot.last_prices,
               'trades': bot.trade_log, 'new_trades': bot.trade_log[trade_count_before:],
               'results': results, 'training_errors': errors,
-              'learning': bot.learning,
+              'learning': bot.learning, 'company_research': bot.research_reports,
               'discovery': discovery_report,
               'coverage': {'tickers': bot.tickers, 'europe': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') == 'Europe' for t in bot.tickers),
                            'other': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') != 'Europe' for t in bot.tickers),
