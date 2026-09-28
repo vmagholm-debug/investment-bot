@@ -43,7 +43,7 @@ training steps ran, the loss before/after on the same training batch, historical
 measurements, not invented market narratives or proof of predictive skill.
 
 
-Runs daily at 09:00 Europe/Stockholm (Swedish local time, including DST), starting with **100,000 simulated USD**. No broker,
+Runs daily at 07:00 Europe/Stockholm (Swedish local time, including DST), starting with **100,000 simulated USD**. No broker,
 credentials, deposits, or real orders are involved. The supplied two-layer LSTM trains on 30-day sequences. The five strategies below generate entries independently of the LSTM score. Each entry uses
 2% of remaining fake cash, with at most ten holdings and no borrowing.
 Purchases use the latest downloaded adjusted close, not an executable live quote.
