@@ -161,6 +161,25 @@ def write_reports(report, directory):
         lines += [patterns['limitations'], '', 'Pattern errors: ' + str(patterns['errors']), '',
                   'Prospective forecasts are evaluated from the first close after issuance over 21 subsequent trading bars, '
                   'when that ticker is retrieved again. Pending outcomes are not wins or losses. The pattern layer does not place orders.', '']
+    catalogue = report.get('catalogue_analysis', {})
+    if catalogue:
+        lines += ['## Literature catalogue and validation controls', '',
+                  f"94 registered families. Implementations: {catalogue['implementation_counts']}. Protocol: {catalogue['protocol_id']}.", '',
+                  catalogue['evidence_attribution'] + '. Status: ' + catalogue['validation_status'], '',
+                  catalogue['independence_rule'], '',
+                  'Required checks: ' + str(catalogue['prerequisites']), '',
+                  'Source metadata and all unavailable families: anomaly_catalogue.json in the repository. '
+                  'Long-horizon value/momentum features are not validated by short-horizon 21-day outcomes.', '',
+                  table(['Stock', 'Family', 'Observed values', 'Limits'],
+                        [[ticker, id, item['values'], item['limitation']]
+                         for ticker, row in catalogue['results'].items() for id,item in row['features'].items()]), '',
+                  'Cost scenarios for historical pattern analogs: 0%, 0.2%, 0.5%, 1% round trip. '
+                  'These are stress assumptions, not observed spread, market impact or borrowing costs.', '',
+                  table(['Stock', '21d median at 0 / 0.2 / 0.5 / 1% cost'],
+                        [[ticker, ' / '.join(f"{v['median_net_return']:.1%}" for v in row['matches']['outcomes']['21']['cost_sensitivity'].values())]
+                         for ticker,row in report.get('pattern_analysis',{}).get('results',{}).items() if row['matches']['count']]), '',
+                  'Multiple-testing correction is not yet estimable: there are no valid family-level p-values. '
+                  'No significance or alpha claim is made; none of the 94 families is automatically promoted to trading.', '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)

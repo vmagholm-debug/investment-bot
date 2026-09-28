@@ -245,3 +245,43 @@ rules or research checks, or increases position sizes.
 Methods context (not validation of this implementation):
 https://www.nber.org/papers/w7613
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
+
+## Applying the 94-family research catalogue
+
+`anomaly_catalogue.json` records all 94 families, source profile pages, source-file
+hash, the document author's literature classification, requirements and actual
+implementation status. See `CATALOGUE_APPLICATION.md` for the complete mapping.
+The source PDF itself is not redistributed. Literature classifications are not
+independently verified performance results for this bot.
+
+`catalogue.py` computes 11 daily-data feature families: 12–1 momentum (excluding
+the latest 21 bars), short-term reversal, 252-day-high distance, MAX daily return,
+overnight/intraday decomposition, fixed MA and breakout distances, RSI, 60-day
+volatility, volatility expansion and relative volume. Five additional families
+have explicitly partial current proxies: raw EPS surprise, book/price, earnings
+yield, quarterly margin and headline sentiment. These are observations, not full
+replications of the papers or 16 independent trading strategies. In particular,
+raw EPS surprise is not standardized SUE; FinBERT is not market-wide sentiment;
+current ratios have no reconstructed historical release timestamps. If required
+fields/history are missing, the feature is unavailable, not zero or bullish.
+
+The other 78 families are registered but not implemented because the current
+provider lacks required history, timestamps or market microstructure, or because
+a proper protocol has not been implemented. No fabricated insider/options/order
+flow or analyst revision history is substituted. The existing five paper-trading
+rules remain experimental; this diagnostic catalogue does not authorize them as
+validated alpha or change them into an automatic 94-signal voting system.
+
+Pattern outcomes include cost sensitivity at 0%, 0.2%, 0.5% and 1% round trip.
+These are assumptions, not measured spread/impact/borrow. A protocol fingerprint
+includes code and definitions, so prospective forecasts from earlier versions
+are excluded from the current validation aggregate without deleting their records.
+A new method cannot claim old prospective results as its own.
+
+Reports explicitly mark the remaining validation prerequisites as not demonstrated:
+point-in-time reconstruction; survivorship/delistings; realistic execution; an
+untouched out-of-sample period; risk-adjusted benchmarks; multiple-testing control;
+and international/time replication. No p-values exist yet, so no FDR/significance
+claim is made. No parameter grid search or automatic deployment takes place.
+Long-horizon value/momentum research cannot be validated by the bot's 21-day
+comparison horizon; risk/behavior regularities do not imply directional returns.

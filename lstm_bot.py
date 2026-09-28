@@ -17,6 +17,7 @@ from reporting import write_reports
 from research import CompanyResearch
 from strategies import StrategyTrading
 from patterns import PatternLibrary
+from catalogue import assess as assess_catalogue
 
 
 class LSTMModel(nn.Module):
@@ -227,6 +228,7 @@ def main():
               'results': results, 'training_errors': errors,
               'learning': bot.learning, 'company_research': bot.research_reports,
               'pattern_analysis': pattern_report,
+              'catalogue_analysis': assess_catalogue(bot.data, bot.research_reports),
               'strategy_policy': 'v1: independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
               'coverage': {'tickers': bot.tickers, 'europe': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') == 'Europe' for t in bot.tickers),

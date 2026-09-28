@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from catalogue import PROTOCOL_ID
 
 HORIZONS = (5, 10, 21)
 COST = .002  # Illustrative round-trip cost assumption, not the paper ledger.
@@ -52,7 +53,8 @@ def summarize(matches):
                             'positive_fraction': float((x > 0).mean()), 'p10_net_return': float(np.quantile(x,.1)),
                             'worst_observed_net_return': float(x.min()),
                             'best_observed_net_return': float(x.max()),
-                            'extreme_outcomes': int((np.abs(x) >= 1).sum())}
+                            'extreme_outcomes': int((np.abs(x) >= 1).sum()),
+                            'cost_sensitivity': {str(cost): {'median_net_return':float(np.median(x+COST-cost)), 'positive_fraction':float(((x+COST-cost)>0).mean())} for cost in (0.,.002,.005,.01)}}
     return {'count': len(matches), 'tickers': len({r['ticker'] for r in matches}),
             'months': len({r['date'][:7] for r in matches}), 'outcomes': outcomes,
             'worst_interim_close_return': min(r['worst_interim_close_return'] for r in matches)}
@@ -132,12 +134,13 @@ class PatternLibrary:
             forecast['actual_net_return'] = float(after.Close.iloc[21]/after.Close.iloc[0]-1-COST)
 
     def validation(self):
-        settled = [f for f in self.state['forecasts'] if 'actual_net_return' in f]
+        current = [f for f in self.state['forecasts'] if f.get('protocol_id') == PROTOCOL_ID]
+        settled = [f for f in current if 'actual_net_return' in f]
         if not settled:
-            return {'settled': 0, 'pending': len(self.state['forecasts']), 'status': 'No prospective outcomes yet'}
+            return {'settled': 0, 'protocol_id': PROTOCOL_ID, 'legacy_excluded': len(self.state['forecasts'])-len(current), 'pending': len(current), 'status': 'No prospective outcomes yet'}
         error = [abs(f['predicted_net_return']-f['actual_net_return']) for f in settled]
         baseline_error = [abs(f['baseline_prediction']-f['actual_net_return']) for f in settled]
-        return {'settled': len(settled), 'pending': len(self.state['forecasts'])-len(settled),
+        return {'settled': len(settled), 'protocol_id': PROTOCOL_ID, 'legacy_excluded': len(self.state['forecasts'])-len(current), 'pending': len(current)-len(settled),
                 'forecast_statistic': 'Median net return; baseline is unconditional historical median',
                 'mean_absolute_error': float(np.mean(error)), 'baseline_mean_absolute_error': float(np.mean(baseline_error)),
                 'issuance_months': len({f['issued_date'][:7] for f in settled}),
@@ -167,11 +170,11 @@ class PatternLibrary:
             # At most one active, nonoverlapping prospective forecast per ticker.
             previous = [f for f in self.state['forecasts'] if f['ticker'] == ticker]
             if result['matches']['count'] and not any('actual_net_return' not in f or f.get('outcome_date','') >= result['context']['date'] for f in previous):
-                self.state['forecasts'].append({'ticker': ticker, 'issued_date': day(now),
+                self.state['forecasts'].append({'ticker': ticker, 'protocol_id': PROTOCOL_ID, 'issued_date': day(now),
                                                'asof_date': result['context']['date'], 'family':result['context']['family'],
                                                'predicted_net_return': result['matches']['outcomes']['21']['median_net_return'],
                                                'baseline_prediction':result['baseline']['outcomes']['21']['median_net_return']})
-        return {'version': 1, 'new_records': added, 'stored_records': len(self.state['records']),
+        return {'version': 1, 'protocol_id': PROTOCOL_ID, 'new_records': added, 'stored_records': len(self.state['records']),
                 'stored_tickers': len({r['ticker'] for r in self.state['records']}),
                 'validation': self.validation(), 'results':results, 'errors':errors,
                 'policy': 'Cross-stock analogs, maximum RMS distance 0.75, 60 neighbors, 20 matches/5 companies/8 months for descriptive support. Never a trade trigger or a calibrated probability.',
