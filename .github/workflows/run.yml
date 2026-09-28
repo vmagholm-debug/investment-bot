@@ -43,6 +43,9 @@ jobs:
             if unzip -Z1 previous-state.zip | grep -qx discovery.json; then
               unzip -p previous-state.zip discovery.json > discovery.json
             fi
+            if unzip -Z1 previous-state.zip | grep -qx patterns.json; then
+              unzip -p previous-state.zip patterns.json > patterns.json
+            fi
           else
             echo "No saved account found; starting with 100000 fake USD."
           fi
@@ -60,5 +63,6 @@ jobs:
             state.json
             model.pt
             discovery.json
+            patterns.json
           retention-days: 90
           if-no-files-found: warn

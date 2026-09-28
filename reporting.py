@@ -135,6 +135,32 @@ def write_reports(report, directory):
                           round(sum(t.get('realized_pnl', 0) for t in report['trades'] if t.get('strategy') == name), 2)]
                          for name in ['mean_reversion', 'momentum', 'trend_following', 'breakout', 'earnings']]), '',
                   'Realized P/L excludes open positions. Rules are experimental, without validated profitability.', '']
+    patterns = report.get('pattern_analysis', {})
+    if patterns:
+        lines += ['## Cross-stock pattern evidence', '', patterns['policy'], '',
+                  f"Library: {patterns['stored_records']} historical snapshots across {patterns['stored_tickers']} tickers; {patterns['new_records']} newly added.", '',
+                  'Prospective validation: ' + str(patterns['validation']), '',
+                  'Outcomes use local-currency adjusted closes less an illustrative 0.2% round-trip cost. '
+                  'Positive fractions describe historical matches, not calibrated forecasts. '
+                  'Research blocking a purchase is distinct from evidence against a price pattern.', '',
+                  table(['Ticker', 'Shape', 'Matches / companies / months', '5d / 10d / 21d mean net return', '21d median / baseline median', '21d positive fraction', '21d downside p10', 'Extreme outcomes', 'Assessment'],
+                        [[ticker, data['context']['family'],
+                          f"{data['matches']['count']} / {data['matches']['tickers']} / {data['matches']['months']}",
+                          ' / '.join(f"{data['matches']['outcomes'][str(h)]['mean_net_return']:.1%}" for h in [5,10,21]) if data['matches']['count'] else 'Unavailable',
+                          (f"{data['matches']['outcomes']['21']['median_net_return']:.1%} / {data['baseline']['outcomes']['21']['median_net_return']:.1%}" if data['matches']['count'] else 'Unavailable'),
+                          f"{data['matches']['outcomes']['21']['positive_fraction']:.1%}" if data['matches']['count'] else 'Unavailable',
+                          f"{data['matches']['outcomes']['21']['p10_net_return']:.1%}" if data['matches']['count'] else 'Unavailable',
+                          sum(o['extreme_outcomes'] for o in data['matches']['outcomes'].values()),
+                          data['assessment'] + '; ' + data['combined_assessment']]
+                         for ticker,data in patterns['results'].items()]), '']
+        for ticker,data in patterns['results'].items():
+            if data['examples']:
+                lines += [f'### Pattern comparisons: {ticker}', '',
+                          table(['Other stock', 'Pattern date', 'Outcome date', 'Distance (lower closer)', '21d gross return', 'Worst interim close return'],
+                                [[e['ticker'],e['date'],e['label_end'],f"{e['distance']:.3f}",f"{e['returns']['21']:.1%}",f"{e['worst_interim_close_return']:.1%}"] for e in data['examples']]), '']
+        lines += [patterns['limitations'], '', 'Pattern errors: ' + str(patterns['errors']), '',
+                  'Prospective forecasts are evaluated from the first close after issuance over 21 subsequent trading bars, '
+                  'when that ticker is retrieved again. Pending outcomes are not wins or losses. The pattern layer does not place orders.', '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)

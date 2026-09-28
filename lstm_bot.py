@@ -16,6 +16,7 @@ from discovery import discover, save_discovery, is_europe
 from reporting import write_reports
 from research import CompanyResearch
 from strategies import StrategyTrading
+from patterns import PatternLibrary
 
 
 class LSTMModel(nn.Module):
@@ -208,6 +209,9 @@ def main():
             bot.research_reports[ticker] = {'symbol': ticker, 'errors': {'research': str(exc)},
                                            'gate': {'approved': False, 'reason': 'Research failed: ' + str(exc),
                                                     'categories': {}, 'blockers': ['Research unavailable']}}
+    pattern_library = PatternLibrary(args.state.parent / 'patterns.json')
+    pattern_report = pattern_library.analyze(bot.data, bot.research_reports)
+    pattern_library.save()
     results = bot.run_once(refresh=False)
     bot.save_model()
     bot.save_state(args.state)
@@ -222,6 +226,7 @@ def main():
               'trades': bot.trade_log, 'new_trades': bot.trade_log[trade_count_before:],
               'results': results, 'training_errors': errors,
               'learning': bot.learning, 'company_research': bot.research_reports,
+              'pattern_analysis': pattern_report,
               'strategy_policy': 'v1: independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
               'coverage': {'tickers': bot.tickers, 'europe': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') == 'Europe' for t in bot.tickers),

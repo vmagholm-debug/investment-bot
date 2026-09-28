@@ -206,3 +206,42 @@ shows all five rule evaluations and realized results by strategy; the cumulative
 CSV contains buys and sells. Existing state and LSTM training continue unchanged.
 Realized strategy P/L excludes open positions and trading costs. This is forward
 paper evaluation, not evidence from a historical out-of-sample backtest.
+
+## Cross-stock pattern comparisons
+
+`patterns.py` adds a diagnostic pattern library. It compares four consecutive
+five-day price changes, distance from 20/50-day means, volatility and relative
+volume across the rotating Europe-first universe. Context is tagged as rebound
+after decline, uptrend, downtrend or mixed. It does not enumerate all named chart
+patterns or scan every listed security. The library grows as new tickers are
+analyzed, retaining at most 50,000 historical snapshots in `patterns.json`.
+
+Matches exclude the same ticker and any outcome not fully known before the query
+date. At most 60 matches within a fixed 0.75 RMS feature distance are retained;
+overlapping outcome intervals within one stock are removed. Reports show returns
+after 5/10/21 trading days, positive fractions, medians, downside percentiles,
+worst interim close returns and actual example tickers/dates. Historical support
+requires at least 20 matches across five stocks and eight calendar months; this
+is an explicit heuristic, not a statistical guarantee. Correlated stocks remain
+correlated observations. The cost assumption is 0.2% round trip, and returns are
+in each stock's quote currency, not the fake account's FX-adjusted USD return.
+
+Current fundamentals, earnings, analysts and news approval are shown alongside
+pattern evidence. These current observations are not retroactively inserted in
+historical examples. Price shapes alone cannot establish that a move followed an
+earnings release; this version does not test historical earnings-event patterns.
+
+New forecasts are saved before their outcomes exist and scored from the next
+trading close over 21 further trading bars when the ticker is retrieved again.
+Only one pending forecast per ticker is allowed. Forecasts use median returns to reduce domination by outliers. Extreme outcomes
+(absolute returns at least 100%) are flagged and retained, not silently dropped.
+Reports compare absolute forecast
+error against the unconditional eligible-history median. Pending examples are not
+successes. This forward evaluation starts now; no claim of proven predictive
+skill is made. Changing ticker selection, survivorship, short history and shared
+market moves limit interpretation. No pattern result overrides the five strategy
+rules or research checks, or increases position sizes.
+
+Methods context (not validation of this implementation):
+https://www.nber.org/papers/w7613
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
