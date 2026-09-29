@@ -26,6 +26,19 @@ def write_reports(report, directory):
              f"Coverage: {report['coverage'].get('us', 0)} US, {report['coverage']['europe']} European and {report['coverage']['other']} other/unclassified listings. "
              + report['coverage'].get('scope', 'Live Yahoo Finance discovery; see report for selection policy.'), '',
              '## New simulated trades', '']
+    if report.get('watchlist'):
+        lines += ['## Priority review before upcoming reports / Q4', '',
+                  'These user-selected companies are reviewed every run in addition to live discovery. '
+                  'The next earnings date comes from Yahoo, is not independently confirmed, and must not be assumed to be Q4. '
+                  'Calendar Q4 and fiscal Q4 differ. Focus topics are review questions, not verified findings; '
+                  'only the recorded company research and strategy evidence below support conclusions.', '',
+                  table(['Company', 'Ticker', 'Provider next report', 'Financial period', 'Decision', 'Research check'],
+                        [[r['name'], r['ticker'], r['next_report_provider_date'] or 'Unavailable',
+                          r['financial_period'] or 'Unavailable', r['decision'], r['research_reason']]
+                         for r in report['watchlist']]), '']
+        for row in report['watchlist']:
+            lines += [f"- **{row['ticker']}**: {row['focus']}. [Official investor page]({row['ir_url']})"]
+        lines += ['', 'The standard five-strategy rules and purchase checks still apply; watchlist membership is not a buy signal.', '']
     if new_trades:
         lines += [table(['Time', 'Ticker', 'Action', 'Shares', 'USD/share', 'Fake USD amount', 'Score', 'Reason'],
                         [[t['time'], t['ticker'], t['action'], f"{t['qty']:.6f}",

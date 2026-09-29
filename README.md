@@ -306,3 +306,13 @@ This is an inventory tool. It does not change the daily 24-US/8-international
 analysis batch or claim that every identified security has usable price history,
 company research or a trade signal. Coverage is measured against the stated dated
 public symbol registers, not private companies or a timeless universal stock count.
+
+## User priority reviews
+
+`watchlist.json` adds HANZA.ST, DYVOX.ST, NOVT, SKHY and BIRK to every run,
+including explicit ticker runs, without replacing live discovery or existing
+holdings. Reports contain a dedicated upcoming-results/Q4 review section with
+provider earnings dates, observed financial periods, decisions and purchase
+checks. Dates are not assumed to be confirmed or to refer to Q4. Short listing
+history and missing company data remain explicit gaps; no alternate listing is
+silently substituted. These entries use the same trading rules as other stocks.

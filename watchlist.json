@@ -1,0 +1,7 @@
+[
+  {"ticker":"HANZA.ST","name":"HANZA","region":"Europe","ir_url":"https://hanza.com/investor/","focus":"Q4 preparation: revenue growth, operating margin, cash flow and acquisition effects"},
+  {"ticker":"DYVOX.ST","name":"Dynavox Group","region":"Europe","ir_url":"https://dynavoxgroup.com/pages/financial-calendar","focus":"Q4 preparation: revenue growth, profitability and cash conversion"},
+  {"ticker":"NOVT","name":"Novanta","region":"US","ir_url":"https://investors.novanta.com/overview/default.aspx","focus":"Q4 preparation: revenue growth, margins, earnings and acquisition effects"},
+  {"ticker":"SKHY","name":"SK hynix (US depositary shares)","region":"US","ir_url":"https://www.skhynix.com/ir","focus":"Q4 preparation: earnings, margins and memory-market news; US listing has short price history and is not interchangeable with 000660.KS"},
+  {"ticker":"BIRK","name":"Birkenstock","region":"US","ir_url":"https://www.birkenstock-holding.com/news-events","focus":"Fiscal Q4 preparation: revenue growth, margins, earnings and outlook; fiscal year ends in September"}
+]
