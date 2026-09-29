@@ -193,6 +193,17 @@ def write_reports(report, directory):
                          for ticker,row in report.get('pattern_analysis',{}).get('results',{}).items() if row['matches']['count']]), '',
                   'Multiple-testing correction is not yet estimable: there are no valid family-level p-values. '
                   'No significance or alpha claim is made; none of the 94 families is automatically promoted to trading.', '']
+    if report.get('long_term_analysis'):
+        theme_report = report['long_term_analysis']
+        lines += ['## Långsiktiga marknader', '', theme_report['policy'], '', theme_report['source_policy'], '']
+        for theme in theme_report['themes']:
+            lines += [f"### {theme['name']}", theme['observation'], theme['forecast'],
+                      theme['risks'], f"Källa: [{theme['publisher']}]({theme['url']}); kontrollerad {theme['reviewed']}.",
+                      f"Behöver källöversyn: {theme['needs_source_review']}. Prognos utgången: {theme['forecast_expired']}.", '']
+        lines += [table(['Bolag', 'Möjliga teman', 'Bedömning', 'Finansiella observationer', 'Saknas'],
+                        [[symbol, ', '.join(m['theme_id'] for m in c['matches']) or 'Ingen / saknas',
+                          c['assessment'], c['checks'], '; '.join(c['missing'])]
+                         for symbol, c in theme_report['companies'].items()]), '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)

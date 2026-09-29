@@ -316,3 +316,30 @@ provider earnings dates, observed financial periods, decisions and purchase
 checks. Dates are not assumed to be confirmed or to refer to Q4. Short listing
 history and missing company data remain explicit gaps; no alternate listing is
 silently substituted. These entries use the same trading rules as other stocks.
+
+## Bot dashboard
+
+The read-only dashboard at https://vmagholm-debug.github.io/investment-bot/ shows
+portfolio value, remaining cash, open-position P/L, every simulated trade, priority
+reviews, price charts, company news and the model's measured training changes.
+`dashboard/build.py` reads the newest bot artifact and cannot place orders or save
+account/model state. A separate `dashboard.yml` workflow refreshes market data
+approximately every 15 minutes and after bot runs; scheduling/data delays are
+possible. The browser checks for a new published snapshot every minute.
+
+Quotes use Yahoo 5-minute bars and dated FX conversions. "Today" compares the
+latest price against the previous available session's final intraday bar. The
+site labels quote times, fallback bot snapshots and retrieval errors. Portfolio
+history is actual observed bot-report values, not a reconstructed backtest; the
+current refreshed valuation is separate. Price charts are in the quote currency.
+
+News comes from existing bot evidence, Yahoo ticker news and Google News company
+name searches for the priority list. New headlines are not model-analyzed and do
+not affect trade decisions. No complete articles are fetched. Public pages contain
+only the fake-money bot's report/market data, with no Gmail details or model files.
+
+### Long-term market context
+
+`themes.py` adds a separate 3–5-year diagnostic to every new bot report and the dashboard's **Framtida marknader** view. Initial evidence covers industrial robotics (IFR 2026, forecast through 2029) and AI/data-centre electricity infrastructure (IEA 2026, through 2030). These are source projections, not stock-return forecasts; no extrapolation to 2031 is invented. The reviewed source registry flags review after 180 days and expired forecast horizons. It does not automatically browse for new sector forecasts.
+
+Every researched candidate's current Yahoo business description is checked for explicit thematic terms, with missing descriptions shown as missing coverage. Matches are leads, not verified revenue exposure. Financial observations include P/E, debt/equity, revenue growth and free cash flow; missing segment exposure, peer valuation and multi-year forecasts prevent an unsupported undervaluation conclusion. This diagnostic does not retrain the 21-day LSTM, override research checks, or create a five-year trading portfolio. Existing five-strategy entries/exits continue unchanged. Historical reports are not rewritten; the local preview can display a separately computed diagnostic with missing profiles clearly marked.

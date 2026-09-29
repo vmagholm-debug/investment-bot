@@ -228,6 +228,8 @@ class CompanyResearch:
             upside = None
         evidence = {'symbol': symbol, 'company': info.get('longName') or symbol,
                     'observed_at': now.isoformat(), 'errors': errors,
+                    'business_profile': {'sector': info.get('sector'), 'industry': info.get('industry'),
+                                         'summary': info.get('longBusinessSummary')},
                     'fundamentals': {key: number(info.get(key)) for key in [
                         'marketCap', 'trailingPE', 'forwardPE', 'priceToBook', 'debtToEquity',
                         'profitMargins', 'revenueGrowth', 'earningsGrowth', 'operatingCashflow',

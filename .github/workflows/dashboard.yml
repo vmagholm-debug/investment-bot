@@ -1,0 +1,65 @@
+name: Update bot dashboard
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Run investment bot']
+    types: [completed]
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  push:
+    branches: [main]
+    paths: ['dashboard/**', '.github/workflows/dashboard.yml']
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: dashboard-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install yfinance==1.2.0 pandas==2.3.3 numpy==2.0.2
+      - name: Read latest bot report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=paper-trading-report&per_page=100" > artifacts.json
+          python - <<'PY'
+          import json, os
+          rows=[a for a in json.load(open('artifacts.json'))['artifacts'] if not a['expired']]
+          latest=max(rows,key=lambda a:a['created_at'])
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write('ARTIFACT_ID='+str(latest['id'])+'\n')
+              f.write('BOT_RUN_ID='+str(latest['workflow_run']['id'])+'\n')
+          PY
+      - name: Download selected report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$ARTIFACT_ID/zip" > report.zip
+          unzip report.zip 'reports/*' -d input
+      - name: Retain observed account history
+        run: |
+          curl --fail --silent --show-error --max-time 20 https://vmagholm-debug.github.io/investment-bot/data.json -o previous.json || rm -f previous.json
+      - name: Build read-only dashboard
+        run: python dashboard/build.py --report input/reports/latest.json --output public --previous previous.json --refresh --run-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/$BOT_RUN_ID"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publish dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4

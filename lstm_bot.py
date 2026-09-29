@@ -14,6 +14,7 @@ from bot import TenPercentMonthlyBot
 from market import CurrencyConverter
 from discovery import discover, save_discovery, is_europe
 from reporting import write_reports
+from themes import analyze_themes
 from research import CompanyResearch
 from strategies import StrategyTrading
 from patterns import PatternLibrary
@@ -232,6 +233,7 @@ def main():
               'results': results, 'training_errors': errors,
               'learning': bot.learning, 'company_research': bot.research_reports,
               'pattern_analysis': pattern_report,
+              'long_term_analysis': analyze_themes(bot.research_reports),
               'catalogue_analysis': assess_catalogue(bot.data, bot.research_reports),
               'strategy_policy': 'v1: independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
