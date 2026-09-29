@@ -285,3 +285,24 @@ and international/time replication. No p-values exist yet, so no FDR/significanc
 claim is made. No parameter grid search or automatic deployment takes place.
 Long-horizon value/momentum research cannot be validated by the bot's 21-day
 comparison horizon; risk/behavior regularities do not imply directional returns.
+
+## Complete US symbol inventory
+
+`market_universe.py` downloads all non-test issues in Nasdaq Trader's Nasdaq and
+other-exchange directories, reconciles their symbol sets against `nasdaqtraded.txt`,
+and paginates FINRA's entire OTC security master for its latest dated partition.
+It verifies counts, uniqueness and dates before writing an inventory and coverage audit.
+No volume or market-cap filter is used for identification. The full CSV retains ETFs,
+preferred shares, warrants and unclassified instruments so uncertain classification
+cannot silently remove stocks. A second CSV provides a heuristic stocks/ADRs subset.
+An optional `otcmarkets.csv` official screener export in the raw directory adds
+supplemental symbols; these may require reconciliation of effective dates.
+
+```sh
+python market_universe.py --fetch --raw universe/raw --output universe/reports
+```
+
+This is an inventory tool. It does not change the daily 24-US/8-international
+analysis batch or claim that every identified security has usable price history,
+company research or a trade signal. Coverage is measured against the stated dated
+public symbol registers, not private companies or a timeless universal stock count.
