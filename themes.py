@@ -1,5 +1,6 @@
 """Source-dated thematic diagnostics. Never an entry rule or return forecast."""
 from datetime import date
+from industry_catalogue import analyze_catalogue
 
 THEMES = [
     {'id': 'robotics', 'name': 'Robotik och automation', 'reviewed': '2026-09-29',
@@ -51,5 +52,6 @@ def analyze_themes(research, now=None):
             'horizon': '3–5 år; prognoser förlängs inte bortom källornas slutår.',
             'source_policy': 'Manuellt verifierat källregister; omprövning markeras efter 180 dagar. Bolagskoppling och finansiella mått uppdateras vid varje botkörning.',
             'themes': themes, 'companies': companies,
+            'industry_catalogue': analyze_catalogue(research),
             'coverage': {'analyzed': len(companies), 'with_profile': sum(c['profile_available'] for c in companies.values()),
                          'possible_matches': sum(bool(c['matches']) for c in companies.values())}}

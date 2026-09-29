@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from market import CurrencyConverter
+from industry_catalogue import analyze_catalogue
 import yfinance as yf
 
 
@@ -130,6 +131,7 @@ def export(report, output, refresh=False, previous=None, run_url=None):
       'decisions':decisions,'research':report.get('company_research',{}),
       'names':{s:watch.get(s,{}).get('name') or selected.get(s,{}).get('name') or s for s in symbols},
       'long_term_analysis':report.get('long_term_analysis'),
+      'industry_catalogue':analyze_catalogue(report.get('company_research',{})),
       'trades':report['trades'],'learning':report['learning'],'discovery':report.get('discovery',{}),
       'news':sorted(articles.values(),key=lambda a:a.get('published_at',''),reverse=True),
       'issues':issues,'account_history':sorted(history.values(),key=lambda p:p['time']),

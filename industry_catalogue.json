@@ -1,0 +1,3164 @@
+{
+  "provenance": "User-supplied industry_growth dictionary, 2026-09-29; not independently verified",
+  "entries": [
+    {
+      "name": "Semiconductors",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Software",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hardware",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cloud Computing",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Artificial Intelligence",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cybersecurity",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Internet",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Consumer Electronics",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "IT Services",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Networking",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Biotechnology",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Pharmaceuticals",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Medical Devices",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Healthcare Providers",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Healthcare Plans",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Life Sciences",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Banks",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Insurance",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Asset Management",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Capital Markets",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Financial Services",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fintech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Automotive",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Retail",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "E-Commerce",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Apparel",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hotels",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Restaurants",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Leisure",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Entertainment",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Travel and Tourism",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Food and Beverage",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Tobacco",
+      "supplied_growth_assumption": 0.01,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Household Products",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Personal Products",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fragrance",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cosmetics",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Oil & Gas",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Renewable Energy",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Solar",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wind",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Energy Equipment",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Aerospace",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Defense",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Robotics",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Industrial Machinery",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Transportation",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Logistics",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Construction",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Engineering",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Chemicals",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Metals",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Mining",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Gold",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Steel",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Agriculture",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Utilities",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Electric Utilities",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Water Utilities",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Real Estate",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "REITs",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Telecommunications",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Media",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Advertising",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Quantum Computing",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Blockchain",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cryptocurrency",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nanotechnology",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "3D Printing",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Drones",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Electric Vehicles",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Autonomous Vehicles",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wearables",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Smart Home",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Virtual Reality",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Augmented Reality",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Esports",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Streaming",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Social Media",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Search",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "E-Learning",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Telemedicine",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Genomics",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Proteomics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Bioinformatics",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Precision Medicine",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Immunotherapy",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Vaccines",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Medical Robotics",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Surgical Robotics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Diagnostics",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Imaging",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Dental",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Veterinary",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Agriculture Technology",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Food Technology",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Plant-Based Foods",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cultured Meat",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Vertical Farming",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Aquaculture",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Forestry",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Paper",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Packaging",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Textiles",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Furniture",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Homebuilding",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Home Improvement",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Appliances",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Toys",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Sports",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fitness",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Beauty",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Luxury Goods",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Jewelry",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Watches",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Footwear",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Accessories",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Pet Care",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Baby Products",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Tobacco Alternatives",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Alcohol",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cannabis Beverages",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Coffee",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Tea",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Soft Drinks",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Snacks",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Confectionery",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Dairy",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Meat",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Seafood",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Bakery",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Frozen Foods",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Canned Foods",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Organic Foods",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Natural Foods",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Supplements",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Vitamins",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Sports Nutrition",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Weight Loss",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Aesthetics",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Dermatology",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Ophthalmology",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cardiology",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Oncology",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Neurology",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Orthopedics",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Urology",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Gastroenterology",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Endocrinology",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rheumatology",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Infectious Diseases",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rare Diseases",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Orphan Drugs",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Generic Drugs",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Biosimilars",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Specialty Pharma",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Contract Research",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Contract Manufacturing",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Drug Delivery",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nanomedicine",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Regenerative Medicine",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Stem Cells",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Gene Therapy",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cell Therapy",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Tissue Engineering",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Bioelectronics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Neurotech",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Bionics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Exoskeletons",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Prosthetics",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Implants",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Dental Implants",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hearing Aids",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Vision Care",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Contact Lenses",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Glasses",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Sunglasses",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Eyewear",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fashion",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Streetwear",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Athleisure",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fast Fashion",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Sustainable Fashion",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Second-Hand Fashion",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rental Fashion",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Digital Fashion",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "NFTs",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Metaverse",
+      "supplied_growth_assumption": 0.35,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Web3",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "DeFi",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "DAO",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "CBDCs",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Stablecoins",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Payments",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Mobile Payments",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Digital Wallets",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Buy Now Pay Later",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Neobanks",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Insurtech",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wealthtech",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Regtech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Proptech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Legaltech",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "HRtech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Edtech",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Agtech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Foodtech",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Medtech",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cleantech",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Greentech",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Climatech",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Carbon Capture",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hydrogen",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Battery Storage",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "EV Charging",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Smart Grid",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nuclear",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fusion",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Geothermal",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hydropower",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Biofuels",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Waste Management",
+      "supplied_growth_assumption": 0.05,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Recycling",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Circular Economy",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Water Treatment",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Desalination",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Air Purification",
+      "supplied_growth_assumption": 0.07,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Environmental Services",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Fishing",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Aluminum",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Copper",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Lithium",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cobalt",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nickel",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rare Earths",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Silver",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Platinum",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Palladium",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Uranium",
+      "supplied_growth_assumption": 0.06,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Coal",
+      "supplied_growth_assumption": 0.01,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Oil",
+      "supplied_growth_assumption": 0.02,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Natural Gas",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Petrochemicals",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Plastics",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rubber",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Glass",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Ceramics",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cement",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Concrete",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wood",
+      "supplied_growth_assumption": 0.03,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Containers",
+      "supplied_growth_assumption": 0.04,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Automation",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Industrial IoT",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Smart Manufacturing",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Machine Learning",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Deep Learning",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Natural Language Processing",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Computer Vision",
+      "supplied_growth_assumption": 0.24,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Speech Recognition",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Generative AI",
+      "supplied_growth_assumption": 0.35,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hydrogen Vehicles",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Flying Cars",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hyperloop",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Brain-Computer Interface",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Neuroprosthetics",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Genetic Engineering",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "CRISPR",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Synthetic Biology",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Biohacking",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Longevity",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Anti-Aging",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cosmeceuticals",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nutraceuticals",
+      "supplied_growth_assumption": 0.08,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Functional Foods",
+      "supplied_growth_assumption": 0.09,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Personalized Nutrition",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Telehealth",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Digital Health",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Healthtech",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wearable Health",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Remote Monitoring",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Electronic Health Records",
+      "supplied_growth_assumption": 0.1,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Healthcare AI",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Drug Discovery AI",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Clinical Trials AI",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Metabolomics",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Microbiomics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Epigenetics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Transcriptomics",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Multi-Omics",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Liquid Biopsy",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Companion Diagnostics",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Molecular Diagnostics",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Point-of-Care Testing",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Lab-on-a-Chip",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Biosensors",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Wearable Sensors",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Implantable Sensors",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Smart Pills",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Ingestible Sensors",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Digital Pills",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Telepharmacy",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Online Pharmacy",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Pharmacy Automation",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Robotic Surgery",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Surgical Navigation",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Operating Room Integration",
+      "supplied_growth_assumption": 0.12,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Hospital Automation",
+      "supplied_growth_assumption": 0.14,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Medical Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Rehabilitation Robots",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Assistive Robots",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Elderly Care Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Social Robots",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Companion Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Military Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Security Robots",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Surveillance Robots",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Delivery Robots",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Warehouse Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Agricultural Robots",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Construction Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Mining Robots",
+      "supplied_growth_assumption": 0.18,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Underwater Robots",
+      "supplied_growth_assumption": 0.16,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Aerial Robots",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Robots",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Nanorobots",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Swarm Robotics",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Soft Robotics",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Modular Robotics",
+      "supplied_growth_assumption": 0.2,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Collaborative Robots",
+      "supplied_growth_assumption": 0.22,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Industrial Robots",
+      "supplied_growth_assumption": 0.15,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Humanoid Robots",
+      "supplied_growth_assumption": 0.25,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Android Robots",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cyborgs",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Transhumanism",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Posthumanism",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Singularity",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Artificial General Intelligence",
+      "supplied_growth_assumption": 0.4,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Superintelligence",
+      "supplied_growth_assumption": 0.45,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Mining",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Asteroid Mining",
+      "supplied_growth_assumption": 0.35,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Lunar Bases",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Mars Colonization",
+      "supplied_growth_assumption": 0.35,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Tourism",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Hotels",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Manufacturing",
+      "supplied_growth_assumption": 0.3,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Solar Power",
+      "supplied_growth_assumption": 0.28,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Space Elevators",
+      "supplied_growth_assumption": 0.4,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Interstellar Travel",
+      "supplied_growth_assumption": 0.4,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Warp Drives",
+      "supplied_growth_assumption": 0.5,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Cold Fusion",
+      "supplied_growth_assumption": 0.35,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    },
+    {
+      "name": "Zero-Point Energy",
+      "supplied_growth_assumption": 0.4,
+      "status": "unverified",
+      "source": null,
+      "period": null,
+      "metric": null,
+      "geography": null
+    }
+  ]
+}

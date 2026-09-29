@@ -204,6 +204,13 @@ def write_reports(report, directory):
                         [[symbol, ', '.join(m['theme_id'] for m in c['matches']) or 'Ingen / saknas',
                           c['assessment'], c['checks'], '; '.join(c['missing'])]
                          for symbol, c in theme_report['companies'].items()]), '']
+    catalogue = report.get('long_term_analysis', {}).get('industry_catalogue')
+    if catalogue:
+        lines += ['## Industry research catalogue', '', catalogue['policy'], '',
+                  str(catalogue['coverage']), '',
+                  table(['Ticker', 'Possible industry', 'Matched fields', 'Still required'],
+                        [[m['ticker'], m['industry'], ', '.join(m['matched_fields']), '; '.join(m['next_checks'])]
+                         for m in catalogue['matches']]), '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)
