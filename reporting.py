@@ -17,14 +17,14 @@ def write_reports(report, directory):
     directory = Path(directory)
     learning = report['learning']
     new_trades = report['new_trades']
-    lines = ['# Europe-first paper-trading report', '',
+    lines = ['# Global paper-trading report', '',
              f"Generated: {report['generated_at']}. All money and trades are simulated.", '',
              f"**Account: ${report['total_account_value']:,.2f} USD** · "
              f"Cash: ${report['remaining_cash']:,.2f} · "
              f"Holdings: ${report['holdings_value']:,.2f} · "
              f"P/L since start: ${report['profit_loss']:,.2f}", '',
-             f"Coverage: {report['coverage']['europe']} European and {report['coverage']['other']} other listings. "
-             'Discovered live from Yahoo Finance; European listings are considered first.', '',
+             f"Coverage: {report['coverage'].get('us', 0)} US, {report['coverage']['europe']} European and {report['coverage']['other']} other/unclassified listings. "
+             + report['coverage'].get('scope', 'Live Yahoo Finance discovery; see report for selection policy.'), '',
              '## New simulated trades', '']
     if new_trades:
         lines += [table(['Time', 'Ticker', 'Action', 'Shares', 'USD/share', 'Fake USD amount', 'Score', 'Reason'],

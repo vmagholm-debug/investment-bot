@@ -175,7 +175,7 @@ class ContinuousLearner(StrategyTrading, TenPercentMonthlyBot):
     def price_quote(self, ticker, df):
         quote = self.fx.convert(float(df['Close'].iloc[-1]), self.fx.currency(ticker))
         quote['data_date'] = df.index[-1].isoformat()
-        quote['region'] = self.discovered_regions.get(ticker, 'Europe' if is_europe(ticker) else 'Other')
+        quote['region'] = self.discovered_regions.get(ticker, self.last_prices.get(ticker, {}).get('region', 'Europe' if is_europe(ticker) else 'Other'))
         return quote
 
 
@@ -231,9 +231,11 @@ def main():
               'catalogue_analysis': assess_catalogue(bot.data, bot.research_reports),
               'strategy_policy': 'v1: independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
-              'coverage': {'tickers': bot.tickers, 'europe': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') == 'Europe' for t in bot.tickers),
-                           'other': sum(bot.discovered_regions.get(t, 'Europe' if is_europe(t) else 'Other') != 'Europe' for t in bot.tickers),
-                           'scope': 'Live Europe-first Yahoo screener with rotating candidate selection'},
+              'coverage': {'tickers': bot.tickers,
+                           'us': sum(bot.last_prices.get(t, {}).get('region') == 'US' for t in bot.tickers),
+                           'europe': sum(is_europe(t) or bot.last_prices.get(t, {}).get('region') == 'Europe' for t in bot.tickers),
+                           'other': sum(not is_europe(t) and bot.last_prices.get(t, {}).get('region') not in ('US','Europe') for t in bot.tickers),
+                           'scope': 'Live US-first global Yahoo screener: 24 US and 8 international candidates plus existing holdings'},
               'training_steps': bot.training_steps, 'training_loss': bot.last_loss,
               'replay_samples': len(bot.buffer),
               'model_validation': 'Uncalibrated score; no out-of-sample performance estimate'}

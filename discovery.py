@@ -18,13 +18,13 @@ def is_europe(symbol):
     return any(symbol.endswith(suffix) for suffix in EUROPE_SUFFIXES)
 
 
-def discover(path, europe_count=24, global_count=8, day=None):
+def discover(path, us_count=24, global_count=8, day=None):
     path = Path(path)
     state = json.loads(path.read_text()) if path.exists() else {'last_selected': {}, 'offsets': {}}
     today = day or datetime.now(timezone.utc).date().isoformat()
     allowed = set(yf.EquityQuery('eq', ['region', 'us']).valid_values['region'])
-    groups = [('Europe', sorted(EUROPE_REGIONS & allowed), europe_count),
-              ('Other', sorted(allowed - EUROPE_REGIONS), global_count)]
+    groups = [('US', ['us'], us_count),
+              ('International', sorted(allowed - {'us'}), global_count)]
     selected = []
     metadata = {}
     scans = []
@@ -50,7 +50,7 @@ def discover(path, europe_count=24, global_count=8, day=None):
         for item in active['quotes'] + page['quotes']:
             symbol = item.get('symbol')
             if (symbol and item.get('quoteType', 'EQUITY') == 'EQUITY'
-                    and not (name == 'Europe' and symbol.endswith('.IL'))):
+                    and not (symbol.endswith('.IL'))):
                 candidates[symbol] = item
         def ranking(symbol):
             # Least recently analyzed first, stable random exploration each day.
@@ -83,7 +83,7 @@ def discover(path, europe_count=24, global_count=8, day=None):
                       'selected': symbols, 'regions': regions})
     return selected, {'mode': 'live discovery', 'scans': scans, 'selected': metadata,
                       'filters': 'Average daily volume >100000; Yahoo intradaymarketcap >=500000000',
-                      'selection': '24 Europe / 8 elsewhere; exchange diversification, least recently selected, daily seeded exploration; excludes London international-order-book secondary listings'}, state
+                      'selection': f'{us_count} US / {global_count} outside US; exchange diversification, least recently selected, daily seeded exploration; excludes London international-order-book secondary listings'}, state
 
 
 def save_discovery(path, state):

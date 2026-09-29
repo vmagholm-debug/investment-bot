@@ -1,4 +1,4 @@
-# Europe-first five-strategy fake-money investment bot
+# US-first global five-strategy fake-money investment bot
 
 ## Where to see results
 
@@ -9,17 +9,17 @@ for `summary.md`, `trades.csv` (all historical trades), `latest.json`, and the s
 account/model. Email delivery is configured separately through the user's Codex
 follow-up and connected Gmail; no mailbox credentials are published in this repo.
 
-## Automatic stock discovery with a European focus
+## Automatic stock discovery with a US focus
 
 No stock-symbol list is required. On every run `discovery.py` queries Yahoo
 Finance's live stock screener across its supported regions, with most analysis
-slots reserved for Europe. It finds equities with average daily volume above
+slots reserved for the US. It finds equities with average daily volume above
 100,000 shares and a Yahoo intraday-market-cap field of at least 500 million.
 These provider filters narrow coverage; this is not every security on earth.
 
-For Europe and the rest of the world separately, it fetches up to 250 active
+For the US and the rest of the world separately, it fetches up to 250 active
 candidates plus a rotating alphabetical page of up to 250. It then selects 24
-European and 8 other candidates, spreading slots across exchanges and favoring those least recently analyzed with a
+US and 8 international candidates, spreading slots across exchanges and favoring those least recently analyzed with a
 reproducible daily shuffle. `discovery.json` saves page positions and selection
 history. Existing holdings are always included in valuation. Each report records
 matching-stock counts, fetched candidates, selected symbols, and data-source
@@ -211,7 +211,7 @@ paper evaluation, not evidence from a historical out-of-sample backtest.
 
 `patterns.py` adds a diagnostic pattern library. It compares four consecutive
 five-day price changes, distance from 20/50-day means, volatility and relative
-volume across the rotating Europe-first universe. Context is tagged as rebound
+volume across the rotating US-first global universe. Context is tagged as rebound
 after decline, uptrend, downtrend or mixed. It does not enumerate all named chart
 patterns or scan every listed security. The library grows as new tickers are
 analyzed, retaining at most 50,000 historical snapshots in `patterns.json`.
