@@ -10,7 +10,9 @@ def normalized(text):
 
 def analyze_catalogue(research):
     catalogue = json.loads(Path(__file__).with_name('industry_catalogue.json').read_text())
-    entries = catalogue['entries']
+    audit = json.loads(Path(__file__).with_name('industry_growth_audit.json').read_text())
+    reviews = {e['name']: e for e in audit['entries']}
+    entries = [{**e, **reviews[e['name']]} for e in catalogue['entries']]
     matches = []
     profiles = 0
     for ticker, report in research.items():
@@ -28,7 +30,9 @@ def analyze_catalogue(research):
                     'next_checks': ['Source and date for market forecast', 'Metric, geography and forecast period',
                                     'Company segment revenue exposure', 'Competition, margins and valuation']})
     return {'provenance': catalogue['provenance'], 'entries': entries, 'matches': matches,
-            'policy': 'Forskningskatalog från användaren. Alla tillväxttal är overifierade antaganden; period, mått, geografi och källa saknas. Ingen rangordning, köpregel eller avkastningsprognos använder talen. Överlappande områden räknas inte som oberoende bekräftelser. Textträffar är ledtrådar, inte verifierade intäkter eller bevis på en investerbar marknad.',
-            'coverage': {'registered': len(entries), 'verified_growth_rates': 0,
+            'audit': {k: v for k, v in audit.items() if k != 'entries'},
+            'policy': 'Alla 351 områden har källsökts mot global marknadsomsättning, CAGR 2026–2031. Kandidatkällor är inte automatiskt godkända. Originaltal behålls som antaganden. Källbelagda prognoser är utgivarens uppskattningar, inte säker framtida tillväxt. Inga tal styr köp; överlappande områden är inte oberoende bekräftelser.',
+            'coverage': {'registered': len(entries), 'verified_growth_rates': 0, 'source_searched': len(entries),
+                         'sourced_forecasts': sum(e['review_status'] == 'sourced_forecast' for e in entries),
                          'companies': len(research), 'with_profile': profiles, 'text_matches': len(matches)},
             'matching_policy': 'Normalized whole phrases in Yahoo industry/business summary; conservative, no inferred synonyms. No automatic source verification or full-market scan.'}

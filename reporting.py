@@ -2,6 +2,7 @@
 import csv
 import html
 import os
+from learning_results import learning_results
 from pathlib import Path
 
 
@@ -26,6 +27,14 @@ def write_reports(report, directory):
              f"Coverage: {report['coverage'].get('us', 0)} US, {report['coverage']['europe']} European and {report['coverage']['other']} other/unclassified listings. "
              + report['coverage'].get('scope', 'Live Yahoo Finance discovery; see report for selection policy.'), '',
              '## New simulated trades', '']
+    observed = learning_results(report)
+    lines += ['## Results versus learning activity', '',
+              f"Recorded sales: {observed['sales']}; profitable sales: {observed['winning_sales']}; losing sales: {observed['losing_sales']}.",
+              f"Realized P/L USD: {observed['realized_pnl']}; unrealized P/L USD: {observed['unrealized_pnl']}.",
+              'No independent out-of-sample LSTM performance estimate is available. Trading strategies select entries; account profit is not proof of model improvement.', '']
+    change = observed['training_loss_change_pct']
+    if change is not None:
+        lines += [f"Fixed-training-batch error became {abs(change):.2f}% {'larger (worse fit)' if change > 0 else 'smaller (better fit)' if change < 0 else 'changed (unchanged fit)'}. This is not a change in accuracy or investment return.", '']
     if report.get('watchlist'):
         lines += ['## Priority review before upcoming reports / Q4', '',
                   'These user-selected companies are reviewed every run in addition to live discovery. '

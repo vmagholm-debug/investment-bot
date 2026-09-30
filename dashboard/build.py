@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from market import CurrencyConverter
 from industry_catalogue import analyze_catalogue
+from learning_results import learning_results
 import yfinance as yf
 
 
@@ -132,6 +133,7 @@ def export(report, output, refresh=False, previous=None, run_url=None):
       'names':{s:watch.get(s,{}).get('name') or selected.get(s,{}).get('name') or s for s in symbols},
       'long_term_analysis':report.get('long_term_analysis'),
       'industry_catalogue':analyze_catalogue(report.get('company_research',{})),
+      'learning_results':learning_results(report),
       'trades':report['trades'],'learning':report['learning'],'discovery':report.get('discovery',{}),
       'news':sorted(articles.values(),key=lambda a:a.get('published_at',''),reverse=True),
       'issues':issues,'account_history':sorted(history.values(),key=lambda p:p['time']),
@@ -139,6 +141,7 @@ def export(report, output, refresh=False, previous=None, run_url=None):
     (output/'data.json').write_text(json.dumps(data,ensure_ascii=False,allow_nan=False))
     (output/'report.json').write_text(json.dumps(report,ensure_ascii=False,allow_nan=False))
     for name in ('index.html','style.css','app.js'):shutil.copy(Path(__file__).with_name(name),output/name)
+    shutil.copy(Path(__file__).resolve().parents[1]/'industry_growth_audit.json', output/'industry_growth_audit.json')
     (output/'.nojekyll').touch()
     return data
 
