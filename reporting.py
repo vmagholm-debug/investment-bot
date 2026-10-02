@@ -220,6 +220,19 @@ def write_reports(report, directory):
                   table(['Ticker', 'Possible industry', 'Matched fields', 'Still required'],
                         [[m['ticker'], m['industry'], ', '.join(m['matched_fields']), '; '.join(m['next_checks'])]
                          for m in catalogue['matches']]), '']
+    analysis = report.get('investment_analysis')
+    if analysis:
+        lines += ['## Investment research discipline', '', analysis['policy'], analysis['source_policy'], '']
+        for ticker, row in analysis['companies'].items():
+            lines += [f'### Investment thesis review: {ticker}', row['assessment'],
+                      'Evidence quality: '+row['confidence']+' — '+row['confidence_reason'],
+                      'Market belief: '+row['market_belief'], 'Variant perception: '+row['variant_perception'],
+                      table(['Stage', 'Recorded assessment'], [[k,v] for k,v in row['chain'].items()]),
+                      table(['Engine', 'Coverage', 'Missing'], [[e['name'],e['status'],'; '.join(e['missing'])] for e in row['engines']]),
+                      table(['Scenario','Assumptions','Trigger','Numerical valuation'], [[e['name'],e['assumptions'],e['trigger'],e['reason_unquantified']] for e in row['scenarios']]),
+                      'Counterarguments: '+'; '.join(row['counterarguments']),
+                      'Invalidation / monitoring: '+str(row['invalidation']),
+                      'Next research by decision value: '+str(row['next_research']), '']
     summary = '\n'.join(lines)
     directory.mkdir(parents=True, exist_ok=True)
     (directory / 'summary.md').write_text(summary)

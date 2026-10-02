@@ -15,6 +15,7 @@ from market import CurrencyConverter
 from discovery import discover, save_discovery, is_europe
 from reporting import write_reports
 from themes import analyze_themes
+from investment_analysis import analyze as analyze_investment
 from research import CompanyResearch
 from strategies import StrategyTrading
 from patterns import PatternLibrary
@@ -246,6 +247,7 @@ def main():
               'training_steps': bot.training_steps, 'training_loss': bot.last_loss,
               'replay_samples': len(bot.buffer),
               'model_validation': 'Uncalibrated score; no out-of-sample performance estimate'}
+    report['investment_analysis'] = analyze_investment(report)
     rendered = json.dumps(report, indent=2, allow_nan=False)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(rendered + '\n')

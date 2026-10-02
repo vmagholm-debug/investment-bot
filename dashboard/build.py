@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from market import CurrencyConverter
 from industry_catalogue import analyze_catalogue
 from learning_results import learning_results
+from investment_analysis import analyze as analyze_investment
 import yfinance as yf
 
 
@@ -132,6 +133,7 @@ def export(report, output, refresh=False, previous=None, run_url=None):
       'decisions':decisions,'research':report.get('company_research',{}),
       'names':{s:watch.get(s,{}).get('name') or selected.get(s,{}).get('name') or s for s in symbols},
       'long_term_analysis':report.get('long_term_analysis'),
+      'investment_analysis':analyze_investment(report),
       'industry_catalogue':analyze_catalogue(report.get('company_research',{})),
       'learning_results':learning_results(report),
       'trades':report['trades'],'learning':report['learning'],'discovery':report.get('discovery',{}),
