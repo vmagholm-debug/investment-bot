@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T14:37:54.080131+00:00",
+  "updated_at": "2026-10-19T16:00:16.736251+00:00",
   "signals": [
     {
       "id": "miljon-20261019-169",
@@ -96,6 +96,54 @@
       "thesis": "PHP har tecknat ett villkorat 50/50-samriskavtal med GIC för 27 sjukhus; väntad nettolikvid cirka 500 miljoner GBP ska minska skulden.",
       "risk": "Affären kräver finansieringsslutförande; överföring till 5 procents rabatt mot bokfört värde och förlorad direkt hyresintjäning kan motverka vinsten.",
       "source_checked_at": "2026-10-19T14:37:53.501128+00:00"
+    },
+    {
+      "id": "miljon-20261019-176",
+      "ticker": "TSTL.L",
+      "company": "Tristel plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-19T16:00:16.323255+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/tristel--tstl/final-results/9828210",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "FY2026: omsättning 51,1 MGBP, upp 10 procent; justerad vinst före skatt 11,7 MGBP, upp 15 procent.",
+      "risk": "MiljonBots tes om inbromsning i andra halvåret kräver separat halvårsjämförelse; den beräkningen är inte verifierad här."
+    },
+    {
+      "id": "miljon-20261019-177",
+      "ticker": "ITM.L",
+      "company": "ITM Power Plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-19T16:00:16.323255+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/itm-power--itm/preliminary-results/9828264",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "ITM uppger att 83 procent av orderboken består av lönsamma kontrakt, mot 60 procent året före; orderboken är 144,0 MGBP.",
+      "risk": "Koncernen är fortfarande förlustbringande. Kontraktsmix är inte bevis på positiv koncernvinst; FY2027 väntas ge ytterligare EBITDA-förlust."
+    },
+    {
+      "id": "miljon-20261019-171",
+      "ticker": "MIND.L",
+      "company": "Mind Gym plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "DJUPRESEARCH",
+      "bias": "negative",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-19T16:00:16.323255+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/mind-gym--mind/half-year-trading-update/9828245",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "MindGym väntar 15 procents omsättningsnedgång i första halvåret och helårs-EBITDA-förlust på 1,2–1,5 MGBP.",
+      "risk": "Bolaget väntar ett starkare andra halvår och växande licensintäkter, men svagare kundutgifter och långsammare konvertering kvarstår."
     },
     {
       "id": "miljon-20261019-167",
