@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T18:05:04.700514+00:00",
+  "updated_at": "2026-10-19T20:05:47.542660+00:00",
   "signals": [
+    {
+      "id": "miljon-20261019-180",
+      "ticker": "HINDZINC.NS",
+      "company": "Hindustan Zinc Limited",
+      "exchange": "NSI",
+      "quote_currency": "INR",
+      "bias": "positive",
+      "published_at": "2026-10-19T13:30:00+00:00",
+      "expires_at": "2026-10-26T13:30:00+00:00",
+      "source_url": "https://www.businesswire.com/news/home/20261019691334/en/",
+      "source_status": "unverified",
+      "status": "DJUPRESEARCH",
+      "thesis": "MiljonBot reports a reduction in FY27 zinc production cost guidance to $825–850/ton excluding royalty. Original release and earnings-call figures could not be independently read during handoff; publication time is source-reported.",
+      "risk": "Unverified research lead. Sulphuric-acid byproduct credits and metal/energy prices may make cost improvements cyclical. No validated earnings forecast."
+    },
+    {
+      "id": "miljon-20261019-181",
+      "ticker": "CME",
+      "company": "CME Group Inc.",
+      "exchange": "NMS",
+      "quote_currency": "USD",
+      "bias": "uncertain",
+      "published_at": "2026-10-19T10:00:00+00:00",
+      "expires_at": "2026-10-26T10:00:00+00:00",
+      "source_url": "https://investor.cmegroup.com/news-releases/news-release-details/cme-group-launch-tungsten-futures-meet-rising-demand-critical",
+      "source_status": "unverified",
+      "status": "BEVAKA",
+      "thesis": "MiljonBot reports planned tungsten futures in Q1 2027 subject to regulatory approval. Issuer page returned HTTP 403, so facts and publication time remain unverified in this handoff.",
+      "risk": "No quantified profit impact. Contract liquidity and basis risk are uncertain; reported indirect beneficiaries have not confirmed adoption."
+    },
     {
       "id": "miljon-20261019-169",
       "ticker": "VLX.L",
