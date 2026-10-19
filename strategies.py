@@ -2,6 +2,7 @@
 from datetime import datetime, timezone
 import math
 import pandas as pd
+from miljon_signals import entry_check
 
 NAMES = ('mean_reversion', 'momentum', 'trend_following', 'breakout', 'earnings')
 
@@ -110,6 +111,7 @@ class StrategyTrading:
                     self.cash += amount
                     trade = self._strategy_trade(sig, 'PAPER SELL', strategy, qty, price, amount, exit_reason)
                     trade['realized_pnl'] = amount - qty * entry['price']
+                    trade['miljon_signal_ids'] = entry.get('miljon_signal_ids', [])
                     self.trade_log.append(trade)
                     sig.update(action='PAPER SELL', strategy=strategy, reason=exit_reason)
                 else:
@@ -117,10 +119,17 @@ class StrategyTrading:
                 continue
             active = [name for name in NAMES if rules[name]['entry']]
             sig['entry_candidates'] = active
+            leads = getattr(self, 'miljon_signals', {}).get(ticker, [])
+            check = entry_check(leads, self.last_prices[ticker], frame, research, self.cash, self.trade_log) if leads else None
+            if check is not None:
+                sig['miljon_entry_check'] = check
+                sig['miljon_signal_ids'] = check['signal_ids']
             if not active:
                 sig['reason'] = 'No strategy entry rule passed'
             elif not sig['research_gate']['approved']:
                 sig['reason'] = sig['research_gate']['reason']
+            elif check is not None and not check['approved']:
+                sig['reason'] = check['reason']
             elif len(self.portfolio) >= 10:
                 sig['reason'] = 'Maximum ten holdings reached'
             elif self.cash * .02 < 1:
@@ -128,12 +137,12 @@ class StrategyTrading:
             else:
                 # Deterministic priority; overlapping signals do not multiply size.
                 strategy = active[0]
-                amount = self.cash * .02
+                amount = check['amount'] if check is not None else self.cash * .02
                 qty = amount / price
                 self.cash -= amount
                 self.portfolio[ticker] = qty
                 self.last_purchase_dates[ticker] = sig['data_date']
-                reason = strategy + ': ' + rules[strategy]['reason'] + '; research passed; 2% of available fake cash'
+                reason = strategy + ': ' + rules[strategy]['reason'] + '; research passed; ' + (check['reason'] if check else '2% of available fake cash')
                 self.trade_log.append(self._strategy_trade(sig, 'PAPER BUY', strategy, qty, price, amount, reason))
                 sig.update(action='PAPER BUY', strategy=strategy, reason=reason)
         return [results[t] for t in self.tickers]
@@ -143,4 +152,6 @@ class StrategyTrading:
                 'action': action, 'strategy': strategy, 'qty': qty, 'price': price,
                 'amount': amount, 'currency': 'USD', 'quote': self.last_prices[sig['ticker']],
                 'confidence': sig['confidence'], 'accuracy': None, 'historical_mean_21d_return': None,
+                'miljon_signal_ids': sig.get('miljon_signal_ids', []),
+                'miljon_entry_check': sig.get('miljon_entry_check'),
                 'reason': reason, 'research_gate': sig['research_gate'], 'strategies': sig['strategies']}

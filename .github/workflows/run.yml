@@ -1,6 +1,9 @@
 name: Run investment bot
 
 on:
+  push:
+    branches: [main]
+    paths: [miljon_signals.json]
   schedule:
     - cron: '0 7 * * *'
       timezone: Europe/Stockholm

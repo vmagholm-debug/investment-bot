@@ -130,6 +130,7 @@ def export(report, output, refresh=False, previous=None, run_url=None):
       'report_account_value':report['total_account_value'],
       'valuation_mixed':any(quotes[s]['status']!='provider_quote' for s in report['portfolio']),
       'positions':positions,'quotes':quotes,'watchlist':list(watch.values()),
+      'miljonbot':report.get('miljonbot'),
       'decisions':decisions,'research':report.get('company_research',{}),
       'names':{s:watch.get(s,{}).get('name') or selected.get(s,{}).get('name') or s for s in symbols},
       'long_term_analysis':report.get('long_term_analysis'),

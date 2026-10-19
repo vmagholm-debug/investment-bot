@@ -35,6 +35,17 @@ def write_reports(report, directory):
     change = observed['training_loss_change_pct']
     if change is not None:
         lines += [f"Fixed-training-batch error became {abs(change):.2f}% {'larger (worse fit)' if change > 0 else 'smaller (better fit)' if change < 0 else 'changed (unchanged fit)'}. This is not a change in accuracy or investment return.", '']
+    miljon = report.get('miljonbot')
+    if miljon:
+        lines += ['## MiljonBot signal handoff', '', miljon['policy'], '',
+                  'Feed updated: ' + str(miljon['updated_at']),
+                  'Feed errors: ' + str(miljon['errors']), '',
+                  table(['Signal', 'Ticker', 'Status / bias', 'Publication', 'Source checked', 'Decision', 'Reason'],
+                        [[r['id'], r['ticker'], r['status'] + ' / ' + r['bias'], r['published_at'],
+                          r['source_status'], r['decision'], r['decision_reason']] for r in miljon['signals']]), '']
+        for r in miljon['signals']:
+            lines += [f"- {r['id']}: {r['thesis']} Risk: {r['risk']}. Source: {r['source_url']}"]
+        lines += ['']
     if report.get('watchlist'):
         lines += ['## Priority review before upcoming reports / Q4', '',
                   'These user-selected companies are reviewed every run in addition to live discovery. '

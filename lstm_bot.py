@@ -10,6 +10,7 @@ import torch
 from torch import nn
 import yfinance as yf
 
+from miljon_signals import load_feed, candidates, summarize as summarize_miljon
 from bot import TenPercentMonthlyBot
 from market import CurrencyConverter
 from discovery import discover, save_discovery, is_europe
@@ -56,6 +57,7 @@ class ContinuousLearner(StrategyTrading, TenPercentMonthlyBot):
         self.learning = {}
         self.discovered_regions = {}
         self.research_reports = {}
+        self.miljon_signals = {}
         if self.checkpoint.exists():
             saved = torch.load(self.checkpoint, map_location='cpu', weights_only=True)
             if saved['version'] != 1:
@@ -199,11 +201,16 @@ def main():
         tickers, discovery_report, discovery_state = args.tickers, {'mode': 'explicit CLI override'}, None
     else:
         tickers, discovery_report, discovery_state = discover(args.discovery_state)
+    miljon_report = load_feed()
+    tickers = list(dict.fromkeys(candidates(miljon_report) + tickers))
     watchlist = load_watchlist()
     tickers = include_watchlist(tickers, watchlist)
     bot = ContinuousLearner(tickers, args.checkpoint, args.steps)
     bot.discovered_regions = {t: d['region_group'] for t, d in discovery_report.get('selected', {}).items()}
     bot.discovered_regions.update({r['ticker']: r['region'] for r in watchlist})
+    for row in miljon_report['signals']:
+        if row.get('selected'):
+            bot.miljon_signals.setdefault(row['ticker'], []).append(row)
     bot.load_state(args.state)
     bot.tickers = list(dict.fromkeys(tickers + list(bot.portfolio)))
     trade_count_before = len(bot.trade_log)
@@ -236,14 +243,15 @@ def main():
               'pattern_analysis': pattern_report,
               'long_term_analysis': analyze_themes(bot.research_reports),
               'catalogue_analysis': assess_catalogue(bot.data, bot.research_reports),
-              'strategy_policy': 'v1: independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
+              'strategy_policy': 'v2: MiljonBot candidates bypass discovery cap; fresh verified positive signal, identity and liquidity checks; below-$5 MiljonBot entries use 1% cash, other MiljonBot entries 2%, capped at 1% daily turnover; independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
+              'miljonbot': summarize_miljon(miljon_report, results),
               'watchlist': summarize_watchlist(watchlist, bot.research_reports, results),
               'coverage': {'tickers': bot.tickers,
                            'us': sum(bot.last_prices.get(t, {}).get('region') == 'US' for t in bot.tickers),
                            'europe': sum(is_europe(t) or bot.last_prices.get(t, {}).get('region') == 'Europe' for t in bot.tickers),
                            'other': sum(not is_europe(t) and bot.last_prices.get(t, {}).get('region') not in ('US','Europe') for t in bot.tickers),
-                           'scope': 'Live US-first global Yahoo screener: 24 US and 8 international candidates plus user watchlist and existing holdings'},
+                           'scope': 'Live US-first global Yahoo screener: 24 US and 8 international candidates plus MiljonBot candidates without market-cap floor, user watchlist and existing holdings'},
               'training_steps': bot.training_steps, 'training_loss': bot.last_loss,
               'replay_samples': len(bot.buffer),
               'model_validation': 'Uncalibrated score; no out-of-sample performance estimate'}
