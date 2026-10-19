@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T16:00:16.736251+00:00",
+  "updated_at": "2026-10-19T18:05:04.700514+00:00",
   "signals": [
     {
       "id": "miljon-20261019-169",
@@ -144,6 +144,38 @@
       "expires_at": "2026-10-26T06:00:00+00:00",
       "thesis": "MindGym väntar 15 procents omsättningsnedgång i första halvåret och helårs-EBITDA-förlust på 1,2–1,5 MGBP.",
       "risk": "Bolaget väntar ett starkare andra halvår och växande licensintäkter, men svagare kundutgifter och långsammare konvertering kvarstår."
+    },
+    {
+      "id": "miljon-20261019-179",
+      "ticker": "SQZ.L",
+      "company": "Serica Energy plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "negative",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-19T18:05:04.001169+00:00",
+      "source_url": "https://www.serica-energy.com/media/20olq1vj/serica-trading-and-operations-update-q3-final.pdf",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "Triton restart delayed until around late November for an engine replacement. Serica now expects 2026 production just below 40,000 boepd; Q3 table reports 22,100 boepd.",
+      "risk": "Negative operational signal, not a buy. Post-tax operating cash-flow guidance remains $450–475m supported by gas prices and a diversified portfolio; current production exceeds 40,000 boepd excluding Triton."
+    },
+    {
+      "id": "miljon-20261019-166",
+      "ticker": "S32.AX",
+      "company": "South32 Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "status": "BEVAKA",
+      "bias": "negative",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-19T18:05:04.001169+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/south32-limited-di---s32/quarterly-report-september-2026-/9828255",
+      "published_at": "2026-10-18T23:28:00+00:00",
+      "expires_at": "2026-10-25T23:28:00+00:00",
+      "thesis": "Cannington zinc-equivalent quarterly production fell 27% to 59.2kt as paste-backfill constraints restricted mining. FY27 guidance remains 290kt. Signals 166 and 178 describe the same release, retained as one event.",
+      "risk": "Negative operational signal, not a buy. South32 expects upgrades to restore mining rates; unchanged guidance and stronger operations elsewhere counter the weakness."
     },
     {
       "id": "miljon-20261019-167",
