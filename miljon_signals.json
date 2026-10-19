@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T11:06:08.461866+00:00",
+  "updated_at": "2026-10-19T14:37:54.080131+00:00",
   "signals": [
     {
       "id": "miljon-20261019-169",
@@ -49,6 +49,53 @@
       "thesis": "Formell tjänsteorder på 1,04 miljoner GBP ersätter preliminärt besked om 0,52 miljoner GBP.",
       "risk": "Tillägget är 0,52 miljoner GBP; resultatpåverkan och framtida licensförsäljning är inte fastställda.",
       "source_checked_at": "2026-10-19T11:06:08.461866+00:00"
+    },
+    {
+      "id": "miljon-20261019-173",
+      "ticker": "GELN.L",
+      "company": "Gelion plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/gelion--geln/strong-independent-u-s-validation-of-gelion-s-nes/9828289",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "Gelion rapporterar externa laboratorietester där NES-celler behöll 92 procent av referenskapaciteten vid högre effektuttag.",
+      "risk": "Preliminära knappcellstester; industriell ekonomi, större celler och kommersiella avtal återstår.",
+      "source_checked_at": "2026-10-19T14:37:53.501128+00:00"
+    },
+    {
+      "id": "miljon-20261019-174",
+      "ticker": "SAV.L",
+      "company": "Savannah Resources Plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "unverified",
+      "source_url": "https://tools.eurolandir.com/tools/Pressreleases/GetPressRelease/?ID=8158447&companycode=uk-ame&lang=en-GB&v=",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "MiljonBot uppger villkorat miljöbesked för en transportväg till Barroso. Originalkällan gick inte att läsa vid överlämningen.",
+      "risk": "Obekräftad källa i denna överlämning; kvarstående tillstånd, finansiering och projektgenomförande."
+    },
+    {
+      "id": "miljon-20261019-175",
+      "ticker": "PHP.L",
+      "company": "Primary Health Properties Plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/primary-health-properties--php/new-strategic-joint-venture-with-gic-/9828233",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "expires_at": "2026-10-26T06:00:00+00:00",
+      "thesis": "PHP har tecknat ett villkorat 50/50-samriskavtal med GIC för 27 sjukhus; väntad nettolikvid cirka 500 miljoner GBP ska minska skulden.",
+      "risk": "Affären kräver finansieringsslutförande; överföring till 5 procents rabatt mot bokfört värde och förlorad direkt hyresintjäning kan motverka vinsten.",
+      "source_checked_at": "2026-10-19T14:37:53.501128+00:00"
     },
     {
       "id": "miljon-20261019-167",
