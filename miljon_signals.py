@@ -23,13 +23,15 @@ def stamp(value):
 
 
 def validate(document):
-    if document.get('version') != 1 or not isinstance(document.get('signals'), list):
+    if not isinstance(document, dict) or document.get('version') != 1 or not isinstance(document.get('signals'), list):
         raise ValueError('Expected version 1 and signals array')
     if len(document['signals']) > 200:
         raise ValueError('Feed limited to 200 records; archive older records separately')
     stamp(document['updated_at'])
     seen = set()
     for row in document['signals']:
+        if not isinstance(row, dict):
+            raise ValueError('Signal records must be objects')
         for key in ('id', 'ticker', 'company', 'exchange', 'quote_currency', 'source_url',
                     'source_status', 'published_at', 'expires_at', 'status', 'bias', 'thesis', 'risk'):
             if not isinstance(row.get(key), str) or not row[key].strip():

@@ -41,6 +41,8 @@ class MiljonTests(unittest.TestCase):
             doc['signals'].append(copy.deepcopy(row));p.write_text(json.dumps(doc))
             self.assertTrue(load_feed(p,now)['errors'])
             self.assertEqual(candidates(load_feed(p,now)),[])
+        with self.assertRaises(ValueError):validate([])
+        with self.assertRaises(ValueError):validate({**doc,'signals':[[]]})
         row['expires_at']=(now+timedelta(days=30)).isoformat()
         with self.assertRaises(ValueError):validate(doc)
 

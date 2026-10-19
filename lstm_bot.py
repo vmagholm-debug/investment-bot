@@ -211,6 +211,8 @@ def main():
     for row in miljon_report['signals']:
         if row.get('selected'):
             bot.miljon_signals.setdefault(row['ticker'], []).append(row)
+            if row['exchange'] in {'NYQ', 'NMS', 'NGM', 'NCM', 'ASE', 'PCX', 'BTS', 'PNK', 'OEM'}:
+                bot.discovered_regions[row['ticker']] = 'US'
     bot.load_state(args.state)
     bot.tickers = list(dict.fromkeys(tickers + list(bot.portfolio)))
     trade_count_before = len(bot.trade_log)
@@ -243,7 +245,7 @@ def main():
               'pattern_analysis': pattern_report,
               'long_term_analysis': analyze_themes(bot.research_reports),
               'catalogue_analysis': assess_catalogue(bot.data, bot.research_reports),
-              'strategy_policy': 'v2: MiljonBot candidates bypass discovery cap; fresh verified positive signal, identity and liquidity checks; below-$5 MiljonBot entries use 1% cash, other MiljonBot entries 2%, capped at 1% daily turnover; independent entries; LSTM diagnostic only; research approval; 2% cash per entry; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
+              'strategy_policy': 'v2: MiljonBot candidates bypass discovery cap; fresh verified positive signal, identity and liquidity checks; below-$5 MiljonBot entries use 1% cash, other MiljonBot entries 2%, capped at 1% daily turnover; independent entries; LSTM diagnostic only; research approval; other discovery entries use 2% cash; maximum 10 positions; daily exits at -5%, +10%, 21 trading days or strategy exit; no fees/slippage',
               'discovery': discovery_report,
               'miljonbot': summarize_miljon(miljon_report, results),
               'watchlist': summarize_watchlist(watchlist, bot.research_reports, results),
