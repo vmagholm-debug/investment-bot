@@ -1,7 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T06:49:03.216757+00:00",
+  "updated_at": "2026-10-20T10:00:45.810600+00:00",
   "signals": [
+    {
+      "id": "miljon-20261020-194",
+      "ticker": "XPP.L",
+      "company": "XP Power Limited",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "bias": "positive",
+      "status": "DJUPRESEARCH",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T10:00:45.209192+00:00",
+      "published_at": "2026-10-20T06:00:00+00:00",
+      "expires_at": "2026-10-27T06:00:00+00:00",
+      "source_url": "https://www.investegate.co.uk/index.php/announcement/rns/xp-power-ltd-di---xpp/q3-trading-update/9830634",
+      "thesis": "Q3 order intake £106.8m, +93%; revenue £63.8m, +10% constant currency; book-to-bill 1.67 and order book £216.9m. FY27 expected slightly ahead of market expectations.",
+      "risk": "Earlier customer orders reflect extending lead times; underlying demand estimated similar to Q2, not +93%. Comet litigation remains and order timing may reverse."
+    },
+    {
+      "id": "miljon-20261020-195",
+      "ticker": "IES.L",
+      "company": "Invinity Energy Systems plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "bias": "negative",
+      "status": "DJUPRESEARCH",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T10:00:45.209192+00:00",
+      "published_at": "2026-10-20T06:00:00+00:00",
+      "expires_at": "2026-10-27T06:00:00+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/invinity-energy-systems--ies/proposed-fundraising-of-a-minimum-of-20-million/9830673",
+      "thesis": "Proposed fundraising at 10p, 43.5% discount to 16 October closing reference. Trading suspended during capital access window; resumption expected 22 October. FY2028 removed from outlook due to project timing uncertainty.",
+      "risk": "Dilution and financing/execution risk; fundraising remains conditional. Commercial pipeline is not unconditional orders. Additional capital may support working capital into H1 2028, but milestones are not guaranteed."
+    },
     {
       "id": "miljon-20261020-192",
       "ticker": "ABB.ST",
