@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19T20:05:47.542660+00:00",
+  "updated_at": "2026-10-20T06:49:03.216757+00:00",
   "signals": [
+    {
+      "id": "miljon-20261020-192",
+      "ticker": "ABB.ST",
+      "company": "ABB Ltd",
+      "exchange": "STO",
+      "quote_currency": "SEK",
+      "bias": "positive",
+      "status": "BEVAKA",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T06:49:02.574843+00:00",
+      "published_at": "2026-10-20T04:50:00+00:00",
+      "expires_at": "2026-10-27T04:50:00+00:00",
+      "source_url": "https://www.eqs-news.com/news/ad-hoc/q3-2026-results/501cf9a9-5caf-482b-b6a4-59e809c6c361_en",
+      "thesis": "Q3 orders $12.055bn (+40%), revenues $9.701bn (+14%) and operational EBITA margin 20.8%. Book-to-bill 1.24. ABB describes incremental capacity expansion and selective third-party assembly.",
+      "risk": "Orders are not guaranteed profitable revenue. ABB expects sequential Q4 margin softening; third-party assembly does not prove a production bottleneck or identify listed suppliers."
+    },
     {
       "id": "miljon-20261019-180",
       "ticker": "HINDZINC.NS",
@@ -221,6 +237,22 @@
       "expires_at": "2026-10-25T22:49:00+00:00",
       "thesis": "MiljonBot rapporterar ett pilotresultat för mangansulfat. Ursprunglig PDF är ännu inte kontrollerad i överlämningen.",
       "risk": "Pilotproduktion bevisar inte kommersiell lönsamhet; finansiering och uppskalning återstår."
+    },
+    {
+      "id": "miljon-20261020-191",
+      "ticker": "MMI.AX",
+      "company": "Metro Mining Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "bias": "negative",
+      "status": "BEVAKA",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T06:49:02.574843+00:00",
+      "published_at": "2026-10-18T14:00:00+00:00",
+      "expires_at": "2026-10-25T14:00:00+00:00",
+      "source_url": "https://investorpa.com/announcement-pdf/20261019/359086.pdf",
+      "thesis": "Issuer announcement dated 19 October updates 2026 bauxite shipments to 6.0–6.5 million wet metric tonnes following September underperformance. Channel maintenance and recruitment mitigation underway. Publication hour unavailable; earliest Australian calendar-day boundary used conservatively.",
+      "risk": "Lower shipments can impair cash flow; channel restoration, available transshipping assets and potential extended loading season may help. Ore hauled is not exported volume; earlier guidance comparison not independently checked."
     }
   ]
 }
