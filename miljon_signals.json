@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T10:00:45.810600+00:00",
+  "updated_at": "2026-10-20T12:02:42.702949+00:00",
   "signals": [
+    {
+      "id": "miljon-20261020-197",
+      "ticker": "GKP.L",
+      "company": "Gulf Keystone Petroleum Limited",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "bias": "negative",
+      "status": "BEVAKA",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T12:02:42.079269+00:00",
+      "published_at": "2026-10-20T06:01:00+00:00",
+      "expires_at": "2026-10-27T06:01:00+00:00",
+      "source_url": "https://mfn.se/a/gulf-keystone-petroleum/operational-and-corporate-update.iframe",
+      "thesis": "Issuer now expects PF-2 water-handling start-up in Q2 2027 due to supply-chain constraints. Production/export continue with approximately 45,000 bopd full well capacity.",
+      "risk": "Capacity is not actual daily production. Debt-free balance sheet and $48.2m cash offer a counterweight; oil prices, security, export receipts and merger execution remain risks. Incremental production estimates not independently verified here."
+    },
     {
       "id": "miljon-20261020-194",
       "ticker": "XPP.L",
@@ -33,6 +49,22 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/invinity-energy-systems--ies/proposed-fundraising-of-a-minimum-of-20-million/9830673",
       "thesis": "Proposed fundraising at 10p, 43.5% discount to 16 October closing reference. Trading suspended during capital access window; resumption expected 22 October. FY2028 removed from outlook due to project timing uncertainty.",
       "risk": "Dilution and financing/execution risk; fundraising remains conditional. Commercial pipeline is not unconditional orders. Additional capital may support working capital into H1 2028, but milestones are not guaranteed."
+    },
+    {
+      "id": "miljon-20261020-196",
+      "ticker": "SIVE.ST",
+      "company": "Sivers Semiconductors AB (publ)",
+      "exchange": "STO",
+      "quote_currency": "SEK",
+      "bias": "positive",
+      "status": "BEVAKA",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T12:02:42.079269+00:00",
+      "published_at": "2026-10-20T05:00:00+00:00",
+      "expires_at": "2026-10-27T05:00:00+00:00",
+      "source_url": "https://news.cision.com/sivers-semiconductors/r/strategic-lidar-customer-initiates-production-orders-with-sivers-semiconductors,c4411825",
+      "thesis": "Strategic LiDAR customer placed first production orders for lasers and optical amplifiers. Shipments expected in Q4 2026 with production scaling in 2027.",
+      "risk": "Order amount and margins undisclosed. Previously estimated $53–138m lifetime potential is not current order value or guaranteed sales; customer volumes and ramp timing remain uncertain."
     },
     {
       "id": "miljon-20261020-192",
