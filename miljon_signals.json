@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T16:03:10.319768+00:00",
+  "updated_at": "2026-10-20T18:03:09.730698+00:00",
   "signals": [
+    {
+      "id": "miljon-20261020-202",
+      "ticker": "KODK",
+      "company": "Eastman Kodak Company",
+      "exchange": "NYQ",
+      "quote_currency": "USD",
+      "bias": "uncertain",
+      "status": "BEVAKA",
+      "source_status": "unverified",
+      "published_at": "2026-10-20T14:00:00+00:00",
+      "expires_at": "2026-10-27T14:00:00+00:00",
+      "source_url": "https://www.globenewswire.com/de/news-release/2026/10/20/3384595/0/en/phoenix-tailings-selects-rochester-ny-as-the-rare-earth-separation-center-for-the-1-2b-freedom-project.html",
+      "thesis": "MiljonBot reports Phoenix Tailings selected Eastman Business Park for a rare-earth separation facility. Original release returned HTTP 403; publication time and project facts remain unverified here.",
+      "risk": "Kodak connection is hypothetical: ownership of the specific site and any Phoenix contract are unconfirmed. No verified Kodak revenue benefit; private Phoenix is not a listed ticker."
+    },
     {
       "id": "miljon-20261020-199",
       "ticker": "VICR",
@@ -112,6 +127,22 @@
       "source_url": "https://www.eqs-news.com/news/ad-hoc/q3-2026-results/501cf9a9-5caf-482b-b6a4-59e809c6c361_en",
       "thesis": "Q3 orders $12.055bn (+40%), revenues $9.701bn (+14%) and operational EBITA margin 20.8%. Book-to-bill 1.24. ABB describes incremental capacity expansion and selective third-party assembly.",
       "risk": "Orders are not guaranteed profitable revenue. ABB expects sequential Q4 margin softening; third-party assembly does not prove a production bottleneck or identify listed suppliers."
+    },
+    {
+      "id": "miljon-20261020-203",
+      "ticker": "HUBN.SW",
+      "company": "Huber+Suhner AG",
+      "exchange": "EBS",
+      "quote_currency": "CHF",
+      "bias": "uncertain",
+      "status": "BEVAKA",
+      "source_status": "checked",
+      "published_at": "2026-10-20T04:45:00+00:00",
+      "expires_at": "2026-10-27T04:45:00+00:00",
+      "source_url": "https://www.hubersuhner.com/en/newsroom/company-news/news-ad-hoc-news/hubersuhner-increases-sales-in-the-first-nine-months-of-2026",
+      "thesis": "Nine-month sales CHF734.1m (+11.3%); orders CHF811.9m (-0.8%). Communication orders fell 41.4% while Industry orders rose 44.7%. Full-year guidance maintained.",
+      "risk": "Communication comparison includes unusually large prior-year OCS orders; decline does not establish weaker underlying demand. MiljonBot standalone Q3 calculation not independently checked; group guidance and Industry strength counter the risk.",
+      "source_checked_at": "2026-10-20T18:03:09.270373+00:00"
     },
     {
       "id": "miljon-20261020-201",
