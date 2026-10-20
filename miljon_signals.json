@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T15:33:25.855660+00:00",
+  "updated_at": "2026-10-20T16:03:10.319768+00:00",
   "signals": [
     {
       "id": "miljon-20261020-199",
@@ -112,6 +112,22 @@
       "source_url": "https://www.eqs-news.com/news/ad-hoc/q3-2026-results/501cf9a9-5caf-482b-b6a4-59e809c6c361_en",
       "thesis": "Q3 orders $12.055bn (+40%), revenues $9.701bn (+14%) and operational EBITA margin 20.8%. Book-to-bill 1.24. ABB describes incremental capacity expansion and selective third-party assembly.",
       "risk": "Orders are not guaranteed profitable revenue. ABB expects sequential Q4 margin softening; third-party assembly does not prove a production bottleneck or identify listed suppliers."
+    },
+    {
+      "id": "miljon-20261020-201",
+      "ticker": "IXI.L",
+      "company": "IXICO plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-20T16:03:09.826130+00:00",
+      "published_at": "2026-10-19T23:00:00+00:00",
+      "expires_at": "2026-10-26T23:00:00+00:00",
+      "source_url": "https://ixico.com/news-and-resources/news/ixico-trading-update-for-year-ending-30-september-2026",
+      "thesis": "FY26 revenue expected at £8.3m versus prior £8.0m guidance; year-end order book £16m and cash £10.4m. EBITDA loss expected better than prior £1.7m loss guidance. Issuer date 20 October; exact hour unavailable, earliest London day boundary used.",
+      "risk": "Mixed signal: MiljonBot flags a decline versus March backlog, not independently checked here. Year-end backlog is higher year-on-year; cash increase reflects April equity fundraising, not profits. Revenue improvement does not establish sustained profitability."
     },
     {
       "id": "miljon-20261019-180",
