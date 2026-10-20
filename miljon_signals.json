@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T12:02:42.702949+00:00",
+  "updated_at": "2026-10-20T15:33:25.855660+00:00",
   "signals": [
+    {
+      "id": "miljon-20261020-199",
+      "ticker": "VICR",
+      "company": "Vicor Corporation",
+      "exchange": "NMS",
+      "quote_currency": "USD",
+      "bias": "positive",
+      "status": "BEVAKA",
+      "source_status": "unverified",
+      "published_at": "2026-10-20T11:00:00+00:00",
+      "expires_at": "2026-10-27T11:00:00+00:00",
+      "source_url": "https://vicorcorporation.gcs-web.com/node/17956",
+      "thesis": "MiljonBot reports Q3 backlog of $406m and plans for substantial factory capacity expansion. Original issuer page returned HTTP 403; figures and publication time remain source-reported and unverified in this handoff.",
+      "risk": "Royalties may fluctuate; planned capacity is not guaranteed demand. Patent disputes, capital spending and high expectations remain risks."
+    },
     {
       "id": "miljon-20261020-197",
       "ticker": "GKP.L",
@@ -49,6 +64,22 @@
       "source_url": "https://www.investegate.co.uk/announcement/rns/invinity-energy-systems--ies/proposed-fundraising-of-a-minimum-of-20-million/9830673",
       "thesis": "Proposed fundraising at 10p, 43.5% discount to 16 October closing reference. Trading suspended during capital access window; resumption expected 22 October. FY2028 removed from outlook due to project timing uncertainty.",
       "risk": "Dilution and financing/execution risk; fundraising remains conditional. Commercial pipeline is not unconditional orders. Additional capital may support working capital into H1 2028, but milestones are not guaranteed."
+    },
+    {
+      "id": "miljon-20261020-200",
+      "ticker": "TIN.L",
+      "company": "Cornish Metals plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "bias": "uncertain",
+      "status": "DJUPRESEARCH",
+      "source_status": "checked",
+      "published_at": "2026-10-20T06:00:00+00:00",
+      "expires_at": "2026-10-27T06:00:00+00:00",
+      "source_url": "https://www.mfn.se/a/cornish-metals/proposed-fundraising-of-approximately-ps135-million-to-develop-the-south-crofty-tin-project",
+      "thesis": "Proposed £135m equity fundraising at 60p includes conditional £11.2m Glencore subscription and six-year offtake agreement. $210m bonds carry 13.5% coupon; equity funding is required to release escrow. First production targeted mid-2028.",
+      "risk": "Not completed or underwritten; trading paused. Dilution, expensive debt, approvals and construction execution may outweigh financing benefits. No verified near-term profit uplift for Glencore.",
+      "source_checked_at": "2026-10-20T15:33:25.283229+00:00"
     },
     {
       "id": "miljon-20261020-196",
