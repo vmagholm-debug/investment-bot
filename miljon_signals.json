@@ -1,7 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20T18:03:09.730698+00:00",
+  "updated_at": "2026-10-21T08:04:03.960671+00:00",
   "signals": [
+    {
+      "id": "miljon-20261021-214",
+      "ticker": "TRANSRAILL.NS",
+      "company": "Transrail Lighting Limited",
+      "exchange": "NSI",
+      "quote_currency": "INR",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "unverified",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=013587b9-5be3-45bb-b040-71d7afb32b1e.pdf",
+      "published_at": "2026-10-21T02:54:00+00:00",
+      "expires_at": "2026-10-28T02:54:00+00:00",
+      "thesis": "EquityBulls reproduction read: INR927 crore orders, FY27 intake INR3356 crore, including domestic transmission projects and conductor supply to USA. Original BSE document and its reported publication time not independently read.",
+      "risk": "Margins and delivery dates undisclosed. Raw-material costs, execution delays and working capital may offset order growth. Source remains unverified until original filing checked."
+    },
+    {
+      "id": "miljon-20261021-212",
+      "ticker": "WGX.AX",
+      "company": "Westgold Resources Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T06:22:09.449698+00:00",
+      "source_url": "https://www.newswire.ca/news-releases/beta-hunt-infrastructure-investment-enables-2mtpa-run-rate-801156978.html",
+      "published_at": "2026-10-20T22:18:00+00:00",
+      "expires_at": "2026-10-27T22:18:00+00:00",
+      "thesis": "Beta Hunt reached 2Mtpa annualised mining in September. Infrastructure upgrades completed; sustained 2Mtpa targeted from Q2 FY27.",
+      "risk": "One month annualised is not sustained output. Permanent ventilation reliability issues remain; Higginsville processing capacity above 1.6Mtpa limits conversion of mined ore into gold sales."
+    },
     {
       "id": "miljon-20261020-202",
       "ticker": "KODK",
