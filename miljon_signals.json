@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T10:19:24.421263+00:00",
+  "updated_at": "2026-10-21T23:14:54.717372+00:00",
   "signals": [
     {
       "id": "miljon-20261021-dynavox-q3",
@@ -112,6 +112,38 @@
       "expires_at": "2026-10-27T23:00:00+00:00",
       "thesis": "FY26 revenue expected above GBP130m versus GBP127m market expectations. EBITDA and statutory PBT expected above expectations; Civil Projects revenue grew about25%. Issuer date21 October; exact time unavailable, earliest London day boundary used.",
       "risk": "Above-expectation PBT does not prove profit: cited market forecast was GBP1.6m loss. Exact earnings not disclosed; project margins and cash conversion remain risks."
+    },
+    {
+      "id": "miljon-20261021-223",
+      "ticker": "VNET.L",
+      "company": "Vianet Group plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T23:14:54.196132+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/vianet-group--vnet/trading-update-notice-of-results-and-dividend/9832795",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Initial100 US restaurants installed; US revenue rose60%. Group H1 revenue GBP7.86m (+2.6%), adjusted operating profit GBP1.80m and free cash flow GBP0.94m. Issuer date21 October; exact hour unavailable, earliest London day boundary used.",
+      "risk": "No commitment for remaining2000-plus estate. Full-year expectations unchanged; consumer spending pressure and low starting base limit inference."
+    },
+    {
+      "id": "miljon-20261021-224",
+      "ticker": "MWE.L",
+      "company": "M.T.I Wireless Edge Ltd.",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T23:14:54.196132+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/mti-wireless-edge-ltd---mwe/acquisition-of-mottech-distributor-in-texas-/9832816",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Acquires Texas distributor Interspec for up to USD2.6m, plus USD1.2m expansion funding. Interspec unaudited2025 revenue USD2.9m and PBT USD0.4m. Issuer date21 October; exact hour unavailable, earliest London day boundary used.",
+      "risk": "Existing intercompany sales mean target revenue is not entirely incremental. Earn-out, integration and retiring founders create risks; earnings enhancement is management expectation."
     },
     {
       "id": "miljon-20261021-212",
