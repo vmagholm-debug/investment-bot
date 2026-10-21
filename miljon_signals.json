@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T08:04:03.960671+00:00",
+  "updated_at": "2026-10-21T08:06:06.726513+00:00",
   "signals": [
+    {
+      "id": "miljon-20261021-dynavox-q3",
+      "ticker": "DYVOX.ST",
+      "company": "Dynavox Group AB (publ)",
+      "exchange": "STO",
+      "quote_currency": "SEK",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T08:06:03.748697+00:00",
+      "source_url": "https://mfn.se/cis/a/dynavox-group/dynavox-groups-delarsrapport-for-tredje-kvartalet-2026-31b4a808.iframe",
+      "published_at": "2026-10-21T05:30:00+00:00",
+      "expires_at": "2026-10-28T05:30:00+00:00",
+      "thesis": "Q3 revenue SEK685m (+13%, currency-adjusted +15%); EBIT SEK119m, margin17.4%; cash flow after ongoing investments SEK62m. Issuer reports stronger profitability and reduced platform setup costs.",
+      "risk": "US Medicaid administration and longer processing times continue to constrain growth. Component costs and implementation risks remain; stronger reported profit alone does not establish attractive valuation."
+    },
     {
       "id": "miljon-20261021-214",
       "ticker": "TRANSRAILL.NS",
@@ -16,6 +32,22 @@
       "expires_at": "2026-10-28T02:54:00+00:00",
       "thesis": "EquityBulls reproduction read: INR927 crore orders, FY27 intake INR3356 crore, including domestic transmission projects and conductor supply to USA. Original BSE document and its reported publication time not independently read.",
       "risk": "Margins and delivery dates undisclosed. Raw-material costs, execution delays and working capital may offset order growth. Source remains unverified until original filing checked."
+    },
+    {
+      "id": "miljon-20261021-215",
+      "ticker": "ATM.L",
+      "company": "Andrada Mining Limited",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T08:06:03.748697+00:00",
+      "source_url": "https://www.investegate.co.uk/index.php/announcement/rns/andrada-mining-limited-npv--atm/interim-results-for-six-months-ended-31-aug-2026/9832839",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Unaudited H1 FY27 revenue GBP20.6m, gross margin 40.3%, profit after tax GBP2.5m and operating cash flow GBP4.9m. Funded ore-sorting expansion on schedule; targeted concentrate output 2500–3000 tonnes annually. Issuer date 21 October; exact hour unavailable, earliest London day boundary retained.",
+      "risk": "Realised tin price rose 57% versus contained production 13%; commodity prices dominate. Net hedge gain GBP1.72m includes GBP3.47m unrealised gain offset by realised losses. Capex GBP6.5m exceeds operating cash flow; borrowings GBP23.8m. Expansion is a target, not delivered output."
     },
     {
       "id": "miljon-20261021-212",
