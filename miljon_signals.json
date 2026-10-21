@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T08:06:06.726513+00:00",
+  "updated_at": "2026-10-21T10:19:24.421263+00:00",
   "signals": [
     {
       "id": "miljon-20261021-dynavox-q3",
@@ -48,6 +48,70 @@
       "expires_at": "2026-10-27T23:00:00+00:00",
       "thesis": "Unaudited H1 FY27 revenue GBP20.6m, gross margin 40.3%, profit after tax GBP2.5m and operating cash flow GBP4.9m. Funded ore-sorting expansion on schedule; targeted concentrate output 2500–3000 tonnes annually. Issuer date 21 October; exact hour unavailable, earliest London day boundary retained.",
       "risk": "Realised tin price rose 57% versus contained production 13%; commodity prices dominate. Net hedge gain GBP1.72m includes GBP3.47m unrealised gain offset by realised losses. Capex GBP6.5m exceeds operating cash flow; borrowings GBP23.8m. Expansion is a target, not delivered output."
+    },
+    {
+      "id": "miljon-20261021-217",
+      "ticker": "HDD.L",
+      "company": "Hardide plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T10:19:21.542027+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/hardide--hdd/year-end-trading-update/9832781",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Unaudited FY26 revenue GBP13.5m, EBITDA expected GBP5.8m and PBT GBP4.9m. Process gas secured for majority of anticipated FY27 needs. New reactors scheduled H2 FY27. Issuer date21 October; exact time unavailable, earliest London day boundary used.",
+      "risk": "Capacity is not demand. Customer concentration, GBP1.5m working-capital investment and reactor commissioning risk remain. GBP40m sales capacity is not a revenue forecast."
+    },
+    {
+      "id": "miljon-20261021-218",
+      "ticker": "MSI.L",
+      "company": "MS INTERNATIONAL plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T10:19:21.542027+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/ms-international--msi/contract-to-provide-12-ds30m-naval-gun-systems/9832784",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Subsidiary awarded GBP29.7m contract for twelve naval systems across four German F128 vessels; deliveries over coming years. Issuer date21 October; exact time unavailable, earliest London day boundary used.",
+      "risk": "Order value is not profit or next-year revenue. Margins undisclosed and delivery timing carries execution risk; no new TKMS revenue inferred."
+    },
+    {
+      "id": "miljon-20261021-219-nexus",
+      "ticker": "NEXS.L",
+      "company": "Nexus Infrastructure plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T10:19:21.542027+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/nexus-infrastructure--nexs/coleman-awarded-2m-amp8-contract/9832774",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "Coleman secured GBP2m AMP8 infrastructure contract; issuer describes first major AMP8 award and transition from early-stage activity. Issuer date21 October; exact time unavailable, earliest London day boundary used.",
+      "risk": "Unknown contract profitability, execution delays and working-capital needs may offset order growth."
+    },
+    {
+      "id": "miljon-20261021-219-hercules",
+      "ticker": "HERC.L",
+      "company": "Hercules Plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-21T10:19:21.542027+00:00",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/hercules-plc--herc/trading-update-/9832815",
+      "published_at": "2026-10-20T23:00:00+00:00",
+      "expires_at": "2026-10-27T23:00:00+00:00",
+      "thesis": "FY26 revenue expected above GBP130m versus GBP127m market expectations. EBITDA and statutory PBT expected above expectations; Civil Projects revenue grew about25%. Issuer date21 October; exact time unavailable, earliest London day boundary used.",
+      "risk": "Above-expectation PBT does not prove profit: cited market forecast was GBP1.6m loss. Exact earnings not disclosed; project margins and cash conversion remain risks."
     },
     {
       "id": "miljon-20261021-212",
