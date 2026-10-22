@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T19:47:50.699668+00:00",
+  "updated_at": "2026-10-22T19:57:44.009334+00:00",
   "signals": [
+    {
+      "id": "miljon-20261022-255",
+      "ticker": "EXC",
+      "company": "Exelon Corporation",
+      "exchange": "NMS",
+      "quote_currency": "USD",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "unverified",
+      "source_url": "https://www.businesswire.com/news/home/20261022573071/en/",
+      "published_at": "2026-10-22T20:40:00+02:00",
+      "expires_at": "2026-10-29T20:40:00+02:00",
+      "thesis": "MiljonBot reports ComEd GRIT approval for four underground 138 kV lines and a substation near Chicago OHare; construction targeted January 2027, commissioning Q2 2029. Original release and reported publication time could not be independently checked.",
+      "risk": "No verified Prysmian or Quanta supplier contract. Project budget and earnings impact unverified. Permits and scheduled construction do not prove profitable execution."
+    },
     {
       "id": "miljon-20261022-244",
       "ticker": "NOKIA.HE",
