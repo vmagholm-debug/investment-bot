@@ -1,7 +1,38 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T08:26:41.496447+00:00",
+  "updated_at": "2026-10-22T11:53:52.056383+00:00",
   "signals": [
+    {
+      "id": "miljon-20261022-244",
+      "ticker": "NOKIA.HE",
+      "company": "Nokia Oyj",
+      "exchange": "HEL",
+      "quote_currency": "EUR",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_url": "https://www.investegate.co.uk/announcement/gnw/nokia-oyj--0haf/nokia-corporation-interim-report-for-q3-2026/9835111",
+      "published_at": "2026-10-22T07:00:00+02:00",
+      "expires_at": "2026-10-29T07:00:00+02:00",
+      "thesis": "Nokia Q3 release confirms EUR 400 million additional working capital planned in 2026 to secure supply for 2027, and FCF conversion guidance of 35-55%. AI and Cloud orders EUR 1.5 billion; combined Optical/IP growth of 25-30% in 2027 remains a forecast.",
+      "risk": "Working capital is not an equivalent income-statement expense. Inventory risk and accelerated restructuring weaken cash conversion. Growth and supplier beneficiaries are not guaranteed.",
+      "source_checked_at": "2026-10-22T11:53:48.759360+00:00"
+    },
+    {
+      "id": "miljon-20261022-245",
+      "ticker": "BESI.AS",
+      "company": "BE Semiconductor Industries N.V.",
+      "exchange": "AMS",
+      "quote_currency": "EUR",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "unverified",
+      "source_url": "https://www.marketscreener.com/news/be-semiconductor-industries-n-announces-q3-2026-results-ce785cd9de89ff27",
+      "published_at": "2026-10-22T07:00:00+02:00",
+      "expires_at": "2026-10-29T07:00:00+02:00",
+      "thesis": "MiljonBot reports Q3 orders EUR 342.6 million and revenue EUR 283.4 million, with customer deliveries aligned to H1 2027. Original announcement retrieval returned HTTP 403; figures and reported publication time are not independently verified.",
+      "risk": "Delivery deferrals need not imply stronger demand. Further delays and slower hybrid-bonding adoption may limit profit conversion. No new Applied Materials contract verified."
+    },
     {
       "id": "miljon-20261022-243",
       "ticker": "KNIN.SW",
