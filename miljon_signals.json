@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T11:53:52.056383+00:00",
+  "updated_at": "2026-10-22T12:02:58.402201+00:00",
   "signals": [
     {
       "id": "miljon-20261022-244",
@@ -48,6 +48,38 @@
       "source_checked_at": "2026-10-22T08:26:31.089721+00:00",
       "thesis": "Q3 Contract Logistics net turnover rose 9% to CHF 1.3 billion and EBIT 7% to CHF 66 million. New customer projects required upfront investment and around 4,000 additional employees.",
       "risk": "Employee additions do not establish new warehouse construction or supplier orders. EBIT grew slower than turnover; investment returns and valuation effects remain unverified. No KION or Jungheinrich contract verified."
+    },
+    {
+      "id": "miljon-20261022-246",
+      "ticker": "NEX.PA",
+      "company": "Nexans S.A.",
+      "exchange": "PAR",
+      "quote_currency": "EUR",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-22T12:02:54.699937+00:00",
+      "source_url": "https://www.nexans.com/app/uploads/2026/10/2026-10-22-pr-nexans-q3-2026.pdf",
+      "published_at": "2026-10-21T22:00:00+00:00",
+      "expires_at": "2026-10-28T22:00:00+00:00",
+      "thesis": "October 22 issuer release: approximately EUR 62 million investment over coming years in medium-voltage accessories capacity in Europe and US. European capacity described as saturated. PWR-Grid Q3 organic growth 14.8%.",
+      "risk": "Seasonality helped Q3; full-year guidance unchanged. Multi-year capacity spending is not realized revenue or profit. No specific listed supplier order verified. Exact release time not established; conservative Paris day boundary used."
+    },
+    {
+      "id": "miljon-20261022-247",
+      "ticker": "VOS.DE",
+      "company": "Vossloh AG",
+      "exchange": "GER",
+      "quote_currency": "EUR",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-22T12:02:54.699937+00:00",
+      "source_url": "https://www.investegate.co.uk/index.php/announcement/eqs/vossloh-ag--0n2z/eqs-news-order-situation-remains-at-a-high-l-/9835131",
+      "published_at": "2026-10-21T22:00:00+00:00",
+      "expires_at": "2026-10-28T22:00:00+00:00",
+      "thesis": "Lifecycle Solutions nine-month orders EUR 179.7 million versus 176.2 million; backlog EUR 78.3 million versus 42.9 million. Revenue EUR 152.1 million versus 159.5 million; EBIT EUR 3.5 million versus 8.5 million. Q4 recovery remains forecast.",
+      "risk": "Backlog growth has not converted into sales or earnings growth. Group expects EBITDA and EBIT near lower end of guidance due to delays and costs. No verified supplier beneficiaries or valuation advantage. Exact time not established; conservative German day boundary used."
     },
     {
       "id": "miljon-20261022-240",
