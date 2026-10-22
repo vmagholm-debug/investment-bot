@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-10-21T23:14:54.717372+00:00",
+  "updated_at": "2026-10-22T04:37:05.486761+00:00",
   "signals": [
+    {
+      "id": "miljon-20261022-240",
+      "ticker": "A1M.AX",
+      "company": "AIC Mines Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-22T04:37:05.043519+00:00",
+      "source_url": "https://investorpa.com/announcement-pdf/20261022/360425.pdf",
+      "published_at": "2026-10-21T13:00:00+00:00",
+      "expires_at": "2026-10-28T13:00:00+00:00",
+      "thesis": "Report dated22 October: expanded1.1Mtpa plant commissioning began earlier than planned; first Jericho stope ahead of schedule. September copper production3072t; annual guidance17500–18500t maintained. Exact publication hour unverified; earliest Australian east-coast day boundary used.",
+      "risk": "September production below guidance after delayed high-grade access and shutdowns. Costs above H1 guidance; seismic rehabilitation completed. Strong mine cash flow benefited from sales and metal prices. Capacity is not achieved profitable production; Jericho development costs excluded from reported Eloise unit costs."
+    },
     {
       "id": "miljon-20261021-dynavox-q3",
       "ticker": "DYVOX.ST",
