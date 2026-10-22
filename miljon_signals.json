@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T04:37:05.486761+00:00",
+  "updated_at": "2026-10-22T08:01:36.979201+00:00",
   "signals": [
     {
       "id": "miljon-20261022-240",
@@ -17,6 +17,22 @@
       "expires_at": "2026-10-28T13:00:00+00:00",
       "thesis": "Report dated22 October: expanded1.1Mtpa plant commissioning began earlier than planned; first Jericho stope ahead of schedule. September copper production3072t; annual guidance17500–18500t maintained. Exact publication hour unverified; earliest Australian east-coast day boundary used.",
       "risk": "September production below guidance after delayed high-grade access and shutdowns. Costs above H1 guidance; seismic rehabilitation completed. Strong mine cash flow benefited from sales and metal prices. Capacity is not achieved profitable production; Jericho development costs excluded from reported Eloise unit costs."
+    },
+    {
+      "id": "miljon-20261022-241",
+      "ticker": "STO.AX",
+      "company": "Santos Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "status": "BEVAKA",
+      "bias": "negative",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-22T08:01:36.514769+00:00",
+      "source_url": "https://announcements.asx.com.au/asxpdf/20261022/pdf/075mplb7bxbhld.pdf",
+      "published_at": "2026-10-21T13:00:00+00:00",
+      "expires_at": "2026-10-28T13:00:00+00:00",
+      "thesis": "Pikka temporarily curtailed after seawater-treatment weather disruption and separate pipeline shutdown. Production planned around70000bpd briefly while water injection restores reservoir voidage. Report22 October; exact publication hour unavailable, earliest Australian east-coast boundary used.",
+      "risk": "Negative operational lead, not a buy. Disruptions may be temporary; group quarterly production26.3mmboe and free cash flow from operations aboutUSD1069m set records. No verified listed supplier benefit."
     },
     {
       "id": "miljon-20261021-dynavox-q3",
