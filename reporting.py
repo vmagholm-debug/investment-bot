@@ -60,7 +60,7 @@ def write_reports(report, directory):
         # Keep distinct cumulative ledgers for reference and experiment.
         (directory / 'experiment.json').write_text(json.dumps(experiment, indent=2, allow_nan=False))
         with (directory / 'experiment-trades.csv').open('w', newline='') as stream:
-            writer = csv.DictWriter(stream, fieldnames=['time', 'decision_at', 'ticker', 'action', 'strategy', 'qty', 'price', 'amount', 'cost_usd', 'realized_pnl', 'reason'], extrasaction='ignore')
+            writer = csv.DictWriter(stream, fieldnames=['time', 'decision_at', 'ticker', 'action', 'strategy', 'qty', 'price', 'amount', 'cost_usd', 'realized_pnl', 'miljon_signal_ids', 'reason'], extrasaction='ignore')
             writer.writeheader()
             writer.writerows(experiment.get('trades', []))
     lines += ['## Results versus learning activity', '',

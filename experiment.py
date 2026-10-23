@@ -204,6 +204,9 @@ def run_comparison(bot, reference_before, feed, path, now=None):
     # Rank before allocation; input file order cannot determine who consumes the cash first.
     for _, t, row, f in sorted(entries, key=lambda x: (-x[0], x[1])):
         q = quotes[t]
+        row['decision_data_date'] = row['data_date']
+        row['data_date'] = f.index[-1].isoformat()
+        results[t] = row
         conversion = q.get('quote_unit_scale', 1.) * q.get('fx_to_usd', 1.)
         turnover = float((f.Close.tail(20) * f.Volume.tail(20)).median()) * conversion
         if not math.isfinite(turnover) or turnover < 25000:
