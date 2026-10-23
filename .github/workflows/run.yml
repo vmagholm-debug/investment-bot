@@ -20,7 +20,7 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -49,6 +49,9 @@ jobs:
             if unzip -Z1 previous-state.zip | grep -qx patterns.json; then
               unzip -p previous-state.zip patterns.json > patterns.json
             fi
+            if unzip -Z1 previous-state.zip | grep -qx experiment-state.json; then
+              unzip -p previous-state.zip experiment-state.json > experiment-state.json
+            fi
           else
             echo "No saved account found; starting with 100000 fake USD."
           fi
@@ -67,5 +70,6 @@ jobs:
             model.pt
             discovery.json
             patterns.json
+            experiment-state.json
           retention-days: 90
           if-no-files-found: warn

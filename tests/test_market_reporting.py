@@ -65,6 +65,24 @@ class MarketTests(unittest.TestCase):
             self.assertIn('-20.0', (Path(folder) / 'summary.md').read_text())
             self.assertIn('mean_reversion', (Path(folder) / 'trades.csv').read_text())
 
+    def test_experiment_reports_and_ledgers_remain_separate(self):
+        report = {'generated_at': 'today', 'total_account_value': 100000.,
+                  'remaining_cash': 100000., 'holdings_value': 0., 'profit_loss': 0.,
+                  'coverage': {'europe': 0, 'other': 0}, 'new_trades': [], 'trades': [],
+                  'results': [], 'portfolio': {}, 'valuation_prices': {}, 'training_errors': {},
+                  'replay_samples': 0, 'learning': {'new_samples': 0, 'steps_this_run': 0,
+                  'fixed_batch_loss_before': None, 'fixed_batch_loss_after': None,
+                  'scores_before_update': {}, 'samples_by_ticker': {}},
+                  'experiment': {'status': 'prospective', 'metrics': {}, 'trades': [], 'new_trades': [],
+                                 'results': [{'ticker': 'THIN', 'action': 'NO TRADE', 'missing_research': ['news'], 'reason': 'Queued'}]}}
+        with tempfile.TemporaryDirectory() as folder:
+            target = Path(folder) / 'new-reports-folder'
+            write_reports(report, target)
+            self.assertTrue((target / 'experiment.json').exists())
+            self.assertTrue((target / 'experiment-trades.csv').exists())
+            self.assertIn('THIN', (target / 'summary.md').read_text())
+            self.assertEqual(len((target / 'trades.csv').read_text().splitlines()), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

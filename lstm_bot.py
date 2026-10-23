@@ -22,6 +22,7 @@ from strategies import StrategyTrading
 from patterns import PatternLibrary
 from catalogue import assess as assess_catalogue
 from watchlist import load_watchlist, include_watchlist, summarize as summarize_watchlist
+from experiment import run_comparison, snapshot
 
 
 class LSTMModel(nn.Module):
@@ -193,6 +194,7 @@ def main():
     parser.add_argument('--checkpoint', type=Path, default=Path('model.pt'))
     parser.add_argument('--output', type=Path, default=Path('reports/latest.json'))
     parser.add_argument('--steps', type=int, default=20)
+    parser.add_argument('--experiment-state', type=Path, help='Separate prospective comparison account; default beside reference state')
     args = parser.parse_args()
     if not 1 <= args.steps <= 200:
         parser.error('--steps must be between 1 and 200')
@@ -228,6 +230,7 @@ def main():
     pattern_library = PatternLibrary(args.state.parent / 'patterns.json')
     pattern_report = pattern_library.analyze(bot.data, bot.research_reports)
     pattern_library.save()
+    reference_before = snapshot(bot)
     results = bot.run_once(refresh=False)
     bot.save_model()
     bot.save_state(args.state)
@@ -257,6 +260,26 @@ def main():
               'training_steps': bot.training_steps, 'training_loss': bot.last_loss,
               'replay_samples': len(bot.buffer),
               'model_validation': 'Uncalibrated score; no out-of-sample performance estimate'}
+    experiment_path = args.experiment_state or args.state.parent / 'experiment-state.json'
+    if experiment_path.resolve() == args.state.resolve():
+        raise ValueError('Experiment state must be separate from reference account')
+    # Expand ONLY the experiment. Do not change the reference universe, ranks or LSTM training.
+    try:
+        extra = [row['ticker'] for row in miljon_report['signals'] if row.get('active')]
+        if experiment_path.exists():
+            experiment_saved = json.loads(experiment_path.read_text())
+            extra += list(experiment_saved['account']['portfolio']) + list(experiment_saved.get('pending', {}))
+        for ticker in dict.fromkeys(extra):
+            if ticker not in bot.research_reports:
+                try:
+                    bot.fetch_data(ticker)
+                    bot.research_reports[ticker] = researcher.collect(ticker)
+                except Exception as exc:
+                    bot.research_reports[ticker] = {'errors': {'experiment_research': str(exc)},
+                                                   'gate': {'approved': False, 'reason': 'Research unavailable', 'categories': {}, 'blockers': ['Research unavailable']}}
+        report['experiment'] = run_comparison(bot, reference_before, miljon_report, experiment_path)
+    except Exception as exc:
+        report['experiment'] = {'status': 'error', 'error': str(exc)}
     report['investment_analysis'] = analyze_investment(report)
     rendered = json.dumps(report, indent=2, allow_nan=False)
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -265,7 +288,7 @@ def main():
     if discovery_state is not None:
         save_discovery(args.discovery_state, discovery_state)
     print(rendered, flush=True)
-    return 1 if errors or any('error' in result for result in results) else 0
+    return 1 if errors or any('error' in result for result in results) or report['experiment'].get('status') == 'error' else 0
 
 
 if __name__ == '__main__':

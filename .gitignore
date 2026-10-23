@@ -19,3 +19,5 @@ discovery.json
 discovery.tmp
 
 patterns.json
+experiment-state.json
+experiment-state.tmp
