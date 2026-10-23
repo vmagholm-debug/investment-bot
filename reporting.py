@@ -1,6 +1,7 @@
 """Factual human-readable and machine-readable paper account reports."""
 import csv
 import html
+import json
 import os
 from learning_results import learning_results
 from pathlib import Path
@@ -16,6 +17,7 @@ def table(headers, rows):
 
 def write_reports(report, directory):
     directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
     learning = report['learning']
     new_trades = report['new_trades']
     lines = ['# Global paper-trading report', '',
@@ -28,6 +30,39 @@ def write_reports(report, directory):
              + report['coverage'].get('scope', 'Live Yahoo Finance discovery; see report for selection policy.'), '',
              '## New simulated trades', '']
     observed = learning_results(report)
+    experiment = report.get('experiment')
+    if experiment:
+        lines += ['## Broader paper experiment versus reference', '',
+                  'A separate prospective account starts with the same marked cash and positions as the reference. '
+                  'Returns below begin at that common start, not at the original bot launch. '
+                  'Costs are illustrative 0.1% per side; no advantage is established by increased activity.', '',
+                  'Status: ' + experiment.get('status', 'unknown'),
+                  'Started: ' + str(experiment.get('started_at', 'not initialized')), '',
+                  table(['Account / baseline', 'Net equity USD', 'Return since comparison start', 'Max observed drawdown'],
+                        [[k, f"{v['equity_usd']:.2f}", f"{v['return_since_start']:.2%}", f"{v['max_observed_drawdown']:.2%}"]
+                         for k, v in experiment.get('metrics', {}).items()]), '',
+                  str(experiment.get('comparison', experiment.get('error', ''))),
+                  'Stale valuations: ' + str(experiment.get('stale_valuation_tickers', [])),
+                  'Requested / analyzed: ' + str(experiment.get('requested')) + ' / ' + str(experiment.get('analyzed')), '',
+                  '### Experimental policy and cost sensitivity', '',
+                  str(experiment.get('policy', {})), '', str(experiment.get('cost_sensitivity', [])),
+                  str(experiment.get('cost_sensitivity_limit', '')), '',
+                  '### New experimental trades (separate from reference trades.csv)', '',
+                  table(['Time', 'Ticker', 'Action', 'Strategy', 'Quote currency', 'Quantity', 'USD price', 'USD amount', 'Cost USD', 'Reason'],
+                        [[t['time'], t['ticker'], t['action'], t['strategy'], t['quote']['quote_currency'],
+                          t['qty'], t['price'], t['amount'], t['cost_usd'], t['reason']]
+                         for t in experiment.get('new_trades', [])]), '',
+                  '### Experimental candidate decisions', '',
+                  table(['Ticker', 'Tier / score (not probability)', 'Action', 'Missing research', 'Reason'],
+                        [[r['ticker'], str(r.get('tier')) + ' / ' + str(r.get('score')), r['action'],
+                          str(r.get('missing_research', [])), r.get('reason', '')]
+                         for r in experiment.get('results', [])]), '']
+        # Keep distinct cumulative ledgers for reference and experiment.
+        (directory / 'experiment.json').write_text(json.dumps(experiment, indent=2, allow_nan=False))
+        with (directory / 'experiment-trades.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=['time', 'decision_at', 'ticker', 'action', 'strategy', 'qty', 'price', 'amount', 'cost_usd', 'realized_pnl', 'reason'], extrasaction='ignore')
+            writer.writeheader()
+            writer.writerows(experiment.get('trades', []))
     lines += ['## Results versus learning activity', '',
               f"Recorded sales: {observed['sales']}; profitable sales: {observed['winning_sales']}; losing sales: {observed['losing_sales']}.",
               f"Realized P/L USD: {observed['realized_pnl']}; unrealized P/L USD: {observed['unrealized_pnl']}.",
