@@ -80,6 +80,11 @@ def run_comparison(bot, reference_before, feed, path, now=None):
     for t in universe:
         try:
             f = bot.fetch_data(t)
+            # Yahoo may include today's incomplete daily candle. Analyze the last
+            # completed date instead of excluding the whole instrument during market hours.
+            f = f.loc[[pd.Timestamp(d).date() < now.date() for d in f.index]]
+            if f.empty:
+                raise ValueError('No completed daily prices available')
             bar = pd.Timestamp(f.index[-1]).date()
             if not 0 < (now.date() - bar).days <= 7:
                 raise ValueError('Need a completed daily price no older than seven days')

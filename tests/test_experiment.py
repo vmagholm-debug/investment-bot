@@ -164,3 +164,13 @@ class ExperimentTests(unittest.TestCase):
             r = run_comparison(b, before, {}, Path(tmp) / 'e.json', pd.Timestamp('2026-10-21T08:00Z'))
             self.assertEqual(r['metrics']['reference_net']['equity_usd'], 99998.)
             self.assertEqual(r['metrics']['experiment_net']['equity_usd'], 100000.)
+
+    def test_incomplete_today_bar_is_removed_without_excluding_instrument(self):
+        b = bot_for()
+        advance(b, '2026-10-21', 500.)  # Deliberately extreme unfinished candle.
+        with TemporaryDirectory() as tmp:
+            r = run_comparison(b, snapshot(b), {}, Path(tmp) / 'e.json', pd.Timestamp('2026-10-21T08:00Z'))
+            self.assertEqual(r['analyzed'], 1)
+            self.assertIn('SMALL', r['pending_orders'])
+            self.assertEqual(pd.Timestamp(r['pending_orders']['SMALL']['data_date']).date(), pd.Timestamp('2026-10-20').date())
+            self.assertEqual(r['metrics']['experiment_net']['equity_usd'], 100000.)
