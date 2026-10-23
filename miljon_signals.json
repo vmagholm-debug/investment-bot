@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T17:50:29.419829+00:00",
+  "updated_at": "2026-10-23T20:07:50.555526+00:00",
   "signals": [
     {
       "id": "miljon-20261023-272",
@@ -64,6 +64,38 @@
       "thesis": "Q3 group orders rose70%; DCT orders more than doubled and DCT sales rose15%. DCT margins weakened due to product mix, component shortages and ramp-up inefficiency. Operating cash flow negative. Exact timezone label ambiguous; conservative Stockholm day boundary used.",
       "risk": "Group leverage3.4x versus3.2x inQ2. AirTech margin includes cancellation-fee benefit. Order growth does not prove profitable conversion; full-year outlook unchanged.",
       "source_checked_at": "2026-10-23T17:50:25.584269+00:00"
+    },
+    {
+      "id": "miljon-20261023-279",
+      "ticker": "NHY.OL",
+      "company": "Norsk Hydro ASA",
+      "exchange": "OSL",
+      "quote_currency": "NOK",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-23T20:07:47.657831+00:00",
+      "source_url": "https://www.hydro.com/globalassets/06-investors/reports-and-presentations/quarterly-reports/2026/q3u7ns/third-quarter-report-2026.pdf",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "thesis": "Q3 report: year-end net working capital guidance raised fromNOK30bn to32bn; capex guidance lowered13.5bn to12.5bn. Adjusted EBITDA9.089bn and free cash flow1.4bn. Higher metal prices and prepayments bind capital. Original publication23October; exact time not established, conservative Oslo day boundary used.",
+      "risk": "Working capital may normalize and lower capex partly offsets cash use. Higher capital binding is not proof of lower operating profit. No verified valuation advantage."
+    },
+    {
+      "id": "miljon-20261023-269-tomra",
+      "ticker": "TOM.OL",
+      "company": "Tomra Systems ASA",
+      "exchange": "OSL",
+      "quote_currency": "NOK",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-23T20:07:47.657831+00:00",
+      "source_url": "https://news.cision.com/tomra-systems-asa/r/tomra--3q26---20--revenue-growth-with-strong-operational-performance,c4414197",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "thesis": "Q3 Collection revenue rose21%, existing markets19%. First UK installations begun ahead of main2027 deployment. Group adjusted EBITA47mEUR, up55%; operating cash flow112mEUR. Original publication23October; exact time not established, conservative Oslo day boundary used.",
+      "risk": "Collection gross margin fell42.3% to40.8%; UK/Poland ramp costs increase. Growth spans other markets; no direct supply agreement with Hargreaves verified. Future installations and earnings remain uncertain."
     },
     {
       "id": "miljon-20261023-277",
