@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T17:23:01.723957+00:00",
+  "updated_at": "2026-10-24T18:00:58.020141+00:00",
   "signals": [
     {
       "id": "miljon-20261023-272",
@@ -174,6 +174,22 @@
       "thesis": "Q3 sales SEK1057m, up27%, but organic growth2%. Adjusted margin9.3%, unchanged; adjusted operating cash flow SEK11m versus121m. Inventory building to safeguard supply weighs on cash flow. Original publication23October retained; exact time not established, conservative local-day boundary used.",
       "risk": "Acquisitions and currency effects differ from organic demand. Material shortages and working capital may limit profitable conversion. Growing order coverage does not guarantee higher cash generation.",
       "source_checked_at": "2026-10-24T08:22:04.470573+00:00"
+    },
+    {
+      "id": "miljon-20261023-290",
+      "ticker": "HOLN.SW",
+      "company": "Holcim AG",
+      "exchange": "EBS",
+      "quote_currency": "CHF",
+      "source_url": "https://www.holcim.com/sites/holcim/files/docs/20261023-media-finance-holcim-q3-2026-results-en.pdf",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-24T18:00:49.893438+00:00",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "23 October issuer Q3 release: nine-month recycled demolition-material volume rose one third to 7.4m tonnes, restated for acquisitions/divestments. ECOPlanet share of cement sales rose 36% to 43%. Q3 recurring EBIT grew 12.2% organically; 2026 organic recurring EBIT growth guidance raised to 10–12%. Original date only; conservative Swiss-day boundary used.",
+      "risk": "Higher recycling volume does not establish new machine orders or undervaluation. No new Holcim-to-Metso order verified. Q3 Building Solutions sales rose 27.1% reported but 4.0% organically. Europe Q3 recurring EBIT margin fell 150bp. Guidance is prospective; website draft metadata predates release, dated issuer PDF confirms 23 October."
     },
     {
       "id": "miljon-20261023-277",
