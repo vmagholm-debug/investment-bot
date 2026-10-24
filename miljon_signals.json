@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T08:22:08.217960+00:00",
+  "updated_at": "2026-10-24T17:23:01.723957+00:00",
   "signals": [
     {
       "id": "miljon-20261023-272",
@@ -16,6 +16,37 @@
       "expires_at": "2026-10-30T04:00:00+00:00",
       "thesis": "MiljonBot reports four Aramco contracts covering over450 wells overthree years, with extensions possible. Original source returnedHTTP403; facts and exact publication time remain independently unverified. Conservative US Eastern day boundary used.",
       "risk": "Contract award dates and values undisclosed in supplied analysis. Replacement contracts and existing equipment may limit increment. No new Tenaris or NOV supplier orders verified."
+    },
+    {
+      "id": "miljon-20261023-293",
+      "ticker": "SGML",
+      "company": "Sigma Lithium Corporation",
+      "exchange": "NCM",
+      "quote_currency": "USD",
+      "source_url": "https://sigmalithiumcorp.com/sigma-lithium-extends-4-year-us100-million-senior-secured-debt-to-june-2027-7090t-produced-since-restart/",
+      "source_status": "checked",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "published_at": "2026-10-23T04:00:00+00:00",
+      "expires_at": "2026-10-30T04:00:00+00:00",
+      "thesis": "Issuer confirms USD100m secured loan maturity extended December2026 toJune2027; interest unchanged SOFR+6.95%. Produced7090t concentrate between restartOctober5 andOctober22. Total debt USD125m atOctober21. OriginalOctober23 publication date retained; exact timezone not established, conservative North American Eastern day boundary used.",
+      "risk": "Debt is deferred, not cancelled. Restart volumes do not establish sustainable output or profit. Year-end2027 annualized330000t target remains forward-looking; refinancing and lithium-price risks persist.",
+      "source_checked_at": "2026-10-24T17:22:59.010691+00:00"
+    },
+    {
+      "id": "miljon-20261023-294",
+      "ticker": "BA",
+      "company": "The Boeing Company",
+      "exchange": "NYQ",
+      "quote_currency": "USD",
+      "source_url": "https://www.reuters.com/business/aerospace-defense/boeing-supplier-dispute-has-halted-777-freighter-production-two-months-sources-2026-10-23/",
+      "source_status": "unverified",
+      "status": "DJUPRESEARCH",
+      "bias": "negative",
+      "published_at": "2026-10-23T04:00:00+00:00",
+      "expires_at": "2026-10-30T04:00:00+00:00",
+      "thesis": "MiljonBot citing Reuters reports an almosttwo-month777F production halt linked to a sole supplier dispute, with767/KC46 effects also reported. No new official Boeing confirmation was read; source remains unverified. OriginalOctober23 publication date retained; exact timezone not established, conservative North American Eastern day boundary used.",
+      "risk": "Reported potential USD6.5m daily disruption cost is an estimate, not an observed loss. Existing completed aircraft may still be delivered and settlement may enable restart. No alternative listed supplier or quantified FedEx impact verified."
     },
     {
       "id": "miljon-20261023-275",
