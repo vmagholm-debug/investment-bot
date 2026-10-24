@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T20:07:50.555526+00:00",
+  "updated_at": "2026-10-24T08:22:08.217960+00:00",
   "signals": [
     {
       "id": "miljon-20261023-272",
@@ -98,6 +98,53 @@
       "risk": "Collection gross margin fell42.3% to40.8%; UK/Poland ramp costs increase. Growth spans other markets; no direct supply agreement with Hargreaves verified. Future installations and earnings remain uncertain."
     },
     {
+      "id": "miljon-20261023-288",
+      "ticker": "GTT.PA",
+      "company": "Gaztransport & Technigaz SA",
+      "exchange": "PAR",
+      "quote_currency": "EUR",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "source_status": "unverified",
+      "source_url": "https://www.globenewswire.com/news-release/2026/10/23/3387519/0/en/gtt-q3-2026-activity-update-press-release.html",
+      "thesis": "MiljonBot reports80 core orders and EUR1.8bn backlog in nine months alongside lower revenue/royalties. Source returnedHTTP403; underlying figures independently unverified. Original publication23October retained; exact time not established, conservative local-day boundary used.",
+      "risk": "Reported ship delivery dates mostly2028-2030 do not establish2027 profit. GTTMarine growth reportedly acquisition-driven. No new Samsung order inferred from an olderOctober5 announcement."
+    },
+    {
+      "id": "miljon-20261023-278-ncab",
+      "ticker": "NCAB.ST",
+      "company": "NCAB Group AB (publ)",
+      "exchange": "STO",
+      "quote_currency": "SEK",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_url": "https://www.mfn.se/a/ncab-group/ncab-interim-report-january-september-2026",
+      "thesis": "Q3 orders rose166%, organic155%; management attributes roughly80percentage points to forward orders and50 to prices. Book-to-bill1.79, EBITA SEK210.8m; supply constraints not expected to improve beforelate2027. Original publication23October retained; exact time not established, conservative local-day boundary used.",
+      "risk": "Headline orders overstate underlying volume growth; customers may pull demand forward. No verified evidence that copper or tin specifically causes shortages. Strong reported results do not establish valuation upside.",
+      "source_checked_at": "2026-10-24T08:22:04.470573+00:00"
+    },
+    {
+      "id": "miljon-20261023-278-note",
+      "ticker": "NOTE.ST",
+      "company": "NOTE AB (publ)",
+      "exchange": "STO",
+      "quote_currency": "SEK",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "source_status": "checked",
+      "source_url": "https://mfn.se/a/note/notes-interim-report-q3-2026",
+      "thesis": "Q3 sales SEK1057m, up27%, but organic growth2%. Adjusted margin9.3%, unchanged; adjusted operating cash flow SEK11m versus121m. Inventory building to safeguard supply weighs on cash flow. Original publication23October retained; exact time not established, conservative local-day boundary used.",
+      "risk": "Acquisitions and currency effects differ from organic demand. Material shortages and working capital may limit profitable conversion. Growing order coverage does not guarantee higher cash generation.",
+      "source_checked_at": "2026-10-24T08:22:04.470573+00:00"
+    },
+    {
       "id": "miljon-20261023-277",
       "ticker": "KCR.HE",
       "company": "Konecranes Plc",
@@ -111,6 +158,22 @@
       "expires_at": "2026-10-29T21:00:00+00:00",
       "thesis": "MiljonBot reports Port SolutionsQ3 orders down36.7% and sales up28.3% at constant currency, book-to-bill0.69. Original issuer page returnedHTTP403, so independently unverified. October23 date retained with conservative Helsinki day boundary.",
       "risk": "Large crane contracts vary by quarter; supplied analysis says guidance maintained and project activity high. No verified supplier changes or structural industry decline. Negative lead, not a buy."
+    },
+    {
+      "id": "miljon-20261023-289",
+      "ticker": "HIAB.HE",
+      "company": "Hiab Oyj",
+      "exchange": "HEL",
+      "quote_currency": "EUR",
+      "published_at": "2026-10-22T21:00:00+00:00",
+      "expires_at": "2026-10-29T21:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "negative",
+      "source_status": "checked",
+      "source_url": "https://www.hiabgroup.com/en/newsroom/press-releases/hiabs-interim-report-januaryseptember-2026-strong-growth-in-comparable-operating-profit-in-the-third-quarter-through-executing-our-strategy/",
+      "thesis": "Q3 orders EUR441m, up26%, but down4% organically at constant currency. EVS contributed EUR87m orders. Organic sales up5%, comparable operating profit up73%; net debtEUR704m. Original publication23October retained; exact time not established, conservative local-day boundary used.",
+      "risk": "Weak organic Americas orders may constrain future growth, but large orders vary and acquisitions/synergies can help. Outlook retained. Negative lead, not proof of structural decline.",
+      "source_checked_at": "2026-10-24T08:22:04.470573+00:00"
     },
     {
       "id": "miljon-20261022-255",
