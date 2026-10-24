@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T18:00:58.020141+00:00",
+  "updated_at": "2026-10-24T21:02:06.673522+00:00",
   "signals": [
     {
       "id": "miljon-20261023-272",
@@ -409,6 +409,22 @@
       "expires_at": "2026-10-28T22:00:00+00:00",
       "thesis": "Lifecycle Solutions nine-month orders EUR 179.7 million versus 176.2 million; backlog EUR 78.3 million versus 42.9 million. Revenue EUR 152.1 million versus 159.5 million; EBIT EUR 3.5 million versus 8.5 million. Q4 recovery remains forecast.",
       "risk": "Backlog growth has not converted into sales or earnings growth. Group expects EBITDA and EBIT near lower end of guidance due to delays and costs. No verified supplier beneficiaries or valuation advantage. Exact time not established; conservative German day boundary used."
+    },
+    {
+      "id": "miljon-20261022-292",
+      "ticker": "HINDPETRO.NS",
+      "company": "Hindustan Petroleum Corporation Limited",
+      "exchange": "NSI",
+      "quote_currency": "INR",
+      "source_url": "https://www.hindustanpetroleum.com/NewsroomDetails/460",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-24T21:01:52.419284+00:00",
+      "published_at": "2026-10-21T18:30:00+00:00",
+      "expires_at": "2026-10-28T18:30:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "Issuer release dated 22 October for quarter/half year ended 30 September 2026: HRRL debt arrangement of INR51970 crore refinanced/repriced at lower cost; CRISIL rating upgraded AA to AA+ stable. Q2 consolidated profit INR3625 crore versus3859 crore; H1 consolidated loss INR8639 crore. Date-only publication uses conservative Indian-day boundary, not the later MiljonBot posting.",
+      "risk": "Issuer release does not quantify 105bp interest cut or INR470–500 crore annual savings; Rajasthan utilization, December throughput and conditional USD20/bbl project margin from the cited call are not independently checked. Group Q2 GRM before export cess was USD32.15/bbl, a different scope from the project-specific USD12 claim. Refinancing is not proof of profitable ramp-up or undervaluation."
     },
     {
       "id": "miljon-20261022-240",
