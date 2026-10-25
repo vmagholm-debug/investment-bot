@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T05:46:46.596725+00:00",
+  "updated_at": "2026-10-25T09:14:03.135919+00:00",
   "signals": [
     {
       "id": "miljon-20261024-295",
@@ -425,6 +425,22 @@
       "expires_at": "2026-10-28T22:00:00+00:00",
       "thesis": "Lifecycle Solutions nine-month orders EUR 179.7 million versus 176.2 million; backlog EUR 78.3 million versus 42.9 million. Revenue EUR 152.1 million versus 159.5 million; EBIT EUR 3.5 million versus 8.5 million. Q4 recovery remains forecast.",
       "risk": "Backlog growth has not converted into sales or earnings growth. Group expects EBITDA and EBIT near lower end of guidance due to delays and costs. No verified supplier beneficiaries or valuation advantage. Exact time not established; conservative German day boundary used."
+    },
+    {
+      "id": "miljon-20261022-rexel-q3",
+      "ticker": "RXL.PA",
+      "company": "Rexel S.A.",
+      "exchange": "PAR",
+      "quote_currency": "EUR",
+      "source_url": "https://www.rexel.com/en/q3-2026-sales",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-25T09:13:50.347128+00:00",
+      "published_at": "2026-10-21T22:00:00+00:00",
+      "expires_at": "2026-10-28T22:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "thesis": "Original issuer Q3 release dated22 October: sales EUR5452.9m, same-day growth11.4%, North America17.4%. Full-year same-day growth outlook raised from about5% to about7%, current adjusted EBITA margin from at least6.2% to at least6.4%. US data centers contributed; volume and price both supported growth. Date-only publication uses conservative Paris-day boundary, not Oct25 brief date.",
+      "risk": "Guidance is prospective and does not establish undervaluation. GCG acquisition financing includes EUR500m capital increase; dilution, integration and per-share returns matter. Data-center slowdown could hurt distribution volumes. No verified valuation discount or independent forecast validation."
     },
     {
       "id": "miljon-20261022-292",
