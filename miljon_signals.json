@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T21:02:06.673522+00:00",
+  "updated_at": "2026-10-25T05:46:46.596725+00:00",
   "signals": [
+    {
+      "id": "miljon-20261024-295",
+      "ticker": "TECK",
+      "company": "Teck Resources Limited",
+      "exchange": "NYQ",
+      "quote_currency": "USD",
+      "source_url": "https://www.teck.com/media/26-24-TR.pdf",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-25T05:46:40.396088+00:00",
+      "published_at": "2026-10-24T07:00:00+00:00",
+      "expires_at": "2026-10-31T07:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "negative",
+      "thesis": "Teck issuer release dated 24 October confirms USW Local7619 strike has commenced at Highland Valley Copper in British Columbia; operations continue at reduced capacity. This is an actual disruption following the earlier strike notice, not a renewed notice. Date only; conservative Vancouver-day boundary used.",
+      "risk": "Production loss and strike duration are not quantified. A quick agreement could limit impact; operation is not fully shut. No alternative listed supplier is verified as a winner. Earlier guidance tonnage and Evolve royalty exposure are not verified by this release and are excluded from checked facts."
+    },
     {
       "id": "miljon-20261023-272",
       "ticker": "SLB",
