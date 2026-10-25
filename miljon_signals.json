@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T09:14:03.135919+00:00",
+  "updated_at": "2026-10-25T13:58:54.160017+00:00",
   "signals": [
     {
       "id": "miljon-20261024-295",
@@ -206,6 +206,22 @@
       "bias": "uncertain",
       "thesis": "23 October issuer Q3 release: nine-month recycled demolition-material volume rose one third to 7.4m tonnes, restated for acquisitions/divestments. ECOPlanet share of cement sales rose 36% to 43%. Q3 recurring EBIT grew 12.2% organically; 2026 organic recurring EBIT growth guidance raised to 10–12%. Original date only; conservative Swiss-day boundary used.",
       "risk": "Higher recycling volume does not establish new machine orders or undervaluation. No new Holcim-to-Metso order verified. Q3 Building Solutions sales rose 27.1% reported but 4.0% organically. Europe Q3 recurring EBIT margin fell 150bp. Guidance is prospective; website draft metadata predates release, dated issuer PDF confirms 23 October."
+    },
+    {
+      "id": "miljon-20261023-safran-q3",
+      "ticker": "SAF.PA",
+      "company": "Safran SA",
+      "exchange": "PAR",
+      "quote_currency": "EUR",
+      "source_url": "https://www.safran-group.com/pressroom/safran-reports-its-third-quarter-2026-revenue-2026-10-23",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-25T13:58:35.038755+00:00",
+      "published_at": "2026-10-22T22:00:00+00:00",
+      "expires_at": "2026-10-29T22:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "thesis": "Issuer Q3 release dated23 October: adjusted revenue EUR9003m, up14.7% reported and13.4% organically; propulsion organic growth13.2%, aftermarket18.7%. Civil spare parts rose17% in USD and services19%. Full-year outlook unchanged: recurring operating income EUR6.4–6.5bn and FCF4.7–4.9bn. Original date-only publication uses conservative Paris-day boundary, not Oct25 brief date.",
+      "risk": "Possible market overreaction is an untested hypothesis, not a verified discount. The cited about6% initial share-price fall is not independently verified here; no return or trade is inferred. Slower aftermarket growth may persist. Outlook depends on supply-chain capability, Middle East risks, advance payments and state-customer payment timing."
     },
     {
       "id": "miljon-20261023-277",
