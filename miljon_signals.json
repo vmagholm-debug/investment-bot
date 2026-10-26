@@ -1,7 +1,39 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T09:22:04.993054+00:00",
+  "updated_at": "2026-10-26T14:32:21.926167+00:00",
   "signals": [
+    {
+      "id": "miljon-20261026-310",
+      "ticker": "NOM.OL",
+      "company": "Nordic Mining ASA",
+      "exchange": "OSL",
+      "quote_currency": "NOK",
+      "source_url": "https://news.cision.com/nordic-mining-asa/r/nordic-mining-asa--update-on-financial-situation%2Cc4414961",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-26T14:28:03.879556+00:00",
+      "published_at": "2026-10-26T06:00:00+00:00",
+      "expires_at": "2026-11-02T06:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "negative",
+      "thesis": "Read complete indexed issuer announcement dated26 October:ERG temporarily suspends Engebo mining operations until further notice to preserve liquidity. Creditor positions moved further apart since20 October; no agreement on proposed waivers or wider restructuring. Source says08:00 with conflicting CET/CEST labels; earlier06UTC retained conservatively.",
+      "risk": "No assured restructuring or restart date. This is a financing/liquidity risk, not a buy catalyst. Suspension refers to mining, not proof all processing or inventory sales stopped. No verified customer-order transfer or direct benefit to Iluka/Kenmare."
+    },
+    {
+      "id": "miljon-20261026-311",
+      "ticker": "CCC.L",
+      "company": "Computacenter plc",
+      "exchange": "LSE",
+      "quote_currency": "GBp",
+      "source_url": "https://computacenter.gcs-web.com/news-releases/news-release-details/computacenter-q3-trading-update-26-october-2026",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-26T14:28:03.879556+00:00",
+      "published_at": "2026-10-26T00:00:00+00:00",
+      "expires_at": "2026-11-02T00:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "thesis": "Read complete indexed issuer RNS3574A dated26 October: committed product backlog GBP12.6bn versus9.3bn atJune-end, against non-cancellable customer orders for delivery within12months on gross-invoiced-income basis. FY2026 adjusted PBT expected at leastGBP425m; company-compiled consensus387.1m. North American hyperscale/neocloud demand contributed. Date-only UK publication boundary retained.",
+      "risk": "Unaudited update and prospective outlook; backlog is gross billing, not profit. Hardware margins, delivery timing, neocloud funding and Managed Services decline remain risks. No verified undervaluation or direct listed subcontractor award. CCC.L is UK Computacenter quoted in pence, distinct from US-listed CCC already held."
+    },
     {
       "exchange": "ASX",
       "quote_currency": "AUD",
