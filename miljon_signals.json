@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T14:32:21.926167+00:00",
+  "updated_at": "2026-10-26T15:03:28.689592+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -63,6 +63,22 @@
       "source_url": "https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03152850-3A704910",
       "thesis": "MiljonBot307 reports an agreement for additional USD15m DFC loan drawdown expected before31 October and temporary waiver of existing covenant breaches; total DFC debt including interest expected near USD93m. Original issuer document could not be read; these claims remain unverified. Original26 October Australian date uses earliest conservative local-day boundary.",
       "risk": "Loan proceeds are not revenue or profit. Existing covenant breaches reportedly remain unresolved permanently; more debt and capital may be needed. Drawdown is expected, not confirmed cash received. No new NextSource order or independently verified second-order beneficiary established."
+    },
+    {
+      "id": "miljon-20261026-309",
+      "ticker": "GNG.AX",
+      "company": "GR Engineering Services Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://www.investegate.co.uk/announcement/rns/greatland-gold--ggp/september-2026-quarterly-activities-report/9839979",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-26T15:03:17.737009+00:00",
+      "published_at": "2026-10-25T13:00:00+00:00",
+      "expires_at": "2026-11-01T13:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "Read issuer Greatland September-quarter report dated26 October, distributed through RNS:Early Contractor Engagement awarded to GR Engineering Services for Telfer Train1 upgrade to optimize Havieron ore recoveries. Havieron construction began after secondary approvals; haul-road and high-voltage-line packages tendered. Date-only Australian publication uses earliest conservative local-day boundary.",
+      "risk": "Award value and contractor margin undisclosed. AUD45.2m is total quarterly Havieron development capex, not GNG contract revenue. Early engagement does not guarantee a larger construction award. Other tender packages are not GNG orders; no quantified earnings benefit or undervaluation established."
     },
     {
       "id": "miljon-20261024-295",
