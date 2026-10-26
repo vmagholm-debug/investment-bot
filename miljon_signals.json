@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T15:03:28.689592+00:00",
+  "updated_at": "2026-10-26T21:26:37.374964+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -79,6 +79,22 @@
       "bias": "uncertain",
       "thesis": "Read issuer Greatland September-quarter report dated26 October, distributed through RNS:Early Contractor Engagement awarded to GR Engineering Services for Telfer Train1 upgrade to optimize Havieron ore recoveries. Havieron construction began after secondary approvals; haul-road and high-voltage-line packages tendered. Date-only Australian publication uses earliest conservative local-day boundary.",
       "risk": "Award value and contractor margin undisclosed. AUD45.2m is total quarterly Havieron development capex, not GNG contract revenue. Early engagement does not guarantee a larger construction award. Other tender packages are not GNG orders; no quantified earnings benefit or undervaluation established."
+    },
+    {
+      "id": "miljon-20261026-308",
+      "ticker": "PPL.AX",
+      "company": "Pureprofile Ltd",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://442721967.fs1.hubspotusercontent-ap1.net/hubfs/442721967/Investor/Pureprofile%20delivers%20record%20quarterly%20revenue%20and%20EBITDA%202026.pdf",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-26T17:52:21.200955+00:00",
+      "published_at": "2026-10-25T13:00:00+00:00",
+      "expires_at": "2026-11-01T13:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "thesis": "Original issuer ASX PDF dated26 October read:preliminary Q1FY27 revenue AUD18.3m+14%, EBITDA2.4m+27%, margin13% versus12%. Platform revenue8.8m+108%,48% of group versus26%,supported by API integrations/automated delivery. FY27 revenue guidance72–75m with11–12% EBITDA margin. Date-only Australian publication uses earliest conservative local-day boundary.",
+      "risk": "Unaudited; EBITDA excludes significant items including share-based payments. Platform revenue is not necessarily recurring:rolling12month annuity revenue only16.9m versus16.7m atJune. ANZ growth partly acquired; FX reduced reported growth. Guidance assumes current macroconditions; scalability and undervaluation are not independently validated."
     },
     {
       "id": "miljon-20261024-295",
