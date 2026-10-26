@@ -1,7 +1,37 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T13:58:54.160017+00:00",
+  "updated_at": "2026-10-26T09:22:04.993054+00:00",
   "signals": [
+    {
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_status": "unverified",
+      "published_at": "2026-10-25T13:00:00+00:00",
+      "expires_at": "2026-11-01T13:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "id": "miljon-20261026-305",
+      "ticker": "BSL.AX",
+      "company": "BlueScope Steel Limited",
+      "source_url": "https://www.bluescope.com/news/BlueScope-upgrades-1H-FY2027-earnings-guidance",
+      "thesis": "MiljonBot305 and secondary reports describe1H FY2027 underlying EBIT guidance approaching AUD1.1bn versus860–960m previously, with US mini-mill spread assumption USD810/t versus750/t. Original issuer text could not be read; details remain unverified. Reported26 October Australian date retained using earliest conservative local-day boundary.",
+      "risk": "Forecast, not realized profit; benchmark spreads may differ from actual mill prices and can reverse. North Star improvements may be company-specific; no STLD/NUE earnings uplift or undervaluation is established. Original issuer source unavailable; requires verification before any feed-funded purchase."
+    },
+    {
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_status": "unverified",
+      "published_at": "2026-10-25T13:00:00+00:00",
+      "expires_at": "2026-11-01T13:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "id": "miljon-20261026-307",
+      "ticker": "SYR.AX",
+      "company": "Syrah Resources Limited",
+      "source_url": "https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03152850-3A704910",
+      "thesis": "MiljonBot307 reports an agreement for additional USD15m DFC loan drawdown expected before31 October and temporary waiver of existing covenant breaches; total DFC debt including interest expected near USD93m. Original issuer document could not be read; these claims remain unverified. Original26 October Australian date uses earliest conservative local-day boundary.",
+      "risk": "Loan proceeds are not revenue or profit. Existing covenant breaches reportedly remain unresolved permanently; more debt and capital may be needed. Drawdown is expected, not confirmed cash received. No new NextSource order or independently verified second-order beneficiary established."
+    },
     {
       "id": "miljon-20261024-295",
       "ticker": "TECK",
