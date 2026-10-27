@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T08:15:46.470105+00:00",
+  "updated_at": "2026-10-27T09:03:27.154844+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -393,6 +393,22 @@
       "expires_at": "2026-10-29T20:40:00+02:00",
       "thesis": "MiljonBot reports ComEd GRIT approval for four underground 138 kV lines and a substation near Chicago OHare; construction targeted January 2027, commissioning Q2 2029. Original release and reported publication time could not be independently checked.",
       "risk": "No verified Prysmian or Quanta supplier contract. Project budget and earnings impact unverified. Permits and scheduled construction do not prove profitable execution."
+    },
+    {
+      "id": "miljon-20261023-infosys-fy27-guidance",
+      "ticker": "INFY",
+      "company": "Infosys Limited",
+      "exchange": "NYQ",
+      "quote_currency": "USD",
+      "source_url": "https://www.infosys.com/investors/documents/exchange-filings/2026/outcome-board-meeting23oct2026.pdf",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-27T09:03:17.982253+00:00",
+      "published_at": "2026-10-22T18:30:00+00:00",
+      "expires_at": "2026-10-29T18:30:00+00:00",
+      "status": "BEVAKA",
+      "bias": "negative",
+      "thesis": "Read issuer23October release first page via indexed original PDF:FY27 constant-currency revenue growth guidance revised to1–2%,operating margin guidance20–22% retained. Q2 revenue USD5145m,CC growth1.5%YoY/1.2%QoQ,margin21%. AI revenue10.5%of group and29%sequential growth;large deal TCV5.2bn,62%net new. Original Indian date-only boundary retained,not later dailybrief date.",
+      "risk": "AI growth alone does not offset broader weak growth or prove AI caused forecast revision. Stable margin,strong deal wins and productivity gains are counterarguments. Prior guidance range was not independently checked on the read page. No undervaluation or beneficiary order established. INFY is the NYSE ADR quoted USD,not the NSE INR listing."
     },
     {
       "id": "miljon-20261023-262",
