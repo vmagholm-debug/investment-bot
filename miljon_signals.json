@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T09:03:27.154844+00:00",
+  "updated_at": "2026-10-27T15:58:07.239560+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -126,6 +126,22 @@
       "bias": "uncertain",
       "thesis": "Read original26October ASX release:binding conditional Liamu farm-in term sheet;Rio may earn initial51% by sole funding AUD6m exploration incl3000m drilling within5years. Minimum AUD200000 within12months after land access before withdrawal. Further earn-in to80% via additional40m OR defined1Mt copper-equivalent resource plus scoping study. LCL initially operator,fee up to10% of actual spend. Conservative original Australian-day boundary retained.",
       "risk": "Funding is exploration expenditure,not LCL revenue or profit;full6m/40m not irrevocably committed. Rio may withdraw after minimum and can take over as operator. Ministerial approval/registration/licence extensions remain conditions;termination possible if unmet by30September2027. Undrilled targets do not establish economic resources. Any600000fee scenario depends on spend/operator status,not guaranteed earnings."
+    },
+    {
+      "id": "miljon-20261026-304",
+      "ticker": "AL3.AX",
+      "company": "AML3D Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://aml3d.com/aml3d-receives-arcemy-x-order-northrop-grumman",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-27T15:58:03.877106+00:00",
+      "published_at": "2026-10-25T13:00:00+00:00",
+      "expires_at": "2026-11-01T13:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "Read original26October issuer web release and linked ASX PDF:first ARCEMY X order from Northrop Grumman Marine Systems after tender,including two-year maintenance/service. Reported value approximately$2.2m with no explicit currency abbreviation in either read document.50%payment on initial milestone,final installation expectedQ4FY2027;17US ARCEMY systems contracted. Original Australian date-only boundary retained.",
+      "risk": "Do not assume order dollars are USD or convert amount without verification;AUD is the listing currency only. One order does not prove recurring demand or profitability. Completion/milestone payments remain prospective;no quantified Northrop earnings effect or undervaluation verified. Earlier reported cashflow/FYrevenue figures were not checked in this release."
     },
     {
       "id": "miljon-20261024-295",
