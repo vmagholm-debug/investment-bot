@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T15:58:07.239560+00:00",
+  "updated_at": "2026-10-27T20:43:13.852852+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -48,6 +48,22 @@
       "bias": "uncertain",
       "thesis": "MiljonBot312 reports Seatrium/Keppel cooperation to finish four offshore rigs, estimated aggregate value above SGD500m; drillship delivery planned2027 and jackup2028,other two build plans still under evaluation. Reported original release26October07:30Singapore converts to25October23:30UTC. Original issuer page returned no readable content; claims remain unverified.",
       "risk": "The aggregate estimate is not guaranteed revenue or profit and includes two unresolved build plans. Financing reportedly uses RigCo cash,not independently checked. Delay,cost overruns and offshore-demand risks remain. No verified listed component supplier award or undervaluation. Requires original-source verification before feed-funded entry."
+    },
+    {
+      "id": "miljon-20261026-302",
+      "ticker": "EOS.AX",
+      "company": "Electro Optic Systems Holdings Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://investorhub.eos-aus.com/announcements/zXYOYX-quarterly-activity-report-and-appendix-4c-sept-2026-qtr",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-27T20:43:05.797875+00:00",
+      "published_at": "2026-10-25T22:17:00+00:00",
+      "expires_at": "2026-11-01T22:17:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "uncertain",
+      "thesis": "Read indexed original26October09:17AEDT issuer quarterly release:unrestricted cash AUD133.1m atSeptember30 recovered to204.0m byOctober23 after Middle East MARSS receipts. Cash security deposits147.1m separately restricted. September order book717m excludes conditional Kuwait contract about700m. FY2026 revenue guidance360–400m unchanged.",
+      "risk": "Quarter operating cash outflow57.2m;customer receipts can be lumpy. Kuwait advance-payment/guarantee and export-licence conditions remain unresolved;amendments not certain. Combined1.4bn order figure includes conditional Kuwait scope,not unconditional revenue. Restricted deposits are not free cash;recovery is not proven future profitability. No verified new subcontractor beneficiary."
     },
     {
       "exchange": "ASX",
