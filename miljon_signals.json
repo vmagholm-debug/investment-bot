@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-27T20:43:13.852852+00:00",
+  "updated_at": "2026-10-28T14:52:43.362289+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -64,6 +64,22 @@
       "bias": "uncertain",
       "thesis": "Read indexed original26October09:17AEDT issuer quarterly release:unrestricted cash AUD133.1m atSeptember30 recovered to204.0m byOctober23 after Middle East MARSS receipts. Cash security deposits147.1m separately restricted. September order book717m excludes conditional Kuwait contract about700m. FY2026 revenue guidance360–400m unchanged.",
       "risk": "Quarter operating cash outflow57.2m;customer receipts can be lumpy. Kuwait advance-payment/guarantee and export-licence conditions remain unresolved;amendments not certain. Combined1.4bn order figure includes conditional Kuwait scope,not unconditional revenue. Restricted deposits are not free cash;recovery is not proven future profitability. No verified new subcontractor beneficiary."
+    },
+    {
+      "id": "miljon-20261026-301",
+      "ticker": "BIO.AX",
+      "company": "Biome Australia Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://investorhub.biomeaustralia.com/announcements/jznBwx-quarterly-activities-cashflow-report",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-28T14:35:16.945882+00:00",
+      "published_at": "2026-10-25T21:30:00+00:00",
+      "expires_at": "2026-11-01T21:30:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "Issuer Q1 FY27 release dated26Oct08:30: Australian production under way since September; products expected on pharmacy shelves November. Customer receipts AUD6.518m, +10% QoQ; operating cash inflow AUD0.100m. Read issuer announcement including Appendix4C; Yahoo confirms ASX/AUD BIO.AX.",
+      "risk": "Manufacturing margin benefit remains forecast, not measured. Cash AUD3.382m versus drawn debt1.9m; funding6.5m includes unused facilities. China arrangement announced August, not a new October order; master agreement/volumes/launch not final. Clinical recruitment does not establish outcomes."
     },
     {
       "exchange": "ASX",
