@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T19:28:17.285643+00:00",
+  "updated_at": "2026-10-28T22:31:23.467913+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -48,6 +48,21 @@
       "bias": "uncertain",
       "thesis": "MiljonBot312 reports Seatrium/Keppel cooperation to finish four offshore rigs, estimated aggregate value above SGD500m; drillship delivery planned2027 and jackup2028,other two build plans still under evaluation. Reported original release26October07:30Singapore converts to25October23:30UTC. Original issuer page returned no readable content; claims remain unverified.",
       "risk": "The aggregate estimate is not guaranteed revenue or profit and includes two unresolved build plans. Financing reportedly uses RigCo cash,not independently checked. Delay,cost overruns and offshore-demand risks remain. No verified listed component supplier award or undervaluation. Requires original-source verification before feed-funded entry."
+    },
+    {
+      "id": "miljon-20261026-306",
+      "ticker": "LOT.AX",
+      "company": "Lotus Resources Limited",
+      "exchange": "ASX",
+      "quote_currency": "AUD",
+      "source_url": "https://lotusresources.com.au/investors/asx-announcements",
+      "source_status": "unverified",
+      "published_at": "2026-10-25T22:32:00+00:00",
+      "expires_at": "2026-11-01T22:32:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "MiljonBot306 reports26Oct09:32AEDT Kayelekera Set for First Export: Namibia transport permission reportedly received; about145000lb U3O8 shipment planned, November export. Original announcement text not retrieved: issuer archive accessible but announcement list absent. Yahoo confirms LOT.AX Lotus Resources Limited ASX/AUD.",
+      "risk": "Source facts and original timestamp remain unverified; no completed export or customer payment confirmed. Shipment-specific checks, production/product quality and reported acid-plant50–60%capacity remain questions; source for capacity not read. Permit is not profit, cash receipt or purchase order."
     },
     {
       "id": "miljon-20261026-302",
