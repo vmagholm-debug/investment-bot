@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T18:14:24.144843+00:00",
+  "updated_at": "2026-10-28T19:28:17.285643+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -489,6 +489,22 @@
       "bias": "negative",
       "thesis": "Read issuer23October release first page via indexed original PDF:FY27 constant-currency revenue growth guidance revised to1–2%,operating margin guidance20–22% retained. Q2 revenue USD5145m,CC growth1.5%YoY/1.2%QoQ,margin21%. AI revenue10.5%of group and29%sequential growth;large deal TCV5.2bn,62%net new. Original Indian date-only boundary retained,not later dailybrief date.",
       "risk": "AI growth alone does not offset broader weak growth or prove AI caused forecast revision. Stable margin,strong deal wins and productivity gains are counterarguments. Prior guidance range was not independently checked on the read page. No undervaluation or beneficiary order established. INFY is the NYSE ADR quoted USD,not the NSE INR listing."
+    },
+    {
+      "id": "miljon-20261023-takeda-ghope001",
+      "ticker": "4502.T",
+      "company": "Takeda Pharmaceutical Company Limited",
+      "exchange": "JPX",
+      "quote_currency": "JPY",
+      "source_url": "https://www.takeda.com/newsroom/newsreleases/2026/arcotatug-tavatecan-phase-3-study/",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-28T19:28:16.857212+00:00",
+      "published_at": "2026-10-22T15:00:00+00:00",
+      "expires_at": "2026-10-29T15:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "positive",
+      "thesis": "Read issuer release dated23Oct, earlier than daily brief25Oct label. G-HOPE-001 arcotatug tavatecan met dual primary OS/PFS endpoints. IA2 median OS10.2vs6.9months; PFS7.1vs3.1. Planned Japan filing; no verified2027 filing date in this release. Yahoo4502.T JPX/JPY.",
+      "risk": "Investigational, unapproved; open-label China/Japan study is not head-to-head with AstraZeneca. Grade>=3 treatment-related adverse events47.4%; one treatment-related fatal event of unknown cause. Commercial uptake, valuation upside and filing timing uncertain. Takeda rights exclude greater China. Use original23Oct date, never renew as25Oct news."
     },
     {
       "id": "miljon-20261023-262",
