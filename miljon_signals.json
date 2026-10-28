@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T16:24:33.870254+00:00",
+  "updated_at": "2026-10-28T18:14:24.144843+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -190,6 +190,22 @@
       "bias": "positive",
       "thesis": "Read issuer25Oct CLARITY-Gastric01 release: primary third/later-line OS median10.0vs5.0months, HR0.47; overall second/later-line OS secondary endpoint10.6vs6.4months, HR0.58. Yahoo confirms AZN AstraZeneca PLC NYQ/USD.",
       "risk": "Other dual primary endpoint, centrally reviewed PFS in overall population, did not reach statistical significance. Regulatory approval, commercial uptake and valuation upside not established. No head-to-head comparison with competing trials; unverified sales estimates excluded. Positive clinical evidence is a research candidate, not a purchase order."
+    },
+    {
+      "id": "miljon-20261025-roche-krascendo1",
+      "ticker": "RO.SW",
+      "company": "Roche Holding AG",
+      "exchange": "EBS",
+      "quote_currency": "CHF",
+      "source_url": "https://www.roche.com/investors/updates/inv-update-2026-10-25",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-28T18:14:23.772142+00:00",
+      "published_at": "2026-10-24T22:00:00+00:00",
+      "expires_at": "2026-10-31T22:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "thesis": "Read issuer25Oct Krascendo1 release:338 previously treated KRAS G12C NSCLC patients; divarasib vs sotorasib/adagrasib. Median OS17.7vs12.0months, HR0.56; primary PFS9.8vs5.7months, HR0.58; response58vs32%. Yahoo confirms registered Roche Holding AG RO.SW EBS/CHF.",
+      "risk": "Investigational treatment: approval, sales, pricing and valuation upside not established. Mutation-defined previously treated population limits generalisation. GI and liver toxicity remain despite no new safety signal. No cross-trial ranking against gastric-cancer medicines. Research candidate, not order."
     },
     {
       "id": "miljon-20261024-295",
