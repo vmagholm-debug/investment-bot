@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T14:52:43.362289+00:00",
+  "updated_at": "2026-10-28T16:24:33.870254+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -174,6 +174,22 @@
       "bias": "uncertain",
       "thesis": "Read original26October issuer web release and linked ASX PDF:first ARCEMY X order from Northrop Grumman Marine Systems after tender,including two-year maintenance/service. Reported value approximately$2.2m with no explicit currency abbreviation in either read document.50%payment on initial milestone,final installation expectedQ4FY2027;17US ARCEMY systems contracted. Original Australian date-only boundary retained.",
       "risk": "Do not assume order dollars are USD or convert amount without verification;AUD is the listing currency only. One order does not prove recurring demand or profitability. Completion/milestone payments remain prospective;no quantified Northrop earnings effect or undervaluation verified. Earlier reported cashflow/FYrevenue figures were not checked in this release."
+    },
+    {
+      "id": "miljon-20261025-astrazeneca-clarity-gastric01",
+      "ticker": "AZN",
+      "company": "AstraZeneca PLC",
+      "exchange": "NYQ",
+      "quote_currency": "USD",
+      "source_url": "https://www.astrazeneca.com/media-centre/press-releases/2026/sonesitatug-vedotin-reduced-the-risk-of-death-by-42-pct-in-2nd-and-later-line-cldn182-positive-advanced-gastricgej-cancers-in-clarity-gastric01.html",
+      "source_status": "checked",
+      "source_checked_at": "2026-10-28T16:24:33.468311+00:00",
+      "published_at": "2026-10-24T23:00:00+00:00",
+      "expires_at": "2026-10-31T23:00:00+00:00",
+      "status": "DJUPRESEARCH",
+      "bias": "positive",
+      "thesis": "Read issuer25Oct CLARITY-Gastric01 release: primary third/later-line OS median10.0vs5.0months, HR0.47; overall second/later-line OS secondary endpoint10.6vs6.4months, HR0.58. Yahoo confirms AZN AstraZeneca PLC NYQ/USD.",
+      "risk": "Other dual primary endpoint, centrally reviewed PFS in overall population, did not reach statistical significance. Regulatory approval, commercial uptake and valuation upside not established. No head-to-head comparison with competing trials; unverified sales estimates excluded. Positive clinical evidence is a research candidate, not a purchase order."
     },
     {
       "id": "miljon-20261024-295",
