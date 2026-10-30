@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T22:31:23.467913+00:00",
+  "updated_at": "2026-10-30T12:12:16.261809+00:00",
   "signals": [
     {
       "id": "miljon-20261026-310",
@@ -221,6 +221,21 @@
       "bias": "positive",
       "thesis": "Read issuer25Oct Krascendo1 release:338 previously treated KRAS G12C NSCLC patients; divarasib vs sotorasib/adagrasib. Median OS17.7vs12.0months, HR0.56; primary PFS9.8vs5.7months, HR0.58; response58vs32%. Yahoo confirms registered Roche Holding AG RO.SW EBS/CHF.",
       "risk": "Investigational treatment: approval, sales, pricing and valuation upside not established. Mutation-defined previously treated population limits generalisation. GI and liver toxicity remain despite no new safety signal. No cross-trial ranking against gastric-cancer medicines. Research candidate, not order."
+    },
+    {
+      "id": "miljon-20261025-298",
+      "ticker": "6010.SR",
+      "company": "The National Agricultural Development Company",
+      "exchange": "SAU",
+      "quote_currency": "SAR",
+      "source_url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=98690&cs=6010&locale=ar",
+      "source_status": "unverified",
+      "published_at": "2026-10-24T21:00:00+00:00",
+      "expires_at": "2026-10-31T21:00:00+00:00",
+      "status": "BEVAKA",
+      "bias": "uncertain",
+      "thesis": "MiljonBot298 dated25Oct reports preliminary NADA dairy-herd agreement: indicative SAR370m, refundable74m deposit and up to12months. Original Saudi Exchange announcement inaccessible403; transaction facts/date not independently verified. Yahoo confirms6010.SR National Agricultural Development Company SAU/SAR.",
+      "risk": "Preliminary arrangement is not a completed acquisition, binding final price or verified revenue/profit. Deposit ties up capital; feed costs,integration and failed completion risks remain. No verified listed supplier beneficiary. Original source unread, so unverified and not a checked positive catalyst."
     },
     {
       "id": "miljon-20261024-295",
