@@ -1,0 +1,71 @@
+name: Supply and Demand paper agent
+
+on:
+  schedule:
+    - cron: '*/15 9-22 * * 1-5'
+      timezone: Europe/Stockholm
+  workflow_dispatch:
+    inputs:
+      initialize:
+        description: 'FIRST RUN ONLY: explicitly create separate paper accounts. Refused if state already exists.'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: supply-demand-paper-agent
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SD_FOLDER: ${{ runner.temp }}/supply-demand-paper
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install market-data dependencies only
+        run: python -m pip install yfinance==1.2.0 pandas==2.3.3 numpy==2.0.2 pandas_market_calendars==4.6.1 exchange-calendars==4.5.6
+      - name: Test isolated strategy and paper accounting
+        run: python -m unittest discover -s tests -p 'test_supply_demand.py' -v
+      - name: Restore independent permanent state
+        env:
+          INITIALIZE: ${{ inputs.initialize || false }}
+        run: |
+          if [ "$INITIALIZE" = "true" ]; then
+            python -m supply_demand.store pull --directory "$SD_FOLDER" --initialize
+          else
+            python -m supply_demand.store pull --directory "$SD_FOLDER"
+          fi
+      - name: Run Supply and Demand simulation
+        id: simulation
+        continue-on-error: true
+        run: python -m supply_demand.agent --state "$SD_FOLDER/state.json" --output "$SD_FOLDER"
+      - name: Persist state and reports atomically
+        if: always()
+        run: |
+          if [ -f "$SD_FOLDER/latest.json" ]; then
+            python -m supply_demand.store push --directory "$SD_FOLDER"
+          fi
+      - name: Preserve run evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: supply-demand-paper-report
+          path: |
+            ${{ env.SD_FOLDER }}/latest.json
+            ${{ env.SD_FOLDER }}/state.json
+            ${{ env.SD_FOLDER }}/trades.csv
+            ${{ env.SD_FOLDER }}/summary.md
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Surface simulation data failures
+        if: steps.simulation.outcome == 'failure'
+        run: exit 1
