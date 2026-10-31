@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 15
     env:
       GH_TOKEN: ${{ github.token }}
-      SD_FOLDER: ${{ runner.temp }}/supply-demand-paper
+      SD_FOLDER: ${{ github.workspace }}/.sd-runtime
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
