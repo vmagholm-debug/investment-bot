@@ -1,6 +1,6 @@
 # Supply & Demand · PAPER
 
-2026-11-04T21:42:11.341227+00:00
+2026-11-05T01:49:00.192230+00:00
 
 {
   "protocol": "supply-demand-v1",
