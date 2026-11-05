@@ -1,6 +1,6 @@
 # Supply & Demand · PAPER
 
-2026-11-05T01:49:00.192230+00:00
+2026-11-05T16:02:37.528747+00:00
 
 {
   "protocol": "supply-demand-v1",
@@ -44,12 +44,20 @@
     "pending": null,
     "decision": "AVVAKTA",
     "notes": [
-      "Stale/closed market: no new entry"
+      "No fresh first-retest rejection setup"
     ],
-    "quote_date": "2026-11-04T21:00:00+00:00",
-    "stale_valuation": true,
-    "zone_count": 1,
+    "quote_date": "2026-11-05T16:00:00+00:00",
+    "stale_valuation": false,
+    "zone_count": 2,
     "recent_zones": [
+      {
+        "id": "de887bdc7da6e8d7e4004fd4",
+        "side": "SHORT",
+        "low": 691.9000244140625,
+        "high": 693.8800048828125,
+        "formed_at": "2026-11-05T15:30:00+00:00",
+        "timeframe_hours": 1
+      },
       {
         "id": "0932c7a8dc0d99e9a23ae3af",
         "side": "LONG",
@@ -70,10 +78,10 @@
     "pending": null,
     "decision": "AVVAKTA",
     "notes": [
-      "Stale/closed market: no new entry"
+      "No fresh first-retest rejection setup"
     ],
-    "quote_date": "2026-11-04T16:30:00+00:00",
-    "stale_valuation": true,
+    "quote_date": "2026-11-05T15:50:00+00:00",
+    "stale_valuation": false,
     "zone_count": 0,
     "recent_zones": []
   }
