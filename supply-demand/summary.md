@@ -1,6 +1,6 @@
 # Supply & Demand · PAPER
 
-2026-11-07T00:55:30.547448+00:00
+2026-11-10T01:30:37.363918+00:00
 
 {
   "protocol": "supply-demand-v1",
@@ -46,7 +46,7 @@
     "notes": [
       "Stale/closed market: no new entry"
     ],
-    "quote_date": "2026-11-06T21:00:00+00:00",
+    "quote_date": "2026-11-09T21:00:00+00:00",
     "stale_valuation": true,
     "zone_count": 2,
     "recent_zones": [
@@ -80,7 +80,7 @@
     "notes": [
       "Stale/closed market: no new entry"
     ],
-    "quote_date": "2026-11-06T16:30:00+00:00",
+    "quote_date": "2026-11-09T16:30:00+00:00",
     "stale_valuation": true,
     "zone_count": 0,
     "recent_zones": []
