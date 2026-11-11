@@ -1,6 +1,6 @@
 {
   "protocol": "supply-demand-v1",
-  "generated_at": "2026-11-11T15:48:31.374693+00:00",
+  "generated_at": "2026-11-11T22:26:28.651709+00:00",
   "policy": {
     "protocol": "supply-demand-v1",
     "mode": "paper only",
@@ -42,10 +42,10 @@
       "pending": null,
       "decision": "AVVAKTA",
       "notes": [
-        "No fresh first-retest rejection setup"
+        "Stale/closed market: no new entry"
       ],
-      "quote_date": "2026-11-11T15:45:00+00:00",
-      "stale_valuation": false,
+      "quote_date": "2026-11-11T21:00:00+00:00",
+      "stale_valuation": true,
       "zone_count": 2,
       "recent_zones": [
         {
@@ -76,10 +76,10 @@
       "pending": null,
       "decision": "AVVAKTA",
       "notes": [
-        "No fresh first-retest rejection setup"
+        "Stale/closed market: no new entry"
       ],
-      "quote_date": "2026-11-11T15:35:00+00:00",
-      "stale_valuation": false,
+      "quote_date": "2026-11-11T16:30:00+00:00",
+      "stale_valuation": true,
       "zone_count": 0,
       "recent_zones": []
     }
