@@ -1,6 +1,6 @@
 # Supply & Demand · PAPER
 
-2026-11-17T17:19:42.882224+00:00
+2026-11-17T23:54:33.675992+00:00
 
 {
   "protocol": "supply-demand-v1",
@@ -44,10 +44,10 @@
     "pending": null,
     "decision": "AVVAKTA",
     "notes": [
-      "No fresh first-retest rejection setup"
+      "Stale/closed market: no new entry"
     ],
-    "quote_date": "2026-11-17T17:15:00+00:00",
-    "stale_valuation": false,
+    "quote_date": "2026-11-17T21:00:00+00:00",
+    "stale_valuation": true,
     "zone_count": 3,
     "recent_zones": [
       {
